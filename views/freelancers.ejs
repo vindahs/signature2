@@ -1,0 +1,3364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.truelancer.com/freelancers by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Mar 2021 04:29:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="icon" href="https://static.truelancer.com/favicon.ico" type="image/ico" />
+<link type="application/opensearchdescription+xml" rel="search" href="opensearch.xml" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Top 10 Freelancers | Best Freelancer  | Truelancer </title>
+<meta name="description" content="Find and Hire  Freelancers at Truelancer. Find Freelance Jobs or Hire Freelancers on Truelancer " />
+
+<link rel="publisher" href="https://plus.google.com/101435621975107603972" />
+
+
+<meta property="fb:app_id" content="264752523692298">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Top 10 Freelancers | Best Freelancer  | Truelancer " />
+<meta property="og:description" content=" Find and Hire  Freelancers at Truelancer. Find Freelance Jobs or Hire Freelancers on Truelancer " />
+<meta property="og:url" content="freelancers.html" />
+<meta property="og:image" content="../images.pickapic.live/get/6562bf4b-5606-25af-26a7-c5fcb78f3953-1590585542.png" />
+<meta property="og:site_name" content="Truelancer.com" />
+
+<meta name="p:domain_verify" content="03fbc761b38bddca8951f874e96b77ae" />
+<meta name="google-site-verification" content="1g-uX6XD98hknt04MUUSxh1CPAzz8S870yBtTk2i1iY" />
+<link href="freelancers.html" rel="canonical" />
+<link href="freelancers4658.html?page=2" rel="next" />
+<link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<link href="assets/tl-min/1f4224ed6c7725352684e57be64027036974.css?103" type="text/css" rel="stylesheet" />
+<link href="assets/tl-min/b966bd3c9d59ccfd051a2be08336561e6974.css?103" type="text/css" rel="stylesheet" />
+
+
+<script type="text/javascript" src="../cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="assets/tl-min/6bb6ae3d5253cab9241bcb18e57758006974.js?103" type="text/javascript"></script>
+<script src="assets/tl-min/980542a880430a2942c7054b4acfa3c86974.js?103" type="text/javascript"></script>
+
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1115766564729514",
+    enable_page_level_ads: true
+  });
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-830870545"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-830870545'); </script>
+<script async src="../www.gstatic.com/firebasejs/4.0.0/firebase.js" onload="firebase_setupstart()"></script>
+<script>
+function firebase_setupstart(){
+    // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBDyUUuN7cYQPTQIHC_cOYcymX3W0F5IOQ",
+    authDomain: "aerial-tide-509.firebaseapp.com",
+    projectId: "aerial-tide-509",
+    messagingSenderId: "264658448910",
+    appId: "1:264658448910:web:ca0fdbbb97bdc86423825f"
+  };
+  firebase.initializeApp(config);
+    
+    if(window.page == 'contest_page' || window.page == 'verify_contact' || window.page == 'job_page' || window.page == 'profile'){
+        window.RecaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container',{'size': 'invisible'});
+        RecaptchaVerifier.render();
+    }
+    
+    const messaging = firebase.messaging();
+
+   function requestPermission() {
+    console.log('Requesting permission...');
+    // [START request_permission]
+    messaging.requestPermission()
+    .then(function() {
+      console.log('Notification permission granted.');
+      // TODO(developer): Retrieve an Instance ID token for use with FCM.
+      // [START_EXCLUDE]
+      // In many cases once an app has been granted notification permission, it
+      // should update its UI reflecting this.
+      // [END_EXCLUDE]
+    })
+    .catch(function(err) {
+      console.log('Unable to get permission to notify.', err);
+    });
+    // [END request_permission]
+  }
+
+ function requestToken() {
+  // Get Instance ID token. Initially this makes a network call, once retrieved
+  // subsequent calls to getToken will return from cache.
+  messaging.getToken()
+  .then(function(currentToken) {
+    if (currentToken) {
+      console.log('currentToken: '+currentToken);
+      sendTokenToServer(currentToken);
+      
+    } else {
+      // Show permission request.
+      console.log('No Instance ID token available. Request permission to generate one.');
+
+      setTokenSentToServer(false);
+    }
+  })
+  .catch(function(err) {
+    console.log('An error occurred while retrieving token. ', err);
+    //showToken('Error retrieving Instance ID token. ', err);
+     setTokenSentToServer(false);
+  });
+}
+
+
+  // Callback fired if Instance ID token is updated.
+messaging.onTokenRefresh(function() {
+  messaging.getToken()
+  .then(function(refreshedToken) {
+    setTokenSentToServer(false);
+    // Send Instance ID token to app server.
+    console.log('refreshedToken: '+refreshedToken)
+    sendTokenToServer(refreshedToken);
+   
+  })
+  .catch(function(err) {
+    console.log('Unable to retrieve refreshed token ', err);
+  });
+});
+messaging.onMessage(function(payload) {
+  console.log("Message received. ", payload);
+});
+
+requestPermission();
+requestToken();
+
+
+}
+
+ function isTokenSentToServer() {
+    return window.localStorage.getItem('sentToServer') == 1;
+  }
+function isTokenSentToServerWithUser() {
+    luser = window.localStorage.getItem('luser');
+    suser = window.sess_uid;
+    if(suser > 0 && (luser == 1)) {
+        return true;
+    }
+    else if(!(suser > 0) && (luser == 0)){
+         return true;
+    }
+    else{
+        return false;
+    }
+}
+
+  function setTokenSentToServer(sent) {
+    window.localStorage.setItem('sentToServer', sent ? 1 : 0);
+    luser = window.sess_uid;
+    window.localStorage.setItem('luser', luser ? 1 : 0);
+  }
+  function sendTokenToServer(currentToken) {
+
+    if (!isTokenSentToServer() || !isTokenSentToServerWithUser()) {
+        console.log('Sending token to server...');
+        // TODO(developer): Send the current token to your server.
+        $.ajax({
+            url: window.base_url + '/ajax/firebase_registerToken',
+            type: "POST",
+            data: {token: currentToken},
+            dataType: 'json',
+            success: function(response) {
+                console.log('request sent to server');
+                setTokenSentToServer(true);
+            }
+        });
+        setTokenSentToServer(true);
+    } else {
+      console.log('Token already sent to server so won\'t send it again ' +
+          'unless it changes');
+    }
+  }
+
+
+
+
+</script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NMP3H9F');</script>
+
+<script>
+
+      window.page = "freelancers";
+      window.referrer =  "";
+    window.base_url = "index.html";
+            window.sess_uid = "";
+        window.sess_fname = "";
+        window.sess_lname = "";  
+        window.sess_displayname = "";    
+        window.sess_uthumb = "";
+        window.sess_uimage ="";
+        window.sess_uprofile = "";
+        window.userType = "";
+        window.userCountry = "";
+    
+  window.sess_uslug = "";
+  window.sess_fbid = "";
+
+  window.fbAsyncInit = function() {
+      FB.init({
+        appId      : "264752523692298",
+        status     : true,
+        xfbml      : true,
+        frictionlessRequests: true,
+        version: 'v2.0',
+      });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "../connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  if(window.sess_uid.length){
+    user_id = window.sess_uid;
+    ga('create', 'UA-11990376-18', { 'userId': user_id });
+  }else{
+    ga('create', 'UA-11990376-18', 'truelancer.com');
+  }
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+
+(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '../connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+  _fbq.push(['addPixelId', '865422773478546']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=865422773478546&amp;ev=PixelInitialized" /></noscript>
+
+<link rel="stylesheet" href="assets/jquery-ui/css/ui-lightness/jquery-ui-1.10.4.custom.min.css">
+<script src="assets/jquery-ui/js/jquery-ui-1.10.4.custom.min.js"></script>
+<script>
+			/*** Handle jQuery plugin naming conflict between jQuery UI and Bootstrap ***/
+				$.widget.bridge('uibutton', $.ui.button);
+				$.widget.bridge('uitooltip', $.ui.tooltip);
+		</script>
+
+<link href="assets/tl-min/f98c00716a9acdf5ca7b78091bdcbf0c6974.css?103" type="text/css" rel="stylesheet" />
+<script src="assets/tl-min/bf9f81290c83da0f03676660b5cc98616974.js?103" type="text/javascript"></script>
+<script src="../cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="assets/scripts/jquery.mobile.custom.min.js"></script>
+</head>
+<body>
+<header class="header_container container-fluid">
+
+<script type="text/javascript">
+      (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="../cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode banner closeBanner creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setIdentity track validateCode".split(" "), 0);
+      branch.init('key_live_oecQL1Hc7LeJup8p1vC7OnmnvueQbaYz');
+      branch.banner({
+      icon: 'https://static.truelancer.com/truelancer-app-icon-128.png',
+      title: 'Truelancer App',
+      description: 'Hire | Work | Collaborate',
+      showiOS: false,
+      showAndroid: true,
+      showDesktop: false
+      }, {});
+    </script>
+
+<style>
+    .offer-nav{
+         background-image: linear-gradient(to bottom,#85d27a 0,#85d27a 100%) !important;
+    }
+    .offer-nav .offer-detail{
+        text-align: center;
+        padding: 10px;
+        color: #fff;
+        font-size: 16px;
+    }
+@media (max-width: 767px) {
+	#tlmenupanel {
+		top:46px;
+	}
+
+	.tlsubmenu
+	{
+		background-color:#272121;
+	}
+
+	.nav-items {
+		background-color: #3D3D3D;
+		border: 0;
+		margin-bottom: 0;
+	}
+   
+}
+color: #fff;
+    padding: 5px;
+    background-color: #f14141;
+</style>
+
+<div class="navbar navbar-default site-nav top-header" role="navigation">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+Menu
+</button>
+<a title="Truelancer is a On Demand Curated Freelance Marketplace" style="min-width: 175px;" class="navbar-brand" href="index.html">
+<img class="site-logo" src="../static.truelancer.com/truelancer-logo1.png" />
+<span class="logo-header">Truelancer</span>
+</a>
+</div>
+<div class="navbar-collapse collapse nav-items">
+<ul class="nav navbar-nav navbar-right">
+<li class="nav-nohover"><a title="Post a Job to Hire Freelancer" href="post-project.html" class=""><span class="post-project-btn">Post Project</span></a></li>
+<li class="dropdown hidden-xs">
+<a href="freelance-contests.html" class="dropdown-toggle ">
+<i title="Truelancer Contests" class="fa fa-trophy" style="font-size:18px;"></i>Contest</a>
+<ul class="dropdown-menu list-items">
+<li><a title="Post a Contest" href="contests.html">Post Contest</a></li>
+<li><a title="Browse Contests" href="freelance-contests.html">Browse Contest</a></li>
+</ul>
+</li>
+<li class="dropdown hidden-xs">
+<a href="freelance-services.html" class="dropdown-toggle ">
+<i title="Buy Freelance Services" class="glyphicon glyphicon-shopping-cart fs18"></i>Buy Services</a>
+<ul class="dropdown-menu list-items">
+<li><a title="Post a service" href="freelance-services.html">Buy Services</a></li>
+<li><a title="Post a service" href="post-service.html">Sell Service</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a title="Find Jobs" href="freelance-jobs.html" class=" dropdown-toggle ">
+<i class="glyphicon glyphicon-briefcase fs18"></i>Find Jobs</a>
+</li>
+<li><a title="Find and Hire Freelancers" href="freelancers.html" class="  active arrow-up "><i class="glyphicon glyphicon-user fs18"></i>Find Freelancers</a></li>
+
+
+
+<li><a href="login.html">Login</a></li>
+<li style="margin-right: 5px;"><a title="Create a Free Account" href="signup.html">Signup</a></li>
+</ul>
+</div>
+</div>
+</div>
+<script>
+$(document).ready(function() {
+	$('.nav li.dropdown').hover(function() {
+		$(this).addClass('open');
+	}, function() {
+		$(this).removeClass('open');
+	});
+});
+</script>
+</header>
+<div class="container">
+<div id="feedback_basic" class="feedback_panel"></div>
+</div>
+<section class="content_pan">
+<style>
+	.popular_search_suggestion{
+
+	}
+	.popular_search_suggestion a{
+		font-style: italic;
+    	font-size: 13px;
+	}
+	.content_pan {
+	    margin-top: 0px; 
+	}
+	.freelancer-list ul{
+		list-style: none;
+		margin:0;
+		padding:0;
+	}
+	.freelancer-list .dl-horizontal dt {
+		width: 80px;
+	}
+	.freelancer-list .dl-horizontal dd {
+		margin-left: 90px;
+	}
+
+	.filter-section h2 {
+		cursor:pointer;
+	}
+	@media (max-width: 767px) {
+		.tlpanel {
+			position: absolute;
+			top: -120px;
+		}
+	}
+
+</style>
+<link rel="stylesheet" href="assets/styles/responsive.css">
+<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+<style type="text/css">
+	.bg02 {
+    min-height: 440px !important;
+    background: #fff url(../static.truelancer.com/lp/images/sliderBg-02.png)no-repeat center bottom;
+    padding-top: 5px;
+}
+.bold {
+    font-weight: bold;
+}
+.content_pan h1,.content_pan h2,.content_pan h3,.content_pan h4 {
+    font-family: 'Lato', sans-serif;
+    color: #174a7f;
+    letter-spacing: 1px;
+}
+.slider {
+    font-family: 'Lato', sans-serif;
+    color: #000;
+    letter-spacing: 1px;
+}
+.blue-color {
+    color: #174a7f;
+}
+.margin-bm-20 {
+    margin-bottom: 20px;
+}
+
+.content_pan .h1, .content_pan h1 {
+    font-size: 2rem;
+}
+.slider .btn-info:hover, .slider .btn-info:focus {
+    color: #55badf !important;
+    border: 1px solid #55badf;
+    background: none !important;
+}
+.slider .btn-round {
+    border-radius: 20px !important;
+    min-width: 140px !important;
+}
+.slider .btn {
+    transition: all 0.35s !important;
+    border: 1px solid #55badf;
+}
+</style>
+<div class="slider bg02">
+<div class="container ">
+<div class="container breadcrumbs bot-smspace" vocab="https://schema.org/" typeof="BreadcrumbList">
+<span property="itemListElement" typeof="ListItem">
+<a class="bhome" property="item" typeof="WebPage" href="index.html">
+<span property="name">Home </span>
+</a>
+<meta property="position" content="1">
+</span> »
+<span>
+Freelancers
+</span>
+</div>
+<div class="slider-text blue-color text-xs-center">
+<h4 class="margin-bm-20">Hire world's best &amp; most affordable</h4>
+<h1 class="bold margin-bm-20">
+Freelancers
+</h1>
+<p class="margin-bm-20">
+Truelancer is a curated freelance marketplace with thousands of top rated Freelancers. It is simple and quick to Post your job and get quick quotes for your Freelancer requirement.
+</p>
+<button class="btn btn-info btn-round letstalk" onclick="$('#loginmodel').click();">Get Free Quotes</button>
+</div>
+</div>
+</div>
+<div class="container text-xs-center ">
+<h2 class="bold blue-color">Hire Freelancers and Experts</h2>
+</div>
+<div class="container">
+<div>
+<div id="compare-bar" style="z-index : 10;" data-spy="affix">
+<div style="display:none">
+<style>
+.compare-box {
+	height : 80px;
+}
+.compare-description {
+	height : 22px;
+	overflow : hidden;
+}
+
+.thumbnail  a > img {
+	height : 48px;
+	width : 48px;
+} 
+
+.compare-remove {
+    float: right;
+    position: relative;
+    right: -12px;
+    top: -10px;
+    z-index :1;
+    cursor : pointer;
+}
+
+.empty-compare {
+	border-radius: 5px; 
+	margin: 10px; 
+	height: 72%; 
+	width: 85%; 
+	border: 2px dashed #EEEEEE; 
+	text-align: center;
+}
+
+.empty-compare i{
+	 color: #EEEEEE;
+	 position: relative; 
+	 top: 8px; 
+	 font-size: 30px;
+}
+#compare-bar.affix {
+	width : 91%;
+	top : 0px;
+}
+@media (max-width: 767px){
+	#compare-bar .panel-heading {
+		padding : 10px;
+	}
+
+	#compare-bar.affix {
+		width : 100%;
+		top : 0px;
+	}
+}
+
+.thumbnail {
+	-webkit-transition-property: margin;
+	-moz-transition-property:margin;
+	-ms-transition-property:margin ;
+	-o-transition-property: margin;
+	transition-property: margin;
+	-webkit-transition-duration: 0.2s;
+	-moz-transition-duration: 0.2s;
+	-ms-transition-duration: 0.2s;
+	-o-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+}
+
+#compare-bar.affix  .thumbnail{
+	margin-bottom : 5px;
+}
+</style>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">
+<span>Compare Freelancer</span>
+<button class="btn btn-link pull-right text-info compare-reset-all" data-compare-type="freelancer"><i class="glyphicon glyphicon-repeat"></i>Reset All</button>
+</h3>
+</div>
+
+<div class="panel-body">
+<div class="col-md-12">
+<h2 class="text-center">Nothing to compare.</h2>
+</div>
+</div>
+
+</div>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+	$(document).on('click', '.compare-remove', function(){
+		var compareType = $(this).attr('data-compare-type');
+		var compareId = $(this).attr('data-compare-Id');
+
+		removeCompare(compareId, compareType);
+	});
+	$('#compare-bar').affix({
+	});
+});
+</script>
+</div>
+</div>
+</div>
+<form role="search" method="GET" action="https://www.truelancer.com/freelancers">
+<div class="search_filter row" style="margin-bottom:10px;">
+<div class="col-xs-12 col-md-12">
+
+<style>
+				.page_st{
+					margin-bottom: 10px;
+					line-height: 24px;
+					font-family: sans-serif;
+				}
+				.page_st span{
+					font-weight: bold;
+				}
+			</style>
+<section class="page_st">
+Find Best <span>Freelancers</span> with great Skills. <span>Freelancer</span> are highly skilled and talented. Truelancer.com provides all kinds of <span> Freelancer</span> with proper authentic profile and are available to be hired on Truelancer.com on a click of a button.
+<br>
+Hiring <span>Freelancers</span> is quite affordable as compared to a full-time employee and you can save upto 50% in business cost by hiring <span> Freelancer</span>. Hiring <span>Freelancer</span> on Truelancer.com is 100% safe as the money is released to the freelancers after you are 100% satisfied with the work.
+</section>
+
+</div>
+<div class="col-xs-12 col-md-9">
+<div class="hidden-xs input-group">
+<input type="text" class="form-control" placeholder="Search by name, skill, profession" id="search" name="q" value="" style="padding:6px 6px;">
+<div class="input-group-btn">
+<button class="btn btn-orange btn-info" id="searchbutton" type="submit"><i class="tl-icon-search"></i><span class="search_span">Search</span></button>
+</div>
+</div>
+<div class="visible-xs-block hidden-sm hidden-md hidden-lg input-group" onClick="panel(this);" data-panel-id="tlfilterpanel" data-panel-align="left">
+<input type="text" class="form-control" readonly placeholder="Search by name, skill, profession" value="" style="padding:6px 6px;">
+<div class="input-group-btn">
+<div class="btn btn-orange btn-info" id="searchbutton"><i class="tl-icon-search"></i><span class="search_span">Search</span></div>
+</div>
+</div>
+<div class="popular_search_suggestion">
+<div class="col-xs-12 col-md-1">
+<b>Popular Searches:</b>
+</div>
+<div class="col-xs-12 col-md-11">
+<a href="graphic-design-freelancers498c.html?ref=popular_search_suggestion">Graphic Designers</a>,&nbsp;
+<a href="ux-design-freelancers498c.html?ref=popular_search_suggestion">UX Designers</a>,&nbsp;
+<a href="ui-design-freelancers498c.html?ref=popular_search_suggestion">UI Designers</a>,&nbsp;
+<a href="content-writing-freelancers498c.html?ref=popular_search_suggestion">Content Writers</a>,&nbsp;
+<a href="website-development-freelancers498c.html?ref=popular_search_suggestion">Web Developer</a>,&nbsp;
+<a href="android-app-development-freelancers498c.html?ref=popular_search_suggestion">Android Developers</a>,&nbsp;
+<a href="ios-development-freelancers498c.html?ref=popular_search_suggestion">IOS Developers</a>,&nbsp;
+<a href="seo-freelancers498c.html?ref=popular_search_suggestion">SEO Experts</a>,&nbsp;
+<a href="data-entry-freelancers498c.html?ref=popular_search_suggestion">Data Entry</a>,&nbsp;
+<a href="cad-freelancers498c.html?ref=popular_search_suggestion">CAD</a>,&nbsp;
+<a href="php-freelancers498c.html?ref=popular_search_suggestion">PHP Developers</a>,&nbsp;
+<a href="freelancers409b.html?q=backend+developer">Backend Developer</a>,&nbsp;
+<a href="frontend-development-freelancers498c.html?ref=popular_search_suggestion">Front End Developer</a>,&nbsp;
+<a href="wordpress-freelancers498c.html?ref=popular_search_suggestion">Wordpress Developers</a>,&nbsp;
+<a href="solidity-freelancers498c.html?ref=popular_search_suggestion">Blockchain/Solidity Developer</a>,&nbsp;
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-md-3 hidden-xs padding0">
+<div class="sorting" style="margin-top:0 !important;">
+<select id="e1" class="filter-sort" name="sort" style="width: 100%;">
+<option value="trending">Trending</option>
+<option value="br">Best Rated</option>
+<option value="new">New Freelancers</option>
+
+</select>
+</div>
+</div>
+</div>
+</form>
+<section class="row tlwhite-container">
+<div class="joblist_container col-md-9">
+<div class="clearfix"></div>
+<div class="loader" style="display:none;"></div>
+<div class="freelancer-list">
+<style>
+.ubio{
+	font-size: 12px;
+	padding: 5px 0;
+	max-height: 43px;
+	overflow: hidden;
+}
+.utagline{
+	padding: 4px 0;
+	margin-top: -10px;
+	font-weight: bold;
+	color:#666766;
+}
+</style>
+<ul>
+<li class="hidden-xs display_box clearfix space" id="409907">
+<div class="picblock pull-left tcenter">
+<a href="freelancer/sohailahmad7.html" title="Sohail Ahmad" class="display-ib no-pad img-polaroid">
+<img class="lazy" data-original="https://cdn1.truelancer.com/user-picture/409907-5e635727128a3.jpg" onerror="$(this).attr('src','user_pictures/default.jpg')" width="150" height="150" class="img-rounded" alt="Freelancer Sohail Ahmad" title="Sohail Ahmad">
+</a>
+</div>
+<div class="col-xs-12 col-md-6 pull-left top-space bot-space">
+<div class="no-mar">
+<div class="clearfix">
+<h3 class="no-mar text-16 capitalize">
+<a href="freelancer/sohailahmad7.html" title="Sa5Studio">Sa5Studio</a>
+<script type="text/javascript">
+	$(window).load(function(){ userOnline(409907) })
+</script>
+<span style="margin:0;display: none;" class="user_online onlinestatus-409907" data-toggle="tooltip" data-placement="right" title="Online"></span>
+<span class="label" style="font-size: 12px; background-color: #F0AD4E;" data-toggle="tooltip" data-placement="right" title="PRO Freelancer">PRO</span>
+<style>
+.user_verified {
+	font-size : 18px !important;
+	line-height : 17px !important;
+	color : #55BADF;
+}
+</style>
+<span data-toggle="tooltip" data-placement="right" title="Verified User">
+<i class="fa fa-check-circle user_verified text-info"></i>
+</span> </h3>
+</div>
+<div class="ver-smspace country">
+<img class="flag" src="../static.truelancer.com/flags/pk.png" title="freelancers Lahore, Pakistan" alt="Pakistan">
+<span class="c">
+<a href="freelancers-in-pakistan.html" title="Freelancers in Pakistan">
+Lahore,
+Pakistan
+</a>
+</span>
+<span data-toggle="tooltip" data-placement="right" title="Company">
+<i class="fa fa-users"></i>
+</span>
+<span data-toggle="tooltip" data-placement="top" class="time_ago_small" title="Last Active: 24 Mar 2021">
+<i class="fa fa-clock-o" aria-hidden="true"></i>17 hours ago
+</span>
+</div>
+<p class="no-mar tagline utagline">
+ARCHITECTURE,3D MODELING,PRODUCT DESIGNING,
+</p>
+<div class="ubio">
+I am an Architect Having 8 years of experience in field .
+I have already complied some live projects
+Planning ,Interior, Exterior ,Building Construction &amp; 3D views
+ARCHITECTURAL &amp; INTERIOR DESIGN SERVICES
+&gt; Design of built up spaces
+&gt; Land use &amp; Town planning
+&gt; Residential
+&gt; Institutional
+&gt; Industrial
+&gt; Hospitality &ndash; Hotels, Motels, Resorts etc.
+&gt; Commercial &gt; Recreational
+I HAVE EXCELLENT SKILLS IN 2D DRAWING AND 3D MODELLING, USING ACTIVLY
+&gt;Autocad,
+&gt;Revit,
+&gt;Google sketchup,
+&gt;3d max,
+&gt;Adobe illustrator
+&gt;Indesign and
+&gt; Photoshop
+&gt;Lumion
+&gt;V-Ray
+&gt;MS office for Presentations....
+</div>
+<div class="clearfix htruncate"><span class="label-skills">Expertise & Skills: </span>
+<ul class="unstyled skills-list uppercase">
+<li class="skillsmall badge badge-default"><a href="photoshop-freelancers.html" title="Photoshop Designers">Photoshop</a></li>
+<li class="skillsmall badge badge-default"><a href="3d-modelling-freelancers.html" title="3D Modellers">3D Modelling</a></li>
+<li class="skillsmall badge badge-default"><a href="architectural-design-freelancers.html" title="Architectural Designers">Architectural Design</a></li>
+<li class="skillsmall badge badge-default"><a href="adobe-photoshop-freelancers.html" title="Adobe Photoshop">Adobe Photoshop</a></li>
+<li class="skillsmall badge badge-default"><a href="autocad-freelancers.html" title="AutoCAD">AutoCAD</a></li>
+<li class="skillsmall badge badge-default"><a href="autodesk-3d-studio-max-freelancers.html" title="Autodesk 3D Studio Max">Autodesk 3D Studio Max</a></li>
+<li class="skillsmall badge badge-default"><a href="autodesk-revit-freelancers.html" title="Autodesk Revit">Autodesk Revit</a></li>
+<li class="skillsmall badge badge-default"><a href="sketchup-freelancers.html" title="SketchUp">SketchUp</a></li>
+<li class="skillsmall badge badge-default"><a href="microsoft-office-freelancers.html" title="Microsoft Office">Microsoft Office</a></li>
+<li class="skillsmall badge badge-default"><a href="autodesk-revit-architecture-freelancers.html" title="Autodesk Revit Architecture">Autodesk Revit Architecture</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-md-3 pull-right top-space">
+<div class="clearfix tb-space border-left">
+<div class="rate_perhour"><div class="fa fa-usd"></div> 20 / Hr</div>
+<div class="top-smspace"><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span></div>
+<div class="top-smspace read-reviews"><a href="freelancer/sohailahmad7.html#feedbacks" title="Feedbacks">1226 Feedbacks</a></div>
+<section class="top-smspace clearfix">
+<a href="freelancer/sohailahmad7.html"><button type="button" class="pull-left btn btn-success btn-wire btn-block ">Contact</button></a>
+</section>
+<div class="tl_gap_top_10"><div>
+<button class="btn-link text-info" onClick="$('#loginmodel').click();" data-toggle="tooltip" data-placement="top" title="Kindly login to compare">
+<i class="glyphicon glyphicon-plus-sign"></i>Add to compare
+</button>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="visible-xs-block hidden-sm hidden-md hidden-lg display_box clearfix space" id="409907">
+
+<div class="pull-right tl_gap_top_5 ">
+</div>
+
+<div class="col-xs-12">
+<div class="tcenter tl_gap_top_5">
+<a href="freelancer/sohailahmad7.html" title="Sohail Ahmad" class="display-ib no-pad img-polaroid img-circle">
+<img class="lazy img-circle" data-original="https://cdn1.truelancer.com/user-picture/409907-5e635727128a3.jpg" onerror="$(this).attr('src','user_pictures/default.jpg')" width="150" height="150" class="img-rounded" alt="Freelancer Sohail Ahmad" title="Sohail Ahmad">
+</a>
+</div>
+</div>
+
+<div class="col-xs-12 col-md-6 pull-left top-space bot-space">
+<div class="no-mar">
+
+<div class="clearfix">
+<h3 class="no-mar text-16 capitalize text-center tl_gap_bottom_5">
+<a href="freelancer/sohailahmad7.html" title="Sohail Ahmad">Sohail Ahmad</a>
+<span style="margin:0;" class="user_online" data-toggle="tooltip" data-placement="right" title="Online"></span>
+<span class=" icon_verified s_16" data-toggle="tooltip" data-placement="right" title="Verified User"></span>
+</h3>
+<div class="col-xs-12 text-center">
+<span class="country">
+<img class="flag" src="../static.truelancer.com/flags/pk.png" title="Lahore" alt="">
+<span class="c">Pakistan</span>
+</span>
+</div>
+</div>
+<p class="col-xs-12 text-info tl_word_wrap tl_gap_top_5 tl-text-center">
+<i class="fa fa-quote-left "></i>ARCHITECTURE,3D MODELING,PRODUCT DESIGNING,<i class="fa fa-quote-right "></i>
+</p>
+<div class="hidden-xs visible-md-block label-skills">Member since 25 Sep, 2017</div>
+<div class="hidden-xs clearfix htruncate">
+<span class="label-skills">Expertise & Skills: </span>
+<ul class="unstyled skills-list uppercase">
+<li class="badge badge badge-default"><a href="photoshop-freelancers.html" title="Photoshop Designers">Photoshop</a></li>
+<li class="badge badge badge-default"><a href="3d-modelling-freelancers.html" title="3D Modellers">3D Modelling</a></li>
+<li class="badge badge badge-default"><a href="architectural-design-freelancers.html" title="Architectural Designers">Architectural Design</a></li>
+<li class="badge badge badge-default"><a href="adobe-photoshop-freelancers.html" title="Adobe Photoshop">Adobe Photoshop</a></li>
+<li class="badge badge badge-default"><a href="autocad-freelancers.html" title="AutoCAD">AutoCAD</a></li>
+<li class="badge badge badge-default"><a href="autodesk-3d-studio-max-freelancers.html" title="Autodesk 3D Studio Max">Autodesk 3D Studio Max</a></li>
+<li class="badge badge badge-default"><a href="autodesk-revit-freelancers.html" title="Autodesk Revit">Autodesk Revit</a></li>
+<li class="badge badge badge-default"><a href="sketchup-freelancers.html" title="SketchUp">SketchUp</a></li>
+<li class="badge badge badge-default"><a href="microsoft-office-freelancers.html" title="Microsoft Office">Microsoft Office</a></li>
+<li class="badge badge badge-default"><a href="autodesk-revit-architecture-freelancers.html" title="Autodesk Revit Architecture">Autodesk Revit Architecture</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="col-xs-12 col-md-3 text-center top-space bot-space">
+<div class="clearfix tb-space border-left">
+<div class="rate_perhour">
+<div class="fa fa-usd"></div> 20 / Hr
+</div>
+<div class="top-smspace"><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span></div>
+<div class="top-smspace read-reviews">
+<a href="freelancer/sohailahmad7.html#feedbacks" title="Feedbacks">1226 Feedbacks</a>
+</div>
+<div class="top-smspace clearfix tl_gap_top_10 tl_gap_bottom_5">
+<a href="freelancer/sohailahmad7.html">
+<button type="button" class="pull-left btn btn-orange btn-lg btn-block ">Contact</button>
+</a>
+</div>
+</div>
+</div>
+</li>
+<li class="hidden-xs display_box clearfix space" id="769108">
+<div class="picblock pull-left tcenter">
+<a href="freelancer/mwaurandungu.html" title="Eric Ndungu" class="display-ib no-pad img-polaroid">
+<img class="lazy" data-original="https://cdn1.truelancer.com/user-picture/769108-5ed77a4b87ff7.jpg" onerror="$(this).attr('src','user_pictures/default.jpg')" width="150" height="150" class="img-rounded" alt="Freelancer Eric Ndungu" title="Eric Ndungu">
+</a>
+</div>
+<div class="col-xs-12 col-md-6 pull-left top-space bot-space">
+<div class="no-mar">
+<div class="clearfix">
+<h3 class="no-mar text-16 capitalize">
+<a href="freelancer/mwaurandungu.html" title="Eric Ndungu">Eric Ndungu</a>
+<script type="text/javascript">
+	$(window).load(function(){ userOnline(769108) })
+</script>
+<span style="margin:0;display: none;" class="user_online onlinestatus-769108" data-toggle="tooltip" data-placement="right" title="Online"></span>
+<span class="label" style="font-size: 12px; background-color: #F0AD4E;" data-toggle="tooltip" data-placement="right" title="PRO Freelancer">PRO</span>
+<style>
+.user_verified {
+	font-size : 18px !important;
+	line-height : 17px !important;
+	color : #55BADF;
+}
+</style>
+<span data-toggle="tooltip" data-placement="right" title="Verified User">
+<i class="fa fa-check-circle user_verified text-info"></i>
+</span> </h3>
+</div>
+<div class="ver-smspace country">
+<img class="flag" src="../static.truelancer.com/flags/ke.png" title="freelancers Nairobi, Kenya" alt="Kenya">
+<span class="c">
+<a href="freelancers-in-kenya.html" title="Freelancers in Kenya">
+Nairobi,
+Kenya
+</a>
+</span>
+<span data-toggle="tooltip" data-placement="right" title="Individual">
+<i class="fa fa-user"></i>
+</span>
+<span data-toggle="tooltip" data-placement="top" class="time_ago_small" title="Last Active: 25 Mar 2021">
+<i class="fa fa-clock-o" aria-hidden="true"></i>1 minute ago
+</span>
+</div>
+<p class="no-mar tagline utagline">
+Professional Blog writer| Academic writer|Technical|Web cont
+</p>
+<div class="ubio">
+My culture has always been reading the instructions and understanding the work even before placing a bid. Whenever I place a bid, it&#039;s a confirmation of my ability to handle the work with professionalism . I have more than 9 years experience and when I blend that with my passion for freelancing, I become the best of the best. My commitment to giving the best to my clients gives me fulfillment. Welcome,and together great things will happen...
+</div>
+<div class="clearfix htruncate"><span class="label-skills">Expertise & Skills: </span>
+<ul class="unstyled skills-list uppercase">
+<li class="skillsmall badge badge-default"><a href="virtual-assistant-freelancers.html" title="Virtual Assistants">Virtual Assistant</a></li>
+<li class="skillsmall badge badge-default"><a href="reviews-freelancers.html" title="Review Writers">Reviews</a></li>
+<li class="skillsmall badge badge-default"><a href="academic-writing-freelancers.html" title="Academic Writers">Academic Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="technical-writing-freelancers.html" title="Technical Writers">Technical Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="content-writing-freelancers.html" title="Content Writers">Content Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="blog-writing-freelancers.html" title="Bloggers">Blog Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="ghostwriting-freelancers.html" title="Ghostwriters">Ghostwriting</a></li>
+<li class="skillsmall badge badge-default"><a href="article-rewriting-freelancers.html" title="Article Rewriters">Article Rewriting</a></li>
+<li class="skillsmall badge badge-default"><a href="research-freelancers.html" title="Research Analysts">Research</a></li>
+<li class="skillsmall badge badge-default"><a href="data-processing-freelancers.html" title="Data Processing Executives">Data Processing</a></li>
+<li class="skillsmall badge badge-default"><a href="business-writing-freelancers.html" title="Business Writing">Business Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="resume-writing-freelancers.html" title="Resume Writing">Resume Writing</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-md-3 pull-right top-space">
+<div class="clearfix tb-space border-left">
+<div class="rate_perhour"><div class="fa fa-usd"></div> 10 / Hr</div>
+<div class="top-smspace"><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span></div>
+<div class="top-smspace read-reviews"><a href="freelancer/mwaurandungu.html#feedbacks" title="Feedbacks">267 Feedbacks</a></div>
+<section class="top-smspace clearfix">
+<a href="freelancer/mwaurandungu.html"><button type="button" class="pull-left btn btn-success btn-wire btn-block ">Contact</button></a>
+</section>
+<div class="tl_gap_top_10"><div>
+<button class="btn-link text-info" onClick="$('#loginmodel').click();" data-toggle="tooltip" data-placement="top" title="Kindly login to compare">
+<i class="glyphicon glyphicon-plus-sign"></i>Add to compare
+</button>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="visible-xs-block hidden-sm hidden-md hidden-lg display_box clearfix space" id="769108">
+
+<div class="pull-right tl_gap_top_5 ">
+</div>
+
+<div class="col-xs-12">
+<div class="tcenter tl_gap_top_5">
+<a href="freelancer/mwaurandungu.html" title="Eric Ndungu" class="display-ib no-pad img-polaroid img-circle">
+<img class="lazy img-circle" data-original="https://cdn1.truelancer.com/user-picture/769108-5ed77a4b87ff7.jpg" onerror="$(this).attr('src','user_pictures/default.jpg')" width="150" height="150" class="img-rounded" alt="Freelancer Eric Ndungu" title="Eric Ndungu">
+</a>
+</div>
+</div>
+
+<div class="col-xs-12 col-md-6 pull-left top-space bot-space">
+<div class="no-mar">
+
+<div class="clearfix">
+<h3 class="no-mar text-16 capitalize text-center tl_gap_bottom_5">
+<a href="freelancer/mwaurandungu.html" title="Eric Ndungu">Eric Ndungu</a>
+<span style="margin:0;" class="user_online" data-toggle="tooltip" data-placement="right" title="Online"></span>
+<span class=" icon_verified s_16" data-toggle="tooltip" data-placement="right" title="Verified User"></span>
+</h3>
+<div class="col-xs-12 text-center">
+<span class="country">
+<img class="flag" src="../static.truelancer.com/flags/ke.png" title="Nairobi" alt="">
+<span class="c">Kenya</span>
+</span>
+</div>
+</div>
+<p class="col-xs-12 text-info tl_word_wrap tl_gap_top_5 tl-text-center">
+<i class="fa fa-quote-left "></i>Professional Blog writer| Academic writer|Technical|Web content Wr.<i class="fa fa-quote-right "></i>
+</p>
+<div class="hidden-xs visible-md-block label-skills">Member since 28 Jul, 2019</div>
+<div class="hidden-xs clearfix htruncate">
+<span class="label-skills">Expertise & Skills: </span>
+<ul class="unstyled skills-list uppercase">
+<li class="badge badge badge-default"><a href="virtual-assistant-freelancers.html" title="Virtual Assistants">Virtual Assistant</a></li>
+<li class="badge badge badge-default"><a href="reviews-freelancers.html" title="Review Writers">Reviews</a></li>
+<li class="badge badge badge-default"><a href="academic-writing-freelancers.html" title="Academic Writers">Academic Writing</a></li>
+<li class="badge badge badge-default"><a href="technical-writing-freelancers.html" title="Technical Writers">Technical Writing</a></li>
+<li class="badge badge badge-default"><a href="content-writing-freelancers.html" title="Content Writers">Content Writing</a></li>
+<li class="badge badge badge-default"><a href="blog-writing-freelancers.html" title="Bloggers">Blog Writing</a></li>
+<li class="badge badge badge-default"><a href="ghostwriting-freelancers.html" title="Ghostwriters">Ghostwriting</a></li>
+<li class="badge badge badge-default"><a href="article-rewriting-freelancers.html" title="Article Rewriters">Article Rewriting</a></li>
+<li class="badge badge badge-default"><a href="research-freelancers.html" title="Research Analysts">Research</a></li>
+<li class="badge badge badge-default"><a href="data-processing-freelancers.html" title="Data Processing Executives">Data Processing</a></li>
+<li class="badge badge badge-default"><a href="business-writing-freelancers.html" title="Business Writing">Business Writing</a></li>
+<li class="badge badge badge-default"><a href="resume-writing-freelancers.html" title="Resume Writing">Resume Writing</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="col-xs-12 col-md-3 text-center top-space bot-space">
+<div class="clearfix tb-space border-left">
+<div class="rate_perhour">
+<div class="fa fa-usd"></div> 10 / Hr
+</div>
+<div class="top-smspace"><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span></div>
+<div class="top-smspace read-reviews">
+<a href="freelancer/mwaurandungu.html#feedbacks" title="Feedbacks">267 Feedbacks</a>
+</div>
+<div class="top-smspace clearfix tl_gap_top_10 tl_gap_bottom_5">
+<a href="freelancer/mwaurandungu.html">
+<button type="button" class="pull-left btn btn-orange btn-lg btn-block ">Contact</button>
+</a>
+</div>
+</div>
+</div>
+</li>
+<li class="hidden-xs display_box clearfix space" id="280787">
+<div class="picblock pull-left tcenter">
+<a href="freelancer/babatundeoladepo.html" title="Babatunde Oladepo" class="display-ib no-pad img-polaroid">
+<img class="lazy" data-original="https://cdn1.truelancer.com/user-picture/280787-57f6705f7954c.jpg" onerror="$(this).attr('src','user_pictures/default.jpg')" width="150" height="150" class="img-rounded" alt="Freelancer Babatunde Oladepo" title="Babatunde Oladepo">
+</a>
+</div>
+<div class="col-xs-12 col-md-6 pull-left top-space bot-space">
+<div class="no-mar">
+<div class="clearfix">
+<h3 class="no-mar text-16 capitalize">
+<a href="freelancer/babatundeoladepo.html" title="Babatunde Oladepo">Babatunde Oladepo</a>
+<script type="text/javascript">
+	$(window).load(function(){ userOnline(280787) })
+</script>
+<span style="margin:0;display: none;" class="user_online onlinestatus-280787" data-toggle="tooltip" data-placement="right" title="Online"></span>
+<span class="label" style="font-size: 12px; background-color: #F0AD4E;" data-toggle="tooltip" data-placement="right" title="PRO Freelancer">PRO</span>
+</h3>
+</div>
+<div class="ver-smspace country">
+<img class="flag" src="../static.truelancer.com/flags/ng.png" title="freelancers Lagos, Nigeria" alt="Nigeria">
+<span class="c">
+<a href="freelancers-in-nigeria.html" title="Freelancers in Nigeria">
+Lagos,
+Nigeria
+</a>
+</span>
+<span data-toggle="tooltip" data-placement="right" title="Individual">
+<i class="fa fa-user"></i>
+</span>
+<span data-toggle="tooltip" data-placement="top" class="time_ago_small" title="Last Active: 24 Mar 2021">
+<i class="fa fa-clock-o" aria-hidden="true"></i>14 hours ago
+</span>
+</div>
+<p class="no-mar tagline utagline">
+Article Writer,Blog Writer, Translator, proofreader
+</p>
+<div class="ubio">
+I am an experienced programmer, blogger. I have a wide range of experienced writing articles, rewriting articles, web content writing, blog post writing, and web design.
+You can trust me for your accurate, High Quality, Unique article contents, and fast delivery....
+</div>
+<div class="clearfix htruncate"><span class="label-skills">Expertise & Skills: </span>
+<ul class="unstyled skills-list uppercase">
+<li class="skillsmall badge badge-default"><a href="copywriting-freelancers.html" title="Copywriters">Copywriting</a></li>
+<li class="skillsmall badge badge-default"><a href="branding-freelancers.html" title="Branding Consultants">Branding</a></li>
+<li class="skillsmall badge badge-default"><a href="lead-generation-freelancers.html" title="Lead Generation Experts">Lead Generation</a></li>
+ <li class="skillsmall badge badge-default"><a href="translation-freelancers.html" title="Translators">Translation</a></li>
+<li class="skillsmall badge badge-default"><a href="content-writing-freelancers.html" title="Content Writers">Content Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="blog-writing-freelancers.html" title="Bloggers">Blog Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="articles-freelancers.html" title="Article Writers">Articles</a></li>
+<li class="skillsmall badge badge-default"><a href="email-marketing-freelancers.html" title="Email Marketers">email marketing</a></li>
+<li class="skillsmall badge badge-default"><a href="fetchmail-freelancers.html" title="Fetchmail">Fetchmail</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-md-3 pull-right top-space">
+<div class="clearfix tb-space border-left">
+<div class="rate_perhour"><div class="fa fa-usd"></div> 8 / Hr</div>
+<div class="top-smspace"><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span></div>
+<div class="top-smspace read-reviews"><a href="freelancer/babatundeoladepo.html#feedbacks" title="Feedbacks">470 Feedbacks</a></div>
+<section class="top-smspace clearfix">
+<a href="freelancer/babatundeoladepo.html"><button type="button" class="pull-left btn btn-success btn-wire btn-block ">Contact</button></a>
+</section>
+<div class="tl_gap_top_10"><div>
+<button class="btn-link text-info" onClick="$('#loginmodel').click();" data-toggle="tooltip" data-placement="top" title="Kindly login to compare">
+<i class="glyphicon glyphicon-plus-sign"></i>Add to compare
+</button>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="visible-xs-block hidden-sm hidden-md hidden-lg display_box clearfix space" id="280787">
+
+<div class="pull-right tl_gap_top_5 ">
+</div>
+
+<div class="col-xs-12">
+<div class="tcenter tl_gap_top_5">
+<a href="freelancer/babatundeoladepo.html" title="Babatunde Oladepo" class="display-ib no-pad img-polaroid img-circle">
+<img class="lazy img-circle" data-original="https://cdn1.truelancer.com/user-picture/280787-57f6705f7954c.jpg" onerror="$(this).attr('src','user_pictures/default.jpg')" width="150" height="150" class="img-rounded" alt="Freelancer Babatunde Oladepo" title="Babatunde Oladepo">
+</a>
+</div>
+</div>
+
+<div class="col-xs-12 col-md-6 pull-left top-space bot-space">
+<div class="no-mar">
+
+<div class="clearfix">
+<h3 class="no-mar text-16 capitalize text-center tl_gap_bottom_5">
+<a href="freelancer/babatundeoladepo.html" title="Babatunde Oladepo">Babatunde Oladepo</a>
+<span style="margin:0;" class="user_online" data-toggle="tooltip" data-placement="right" title="Online"></span>
+</h3>
+<div class="col-xs-12 text-center">
+<span class="country">
+<img class="flag" src="../static.truelancer.com/flags/ng.png" title="Lagos" alt="">
+<span class="c">Nigeria</span>
+</span>
+</div>
+</div>
+<p class="col-xs-12 text-info tl_word_wrap tl_gap_top_5 tl-text-center">
+<i class="fa fa-quote-left "></i>Article Writer,Blog Writer, Translator, proofreader<i class="fa fa-quote-right "></i>
+</p>
+<div class="hidden-xs visible-md-block label-skills">Member since 06 Oct, 2016</div>
+<div class="hidden-xs clearfix htruncate">
+<span class="label-skills">Expertise & Skills: </span>
+<ul class="unstyled skills-list uppercase">
+<li class="badge badge badge-default"><a href="copywriting-freelancers.html" title="Copywriters">Copywriting</a></li>
+<li class="badge badge badge-default"><a href="branding-freelancers.html" title="Branding Consultants">Branding</a></li>
+<li class="badge badge badge-default"><a href="lead-generation-freelancers.html" title="Lead Generation Experts">Lead Generation</a></li>
+<li class="badge badge badge-default"><a href="translation-freelancers.html" title="Translators">Translation</a></li>
+<li class="badge badge badge-default"><a href="content-writing-freelancers.html" title="Content Writers">Content Writing</a></li>
+<li class="badge badge badge-default"><a href="blog-writing-freelancers.html" title="Bloggers">Blog Writing</a></li>
+<li class="badge badge badge-default"><a href="articles-freelancers.html" title="Article Writers">Articles</a></li>
+<li class="badge badge badge-default"><a href="email-marketing-freelancers.html" title="Email Marketers">email marketing</a></li>
+<li class="badge badge badge-default"><a href="fetchmail-freelancers.html" title="Fetchmail">Fetchmail</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="col-xs-12 col-md-3 text-center top-space bot-space">
+<div class="clearfix tb-space border-left">
+<div class="rate_perhour">
+<div class="fa fa-usd"></div> 8 / Hr
+</div>
+<div class="top-smspace"><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span></div>
+<div class="top-smspace read-reviews">
+<a href="freelancer/babatundeoladepo.html#feedbacks" title="Feedbacks">470 Feedbacks</a>
+</div>
+<div class="top-smspace clearfix tl_gap_top_10 tl_gap_bottom_5">
+<a href="freelancer/babatundeoladepo.html">
+<button type="button" class="pull-left btn btn-orange btn-lg btn-block ">Contact</button>
+</a>
+</div>
+</div>
+</div>
+</li>
+<li class="hidden-xs display_box clearfix space" id="414792">
+<div class="picblock pull-left tcenter">
+<a href="freelancer/patiencemuia20.html" title="Beatrice Kilonzi" class="display-ib no-pad img-polaroid">
+<img class="lazy" data-original="https://cdn1.truelancer.com/user-picture/414792-604b0cabef47f.jpg" onerror="$(this).attr('src','user_pictures/default.jpg')" width="150" height="150" class="img-rounded" alt="Freelancer Beatrice Kilonzi" title="Beatrice Kilonzi">
+</a>
+</div>
+<div class="col-xs-12 col-md-6 pull-left top-space bot-space">
+<div class="no-mar">
+<div class="clearfix">
+<h3 class="no-mar text-16 capitalize">
+<a href="freelancer/patiencemuia20.html" title="Beatrice.k">Beatrice.k</a>
+<script type="text/javascript">
+	$(window).load(function(){ userOnline(414792) })
+</script>
+<span style="margin:0;display: none;" class="user_online onlinestatus-414792" data-toggle="tooltip" data-placement="right" title="Online"></span>
+<span class="label" style="font-size: 12px; background-color: #F0AD4E;" data-toggle="tooltip" data-placement="right" title="PRO Freelancer">PRO</span>
+</h3>
+</div>
+<div class="ver-smspace country">
+<img class="flag" src="../static.truelancer.com/flags/ke.png" title="freelancers Nairobi, Kenya" alt="Kenya">
+<span class="c">
+<a href="freelancers-in-kenya.html" title="Freelancers in Kenya">
+Nairobi,
+Kenya
+</a>
+</span>
+<span data-toggle="tooltip" data-placement="right" title="Individual">
+<i class="fa fa-user"></i>
+</span>
+<span data-toggle="tooltip" data-placement="top" class="time_ago_small" title="Last Active: 24 Mar 2021">
+<i class="fa fa-clock-o" aria-hidden="true"></i>7 hours ago
+</span>
+</div>
+<p class="no-mar tagline utagline">
+Ghost Writer/ SEO/Super-nerd Content writer/Academic writing
+</p>
+<div class="ubio">
+Hello,
+My name is Beatrice. A Kenya based seasoned writer!
+Writing is my passion!
+I am justifiably proud of my content writing career. I&#039;m the consummate professional, with boundless enthusiasm for every assignment which I accept.
+With a style that is spare and to the point,
+I delights in presenting facts accurately. But I also strives to lead readers into unknown worlds, worlds filled with ideas to explore and information to digest.
+I am an excellent writer with the ability to really stretch my voice to fit my clients needs.
+You will love the way I work with words. My writing is crisp, to the point and clean. I know how to use the right words to deliver the message.
+I&#039;m here to get you exactly what you want. Impossible meets the achievable, as I take any challenge you present to me and make sure that nothing is left to chance....
+</div>
+<div class="clearfix htruncate"><span class="label-skills">Expertise & Skills: </span>
+<ul class="unstyled skills-list uppercase">
+<li class="skillsmall badge badge-default"><a href="copywriting-freelancers.html" title="Copywriters">Copywriting</a></li>
+<li class="skillsmall badge badge-default"><a href="blog-writing-freelancers.html" title="Bloggers">Blog Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="article-writing-freelancers.html" title="Article Writing">Article Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="instagram-marketing-freelancers.html" title="Instagram Marketing">Instagram Marketing</a></li>
+<li class="skillsmall badge badge-default"><a href="landing-pages-freelancers.html" title="Landing Pages">Landing Pages</a></li>
+<li class="skillsmall badge badge-default"><a href="newsletter-writing-freelancers.html" title="Newsletter Writing">Newsletter Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="product-descriptions-freelancers.html" title="Product Descriptions">Product Descriptions</a></li>
+<li class="skillsmall badge badge-default"><a href="social-media-management-freelancers.html" title="Social Media Management">Social Media Management</a></li>
+<li class="skillsmall badge badge-default"><a href="content-management-freelancers.html" title="Content Management">Content Management</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-md-3 pull-right top-space">
+<div class="clearfix tb-space border-left">
+<div class="rate_perhour"><div class="fa fa-usd"></div> 10 / Hr</div>
+<div class="top-smspace"><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span></div>
+<div class="top-smspace read-reviews"><a href="freelancer/patiencemuia20.html#feedbacks" title="Feedbacks">215 Feedbacks</a></div>
+<section class="top-smspace clearfix">
+<a href="freelancer/patiencemuia20.html"><button type="button" class="pull-left btn btn-success btn-wire btn-block ">Contact</button></a>
+</section>
+<div class="tl_gap_top_10"><div>
+<button class="btn-link text-info" onClick="$('#loginmodel').click();" data-toggle="tooltip" data-placement="top" title="Kindly login to compare">
+<i class="glyphicon glyphicon-plus-sign"></i>Add to compare
+</button>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="visible-xs-block hidden-sm hidden-md hidden-lg display_box clearfix space" id="414792">
+
+<div class="pull-right tl_gap_top_5 ">
+</div>
+
+<div class="col-xs-12">
+<div class="tcenter tl_gap_top_5">
+<a href="freelancer/patiencemuia20.html" title="Beatrice Kilonzi" class="display-ib no-pad img-polaroid img-circle">
+<img class="lazy img-circle" data-original="https://cdn1.truelancer.com/user-picture/414792-604b0cabef47f.jpg" onerror="$(this).attr('src','user_pictures/default.jpg')" width="150" height="150" class="img-rounded" alt="Freelancer Beatrice Kilonzi" title="Beatrice Kilonzi">
+</a>
+</div>
+</div>
+
+<div class="col-xs-12 col-md-6 pull-left top-space bot-space">
+<div class="no-mar">
+
+<div class="clearfix">
+<h3 class="no-mar text-16 capitalize text-center tl_gap_bottom_5">
+<a href="freelancer/patiencemuia20.html" title="Beatrice Kilonzi">Beatrice Kilonzi</a>
+<span style="margin:0;" class="user_online" data-toggle="tooltip" data-placement="right" title="Online"></span>
+</h3>
+<div class="col-xs-12 text-center">
+<span class="country">
+<img class="flag" src="../static.truelancer.com/flags/ke.png" title="Nairobi" alt="">
+<span class="c">Kenya</span>
+</span>
+</div>
+</div>
+<p class="col-xs-12 text-info tl_word_wrap tl_gap_top_5 tl-text-center">
+<i class="fa fa-quote-left "></i>Ghost Writer/ SEO/Super-nerd Content writer/Academic writing/ Blog<i class="fa fa-quote-right "></i>
+</p>
+<div class="hidden-xs visible-md-block label-skills">Member since 12 Oct, 2017</div>
+<div class="hidden-xs clearfix htruncate">
+<span class="label-skills">Expertise & Skills: </span>
+<ul class="unstyled skills-list uppercase">
+<li class="badge badge badge-default"><a href="copywriting-freelancers.html" title="Copywriters">Copywriting</a></li>
+<li class="badge badge badge-default"><a href="blog-writing-freelancers.html" title="Bloggers">Blog Writing</a></li>
+<li class="badge badge badge-default"><a href="article-writing-freelancers.html" title="Article Writing">Article Writing</a></li>
+<li class="badge badge badge-default"><a href="instagram-marketing-freelancers.html" title="Instagram Marketing">Instagram Marketing</a></li>
+<li class="badge badge badge-default"><a href="landing-pages-freelancers.html" title="Landing Pages">Landing Pages</a></li>
+<li class="badge badge badge-default"><a href="newsletter-writing-freelancers.html" title="Newsletter Writing">Newsletter Writing</a></li>
+<li class="badge badge badge-default"><a href="product-descriptions-freelancers.html" title="Product Descriptions">Product Descriptions</a></li>
+<li class="badge badge badge-default"><a href="social-media-management-freelancers.html" title="Social Media Management">Social Media Management</a></li>
+<li class="badge badge badge-default"><a href="content-management-freelancers.html" title="Content Management">Content Management</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="col-xs-12 col-md-3 text-center top-space bot-space">
+<div class="clearfix tb-space border-left">
+<div class="rate_perhour">
+<div class="fa fa-usd"></div> 10 / Hr
+</div>
+<div class="top-smspace"><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span></div>
+<div class="top-smspace read-reviews">
+<a href="freelancer/patiencemuia20.html#feedbacks" title="Feedbacks">215 Feedbacks</a>
+</div>
+<div class="top-smspace clearfix tl_gap_top_10 tl_gap_bottom_5">
+<a href="freelancer/patiencemuia20.html">
+<button type="button" class="pull-left btn btn-orange btn-lg btn-block ">Contact</button>
+</a>
+</div>
+</div>
+</div>
+</li>
+<li class="hidden-xs display_box clearfix space" id="584456">
+<div class="picblock pull-left tcenter">
+<a href="freelancer/temitopeolukomogbon.html" title="Temitope Olukomogbon" class="display-ib no-pad img-polaroid">
+<img class="lazy" data-original="https://cdn1.truelancer.com/user-picture/584456-602dfa024930f.jpg" onerror="$(this).attr('src','user_pictures/default.jpg')" width="150" height="150" class="img-rounded" alt="Freelancer Temitope Olukomogbon" title="Temitope Olukomogbon">
+</a>
+</div>
+<div class="col-xs-12 col-md-6 pull-left top-space bot-space">
+<div class="no-mar">
+<div class="clearfix">
+<h3 class="no-mar text-16 capitalize">
+<a href="freelancer/temitopeolukomogbon.html" title="Temitope Olukomogbon">Temitope Olukomogbon</a>
+<script type="text/javascript">
+	$(window).load(function(){ userOnline(584456) })
+</script>
+<span style="margin:0;display: none;" class="user_online onlinestatus-584456" data-toggle="tooltip" data-placement="right" title="Online"></span>
+<span class="label" style="font-size: 12px; background-color: #F0AD4E;" data-toggle="tooltip" data-placement="right" title="PRO Freelancer">PRO</span>
+</h3>
+</div>
+<div class="ver-smspace country">
+<img class="flag" src="../static.truelancer.com/flags/ng.png" title="freelancers Abuja, Nigeria" alt="Nigeria">
+<span class="c">
+<a href="freelancers-in-nigeria.html" title="Freelancers in Nigeria">
+Abuja,
+Nigeria
+</a>
+</span>
+<span data-toggle="tooltip" data-placement="right" title="Individual">
+<i class="fa fa-user"></i>
+</span>
+<span data-toggle="tooltip" data-placement="top" class="time_ago_small" title="Last Active: 24 Mar 2021">
+<i class="fa fa-clock-o" aria-hidden="true"></i>10 hours ago
+</span>
+</div>
+<p class="no-mar tagline utagline">
+Creative Writer, Editor and Proof reader
+</p>
+<div class="ubio">
+My creative writing skills are extremely outstanding because I am passionate about writing.
+I am efficient, detail-oriented and extremely competent. I have been a content developer for over 10 years with 3 published books. I can be trusted to deliver an excellent output.
+I am result driven which causes me to deliver on time and on target....
+</div>
+<div class="clearfix htruncate"><span class="label-skills">Expertise & Skills: </span>
+<ul class="unstyled skills-list uppercase">
+<li class="skillsmall badge badge-default"><a href="speech-writing-freelancers.html" title="Speech Writers">Speech Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="editing-freelancers.html" title="Editors">Editing</a></li>
+<li class="skillsmall badge badge-default"><a href="content-writing-freelancers.html" title="Content Writers">Content Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="blog-writing-freelancers.html" title="Bloggers">Blog Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="ghostwriting-freelancers.html" title="Ghostwriters">Ghostwriting</a></li>
+<li class="skillsmall badge badge-default"><a href="article-rewriting-freelancers.html" title="Article Rewriters">Article Rewriting</a></li>
+<li class="skillsmall badge badge-default"><a href="fiction-writing-freelancers.html" title="Fiction Writing">Fiction Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="short-story-writing-freelancers.html" title="Short Story Writing">Short Story Writing</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-md-3 pull-right top-space">
+<div class="clearfix tb-space border-left">
+<div class="rate_perhour"><div class="fa fa-usd"></div> 56 / Hr</div>
+<div class="top-smspace"><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span></div>
+<div class="top-smspace read-reviews"><a href="freelancer/temitopeolukomogbon.html#feedbacks" title="Feedbacks">124 Feedbacks</a></div>
+<section class="top-smspace clearfix">
+<a href="freelancer/temitopeolukomogbon.html"><button type="button" class="pull-left btn btn-success btn-wire btn-block ">Contact</button></a>
+</section>
+<div class="tl_gap_top_10"><div>
+<button class="btn-link text-info" onClick="$('#loginmodel').click();" data-toggle="tooltip" data-placement="top" title="Kindly login to compare">
+<i class="glyphicon glyphicon-plus-sign"></i>Add to compare
+</button>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="visible-xs-block hidden-sm hidden-md hidden-lg display_box clearfix space" id="584456">
+
+<div class="pull-right tl_gap_top_5 ">
+</div>
+
+<div class="col-xs-12">
+<div class="tcenter tl_gap_top_5">
+<a href="freelancer/temitopeolukomogbon.html" title="Temitope Olukomogbon" class="display-ib no-pad img-polaroid img-circle">
+<img class="lazy img-circle" data-original="https://cdn1.truelancer.com/user-picture/584456-602dfa024930f.jpg" onerror="$(this).attr('src','user_pictures/default.jpg')" width="150" height="150" class="img-rounded" alt="Freelancer Temitope Olukomogbon" title="Temitope Olukomogbon">
+</a>
+</div>
+</div>
+
+<div class="col-xs-12 col-md-6 pull-left top-space bot-space">
+<div class="no-mar">
+
+<div class="clearfix">
+<h3 class="no-mar text-16 capitalize text-center tl_gap_bottom_5">
+<a href="freelancer/temitopeolukomogbon.html" title="Temitope Olukomogbon">Temitope Olukomogbon</a>
+<span style="margin:0;" class="user_online" data-toggle="tooltip" data-placement="right" title="Online"></span>
+</h3>
+<div class="col-xs-12 text-center">
+<span class="country">
+<img class="flag" src="../static.truelancer.com/flags/ng.png" title="Abuja" alt="">
+<span class="c">Nigeria</span>
+</span>
+</div>
+</div>
+<p class="col-xs-12 text-info tl_word_wrap tl_gap_top_5 tl-text-center">
+<i class="fa fa-quote-left "></i>Creative Writer, Editor and Proof reader<i class="fa fa-quote-right "></i>
+</p>
+<div class="hidden-xs visible-md-block label-skills">Member since 04 Oct, 2018</div>
+<div class="hidden-xs clearfix htruncate">
+<span class="label-skills">Expertise & Skills: </span>
+<ul class="unstyled skills-list uppercase">
+<li class="badge badge badge-default"><a href="speech-writing-freelancers.html" title="Speech Writers">Speech Writing</a></li>
+<li class="badge badge badge-default"><a href="editing-freelancers.html" title="Editors">Editing</a></li>
+<li class="badge badge badge-default"><a href="content-writing-freelancers.html" title="Content Writers">Content Writing</a></li>
+<li class="badge badge badge-default"><a href="blog-writing-freelancers.html" title="Bloggers">Blog Writing</a></li>
+<li class="badge badge badge-default"><a href="ghostwriting-freelancers.html" title="Ghostwriters">Ghostwriting</a></li>
+<li class="badge badge badge-default"><a href="article-rewriting-freelancers.html" title="Article Rewriters">Article Rewriting</a></li>
+<li class="badge badge badge-default"><a href="fiction-writing-freelancers.html" title="Fiction Writing">Fiction Writing</a></li>
+<li class="badge badge badge-default"><a href="short-story-writing-freelancers.html" title="Short Story Writing">Short Story Writing</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="col-xs-12 col-md-3 text-center top-space bot-space">
+<div class="clearfix tb-space border-left">
+<div class="rate_perhour">
+<div class="fa fa-usd"></div> 56 / Hr
+</div>
+<div class="top-smspace"><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span></div>
+<div class="top-smspace read-reviews">
+<a href="freelancer/temitopeolukomogbon.html#feedbacks" title="Feedbacks">124 Feedbacks</a>
+</div>
+<div class="top-smspace clearfix tl_gap_top_10 tl_gap_bottom_5">
+<a href="freelancer/temitopeolukomogbon.html">
+<button type="button" class="pull-left btn btn-orange btn-lg btn-block ">Contact</button>
+</a>
+</div>
+</div>
+</div>
+</li>
+<li class="hidden-xs display_box clearfix space" id="1910721">
+<div class="picblock pull-left tcenter">
+<a href="freelancer/sunandamishra.html" title="Sunanda Mishra" class="display-ib no-pad img-polaroid">
+ <img class="lazy" data-original="https://cdn1.truelancer.com/user-picture/1910721-6037c3650af7e.jpg" onerror="$(this).attr('src','user_pictures/default.jpg')" width="150" height="150" class="img-rounded" alt="Freelancer Sunanda Mishra" title="Sunanda Mishra">
+</a>
+</div>
+<div class="col-xs-12 col-md-6 pull-left top-space bot-space">
+<div class="no-mar">
+<div class="clearfix">
+<h3 class="no-mar text-16 capitalize">
+<a href="freelancer/sunandamishra.html" title="Sunanda">Sunanda</a>
+<script type="text/javascript">
+	$(window).load(function(){ userOnline(1910721) })
+</script>
+<span style="margin:0;display: none;" class="user_online onlinestatus-1910721" data-toggle="tooltip" data-placement="right" title="Online"></span>
+</h3>
+</div>
+<div class="ver-smspace country">
+<img class="flag" src="../static.truelancer.com/flags/in.png" title="freelancers Bhubaneshwar, India" alt="India">
+<span class="c">
+<a href="freelancers-in-india.html" title="Freelancers in India">
+Bhubaneshwar,
+India
+</a>
+</span>
+<span data-toggle="tooltip" data-placement="right" title="Individual">
+<i class="fa fa-user"></i>
+</span>
+<span data-toggle="tooltip" data-placement="top" class="time_ago_small" title="Last Active: 25 Mar 2021">
+<i class="fa fa-clock-o" aria-hidden="true"></i>45 minutes ago
+</span>
+</div>
+<p class="no-mar tagline utagline">
+✅content writer ✅ translation ✅ transcription ✅ data
+</p>
+<div class="ubio">
+Hello
+I am kiran. I am a lecturer by profession as I have passed Masters in civil engineering. As i had passed my masters degree recently so i am fluent in MSOFFICE, DATA ENTRY, INTERNET RESEARCH, DATA COLLECTION and INTREPRETATION. I have technical writing skills too. Also I have skills in writing articles, blogs, short stories, etc. I have a good knowledge of translating and transcribing in ENGLISH, HINDI and ODIA languages. I am here for my part time work but now working as full time due to lockdown. Please feel free to connect with me.
+Thank you...
+</div>
+<div class="clearfix htruncate"><span class="label-skills">Expertise & Skills: </span>
+<ul class="unstyled skills-list uppercase">
+<li class="skillsmall badge badge-default"><a href="editing-freelancers.html" title="Editors">Editing</a></li>
+<li class="skillsmall badge badge-default"><a href="content-writing-freelancers.html" title="Content Writers">Content Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="article-rewriting-freelancers.html" title="Article Rewriters">Article Rewriting</a></li>
+<li class="skillsmall badge badge-default"><a href="copy-typing-freelancers.html" title="Copy Typers">copy typing</a></li>
+<li class="skillsmall badge badge-default"><a href="proofreading-freelancers.html" title="Proofreaders">Proofreading</a></li>
+<li class="skillsmall badge badge-default"><a href="voiceover-freelancers.html" title="Voiceover Artists">Voiceover</a></li>
+<li class="skillsmall badge badge-default"><a href="article-writing-freelancers.html" title="Article Writing">Article Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="essay-writing-freelancers.html" title="Essay Writing">Essay Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="transcription-freelancers.html" title="Transcription">Transcription</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-md-3 pull-right top-space">
+<div class="clearfix tb-space border-left">
+<div class="rate_perhour"><div class="fa fa-usd"></div> 4 / Hr</div>
+<div class="top-smspace"><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span></div>
+<div class="top-smspace read-reviews"><a href="freelancer/sunandamishra.html#feedbacks" title="Feedbacks">34 Feedbacks</a></div>
+<section class="top-smspace clearfix">
+<a href="freelancer/sunandamishra.html"><button type="button" class="pull-left btn btn-success btn-wire btn-block ">Contact</button></a>
+</section>
+<div class="tl_gap_top_10"><div>
+<button class="btn-link text-info" onClick="$('#loginmodel').click();" data-toggle="tooltip" data-placement="top" title="Kindly login to compare">
+<i class="glyphicon glyphicon-plus-sign"></i>Add to compare
+</button>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="visible-xs-block hidden-sm hidden-md hidden-lg display_box clearfix space" id="1910721">
+
+<div class="pull-right tl_gap_top_5 ">
+</div>
+
+<div class="col-xs-12">
+<div class="tcenter tl_gap_top_5">
+<a href="freelancer/sunandamishra.html" title="Sunanda Mishra" class="display-ib no-pad img-polaroid img-circle">
+<img class="lazy img-circle" data-original="https://cdn1.truelancer.com/user-picture/1910721-6037c3650af7e.jpg" onerror="$(this).attr('src','user_pictures/default.jpg')" width="150" height="150" class="img-rounded" alt="Freelancer Sunanda Mishra" title="Sunanda Mishra">
+</a>
+</div>
+</div>
+
+<div class="col-xs-12 col-md-6 pull-left top-space bot-space">
+<div class="no-mar">
+
+<div class="clearfix">
+<h3 class="no-mar text-16 capitalize text-center tl_gap_bottom_5">
+<a href="freelancer/sunandamishra.html" title="Sunanda Mishra">Sunanda Mishra</a>
+<span style="margin:0;" class="user_online" data-toggle="tooltip" data-placement="right" title="Online"></span>
+</h3>
+<div class="col-xs-12 text-center">
+<span class="country">
+<img class="flag" src="../static.truelancer.com/flags/in.png" title="Bhubaneshwar" alt="">
+<span class="c">India</span>
+</span>
+</div>
+</div>
+<p class="col-xs-12 text-info tl_word_wrap tl_gap_top_5 tl-text-center">
+<i class="fa fa-quote-left "></i>✅content writer ✅ translation ✅ transcription ✅ dataentry ✅voiceover ✅<i class="fa fa-quote-right "></i>
+</p>
+<div class="hidden-xs visible-md-block label-skills">Member since 23 Sep, 2020</div>
+<div class="hidden-xs clearfix htruncate">
+<span class="label-skills">Expertise & Skills: </span>
+<ul class="unstyled skills-list uppercase">
+<li class="badge badge badge-default"><a href="editing-freelancers.html" title="Editors">Editing</a></li>
+<li class="badge badge badge-default"><a href="content-writing-freelancers.html" title="Content Writers">Content Writing</a></li>
+<li class="badge badge badge-default"><a href="article-rewriting-freelancers.html" title="Article Rewriters">Article Rewriting</a></li>
+<li class="badge badge badge-default"><a href="copy-typing-freelancers.html" title="Copy Typers">copy typing</a></li>
+<li class="badge badge badge-default"><a href="proofreading-freelancers.html" title="Proofreaders">Proofreading</a></li>
+<li class="badge badge badge-default"><a href="voiceover-freelancers.html" title="Voiceover Artists">Voiceover</a></li>
+<li class="badge badge badge-default"><a href="article-writing-freelancers.html" title="Article Writing">Article Writing</a></li>
+<li class="badge badge badge-default"><a href="essay-writing-freelancers.html" title="Essay Writing">Essay Writing</a></li>
+<li class="badge badge badge-default"><a href="transcription-freelancers.html" title="Transcription">Transcription</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="col-xs-12 col-md-3 text-center top-space bot-space">
+<div class="clearfix tb-space border-left">
+<div class="rate_perhour">
+<div class="fa fa-usd"></div> 4 / Hr
+</div>
+<div class="top-smspace"><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span></div>
+<div class="top-smspace read-reviews">
+<a href="freelancer/sunandamishra.html#feedbacks" title="Feedbacks">34 Feedbacks</a>
+</div>
+<div class="top-smspace clearfix tl_gap_top_10 tl_gap_bottom_5">
+<a href="freelancer/sunandamishra.html">
+<button type="button" class="pull-left btn btn-orange btn-lg btn-block ">Contact</button>
+</a>
+</div>
+</div>
+</div>
+</li>
+<li class="hidden-xs display_box clearfix space" id="723384">
+<div class="picblock pull-left tcenter">
+<a href="freelancer/amandaramirez.html" title="Amanda Ramirez" class="display-ib no-pad img-polaroid">
+<img class="lazy" data-original="https://cdn1.truelancer.com/user-picture/723384-5d1200a53e47f.jpg" onerror="$(this).attr('src','user_pictures/default.jpg')" width="150" height="150" class="img-rounded" alt="Freelancer Amanda Ramirez" title="Amanda Ramirez">
+</a>
+</div>
+<div class="col-xs-12 col-md-6 pull-left top-space bot-space">
+<div class="no-mar">
+<div class="clearfix">
+<h3 class="no-mar text-16 capitalize">
+<a href="freelancer/amandaramirez.html" title="Amanda Ramirez">Amanda Ramirez</a>
+<script type="text/javascript">
+	$(window).load(function(){ userOnline(723384) })
+</script>
+<span style="margin:0;display: none;" class="user_online onlinestatus-723384" data-toggle="tooltip" data-placement="right" title="Online"></span>
+<span class="label" style="font-size: 12px; background-color: #F0AD4E;" data-toggle="tooltip" data-placement="right" title="PRO Freelancer">PRO</span>
+<style>
+.user_verified {
+	font-size : 18px !important;
+	line-height : 17px !important;
+	color : #55BADF;
+}
+</style>
+<span data-toggle="tooltip" data-placement="right" title="Verified User">
+<i class="fa fa-check-circle user_verified text-info"></i>
+</span> </h3>
+</div>
+<div class="ver-smspace country">
+<img class="flag" src="../static.truelancer.com/flags/us.png" title="freelancers Sevilla, USA" alt="USA">
+<span class="c">
+<a href="freelancers-in-usa.html" title="Freelancers in USA">
+Sevilla,
+USA
+</a>
+</span>
+<span data-toggle="tooltip" data-placement="right" title="Individual">
+<i class="fa fa-user"></i>
+</span>
+<span data-toggle="tooltip" data-placement="top" class="time_ago_small" title="Last Active: 25 Mar 2021">
+<i class="fa fa-clock-o" aria-hidden="true"></i>4 hours ago
+</span>
+</div>
+<p class="no-mar tagline utagline">
+Content Creation, Plagiarism Free
+</p>
+<div class="ubio">
+The tone, and the message conveyed through the written word can be a make or break for you and your company. Rich, well-worded and plagiarism free content is my specialty, I also work closely with clients making sure that the writing and the tone are exactly what they had in mind.
+I have experience writing in the fields of:
+- Technology
+- Art
+- Casinos
+- Mindfulness
+- HR
+- Botany...
+</div>
+<div class="clearfix htruncate"><span class="label-skills">Expertise & Skills: </span>
+<ul class="unstyled skills-list uppercase">
+<li class="skillsmall badge badge-default"><a href="blog-writing-freelancers.html" title="Bloggers">Blog Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="english-language-freelancers.html" title="English Language Experts">English Language</a></li>
+<li class="skillsmall badge badge-default"><a href="article-writing-freelancers.html" title="Article Writing">Article Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="business-coaching-freelancers.html" title="Business Coaching">Business Coaching</a></li>
+<li class="skillsmall badge badge-default"><a href="interviewing-freelancers.html" title="Interviewing">Interviewing</a></li>
+<li class="skillsmall badge badge-default"><a href="microsoft-powerpoint-freelancers.html" title="Microsoft PowerPoint">Microsoft PowerPoint</a></li>
+<li class="skillsmall badge badge-default"><a href="public-speaking-freelancers.html" title="Public speaking">Public speaking</a></li>
+</ul>
+</div>
+</div>
+</div>
+ <div class="col-xs-12 col-md-3 pull-right top-space">
+<div class="clearfix tb-space border-left">
+<div class="rate_perhour"><div class="fa fa-usd"></div> 15 / Hr</div>
+<div class="top-smspace"><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span></div>
+<div class="top-smspace read-reviews"><a href="freelancer/amandaramirez.html#feedbacks" title="Feedbacks">208 Feedbacks</a></div>
+<section class="top-smspace clearfix">
+<a href="freelancer/amandaramirez.html"><button type="button" class="pull-left btn btn-success btn-wire btn-block ">Contact</button></a>
+</section>
+<div class="tl_gap_top_10"><div>
+<button class="btn-link text-info" onClick="$('#loginmodel').click();" data-toggle="tooltip" data-placement="top" title="Kindly login to compare">
+<i class="glyphicon glyphicon-plus-sign"></i>Add to compare
+</button>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="visible-xs-block hidden-sm hidden-md hidden-lg display_box clearfix space" id="723384">
+
+<div class="pull-right tl_gap_top_5 ">
+</div>
+
+<div class="col-xs-12">
+<div class="tcenter tl_gap_top_5">
+<a href="freelancer/amandaramirez.html" title="Amanda Ramirez" class="display-ib no-pad img-polaroid img-circle">
+<img class="lazy img-circle" data-original="https://cdn1.truelancer.com/user-picture/723384-5d1200a53e47f.jpg" onerror="$(this).attr('src','user_pictures/default.jpg')" width="150" height="150" class="img-rounded" alt="Freelancer Amanda Ramirez" title="Amanda Ramirez">
+</a>
+</div>
+</div>
+
+<div class="col-xs-12 col-md-6 pull-left top-space bot-space">
+<div class="no-mar">
+
+<div class="clearfix">
+<h3 class="no-mar text-16 capitalize text-center tl_gap_bottom_5">
+<a href="freelancer/amandaramirez.html" title="Amanda Ramirez">Amanda Ramirez</a>
+<span style="margin:0;" class="user_online" data-toggle="tooltip" data-placement="right" title="Online"></span>
+<span class=" icon_verified s_16" data-toggle="tooltip" data-placement="right" title="Verified User"></span>
+</h3>
+<div class="col-xs-12 text-center">
+<span class="country">
+<img class="flag" src="../static.truelancer.com/flags/us.png" title="Sevilla" alt="">
+<span class="c">USA</span>
+</span>
+</div>
+</div>
+<p class="col-xs-12 text-info tl_word_wrap tl_gap_top_5 tl-text-center">
+<i class="fa fa-quote-left "></i>Content Creation, Plagiarism Free <i class="fa fa-quote-right "></i>
+</p>
+<div class="hidden-xs visible-md-block label-skills">Member since 25 Jun, 2019</div>
+<div class="hidden-xs clearfix htruncate">
+<span class="label-skills">Expertise & Skills: </span>
+<ul class="unstyled skills-list uppercase">
+<li class="badge badge badge-default"><a href="blog-writing-freelancers.html" title="Bloggers">Blog Writing</a></li>
+<li class="badge badge badge-default"><a href="english-language-freelancers.html" title="English Language Experts">English Language</a></li>
+<li class="badge badge badge-default"><a href="article-writing-freelancers.html" title="Article Writing">Article Writing</a></li>
+<li class="badge badge badge-default"><a href="business-coaching-freelancers.html" title="Business Coaching">Business Coaching</a></li>
+ <li class="badge badge badge-default"><a href="interviewing-freelancers.html" title="Interviewing">Interviewing</a></li>
+<li class="badge badge badge-default"><a href="microsoft-powerpoint-freelancers.html" title="Microsoft PowerPoint">Microsoft PowerPoint</a></li>
+<li class="badge badge badge-default"><a href="public-speaking-freelancers.html" title="Public speaking">Public speaking</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="col-xs-12 col-md-3 text-center top-space bot-space">
+<div class="clearfix tb-space border-left">
+<div class="rate_perhour">
+<div class="fa fa-usd"></div> 15 / Hr
+</div>
+<div class="top-smspace"><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span></div>
+<div class="top-smspace read-reviews">
+<a href="freelancer/amandaramirez.html#feedbacks" title="Feedbacks">208 Feedbacks</a>
+</div>
+<div class="top-smspace clearfix tl_gap_top_10 tl_gap_bottom_5">
+<a href="freelancer/amandaramirez.html">
+<button type="button" class="pull-left btn btn-orange btn-lg btn-block ">Contact</button>
+</a>
+</div>
+</div>
+</div>
+</li>
+<li class="hidden-xs display_box clearfix space" id="2109435">
+<div class="picblock pull-left tcenter">
+<a href="freelancer/ramadhanhakeem.html" title="Ramadhan Hakeem" class="display-ib no-pad img-polaroid">
+<img class="lazy" data-original="https://cdn1.truelancer.com/user-picture/2109435-6004832f4177a.jpg" onerror="$(this).attr('src','user_pictures/default.jpg')" width="150" height="150" class="img-rounded" alt="Freelancer Ramadhan Hakeem" title="Ramadhan Hakeem">
+</a>
+</div>
+<div class="col-xs-12 col-md-6 pull-left top-space bot-space">
+<div class="no-mar">
+<div class="clearfix">
+<h3 class="no-mar text-16 capitalize">
+<a href="freelancer/ramadhanhakeem.html" title="Ramadhan  Omar">Ramadhan Omar</a>
+<script type="text/javascript">
+	$(window).load(function(){ userOnline(2109435) })
+</script>
+<span style="margin:0;display: none;" class="user_online onlinestatus-2109435" data-toggle="tooltip" data-placement="right" title="Online"></span>
+</h3>
+</div>
+<div class="ver-smspace country">
+<img class="flag" src="../static.truelancer.com/flags/ke.png" title="freelancers Nairobi, Kenya" alt="Kenya">
+<span class="c">
+<a href="freelancers-in-kenya.html" title="Freelancers in Kenya">
+Nairobi,
+Kenya
+</a>
+</span>
+<span data-toggle="tooltip" data-placement="right" title="Individual">
+<i class="fa fa-user"></i>
+</span>
+<span data-toggle="tooltip" data-placement="top" class="time_ago_small" title="Last Active: 25 Mar 2021">
+<i class="fa fa-clock-o" aria-hidden="true"></i>5 minutes ago
+</span>
+</div>
+<p class="no-mar tagline utagline">
+Freelance Writer
+</p>
+<div class="ubio">
+HEY! Have you ever considered recruiting an individual assistant to help you meet your everyday objectives?
+To be exact, do you work in any association or own a business or site? If true, how is your advancement?
+- Am a college researcher advancing people and independent companies in accomplishing indisputably the possibility to scale up utilizing my independent composing abilities.
+- I control any work given with ability and acknowledge a limitless number of amendments to ensure the final result is fulfilling to you and me.
+- Am neighborly. Yees am agreeable!
+- Hire me and let us not waste any additional time!
+<a href="cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="d785b6bab6b3bfb6b997a3a5a2b2bbb6b9b4b2a5f9f9f9">[email&#160;protected]</a>
+</div>
+<div class="clearfix htruncate"><span class="label-skills">Expertise & Skills: </span>
+<ul class="unstyled skills-list uppercase">
+<li class="skillsmall badge badge-default"><a href="grant-writing-freelancers.html" title="Grant Writers">Grant Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="speech-writing-freelancers.html" title="Speech Writers">Speech Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="copywriting-freelancers.html" title="Copywriters">Copywriting</a></li>
+<li class="skillsmall badge badge-default"><a href="academic-writing-freelancers.html" title="Academic Writers">Academic Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="technical-writing-freelancers.html" title="Technical Writers">Technical Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="translation-freelancers.html" title="Translators">Translation</a></li>
+<li class="skillsmall badge badge-default"><a href="content-writing-freelancers.html" title="Content Writers">Content Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="blog-writing-freelancers.html" title="Bloggers">Blog Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="data-entry-freelancers.html" title="Data Entry Operators">Data Entry</a></li>
+<li class="skillsmall badge badge-default"><a href="ghostwriting-freelancers.html" title="Ghostwriters">Ghostwriting</a></li>
+<li class="skillsmall badge badge-default"><a href="article-rewriting-freelancers.html" title="Article Rewriters">Article Rewriting</a></li>
+<li class="skillsmall badge badge-default"><a href="research-freelancers.html" title="Research Analysts">Research</a></li>
+<li class="skillsmall badge badge-default"><a href="copy-typing-freelancers.html" title="Copy Typers">copy typing</a></li>
+<li class="skillsmall badge badge-default"><a href="biography-writing-freelancers.html" title="Biography Writing">Biography Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="biology-freelancers.html" title="Biology">Biology</a></li>
+<li class="skillsmall badge badge-default"><a href="business-proposal-writing-freelancers.html" title="Business Proposal Writing">Business Proposal Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="business-writing-freelancers.html" title="Business Writing">Business Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="copy-editing-freelancers.html" title="Copy editing">Copy editing</a></li>
+<li class="skillsmall badge badge-default"><a href="cover-letter-writing-freelancers.html" title="Cover Letter Writing">Cover Letter Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="creative-writing-freelancers.html" title="Creative writing">Creative writing</a></li>
+<li class="skillsmall badge badge-default"><a href="ebook-writing-freelancers.html" title="ebook Writing">ebook Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="ebooks-freelancers.html" title="eBooks">eBooks</a></li>
+<li class="skillsmall badge badge-default"><a href="editorial-writing-freelancers.html" title="Editorial Writing">Editorial Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="english-proofreading-freelancers.html" title="English Proofreading">English Proofreading</a></li>
+<li class="skillsmall badge badge-default"><a href="essay-writing-freelancers.html" title="Essay Writing">Essay Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="financial-writing-freelancers.html" title="Financial Writing">Financial Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="medical-writing-freelancers.html" title="Medical Writing">Medical Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="online-writing-freelancers.html" title="Online Writing">Online Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="presentation-design-freelancers.html" title="Presentation Design">Presentation Design</a></li>
+<li class="skillsmall badge badge-default"><a href="project-management-freelancers.html" title="Project management">Project management</a></li>
+<li class="skillsmall badge badge-default"><a href="recipe-writing-freelancers.html" title="Recipe Writing">Recipe Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="report-writing-freelancers.html" title="report writing">report writing</a></li>
+<li class="skillsmall badge badge-default"><a href="search-engine-optimization-seo-freelancers.html" title="SEO Consultants">Search Engine Optimization SEO</a></li>
+<li class="skillsmall badge badge-default"><a href="seo-writing-freelancers.html" title="SEO Writers">SEO Writing</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-md-3 pull-right top-space">
+<div class="clearfix tb-space border-left">
+<div class="rate_perhour"><div class="fa fa-usd"></div> 2 / Hr</div>
+<div class="top-smspace"><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span></div>
+<div class="top-smspace read-reviews"><a href="freelancer/ramadhanhakeem.html#feedbacks" title="Feedbacks">44 Feedbacks</a></div>
+<section class="top-smspace clearfix">
+<a href="freelancer/ramadhanhakeem.html"><button type="button" class="pull-left btn btn-success btn-wire btn-block ">Contact</button></a>
+</section>
+<div class="tl_gap_top_10"><div>
+<button class="btn-link text-info" onClick="$('#loginmodel').click();" data-toggle="tooltip" data-placement="top" title="Kindly login to compare">
+<i class="glyphicon glyphicon-plus-sign"></i>Add to compare
+</button>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="visible-xs-block hidden-sm hidden-md hidden-lg display_box clearfix space" id="2109435">
+
+<div class="pull-right tl_gap_top_5 ">
+</div>
+
+<div class="col-xs-12">
+<div class="tcenter tl_gap_top_5">
+<a href="freelancer/ramadhanhakeem.html" title="Ramadhan Hakeem" class="display-ib no-pad img-polaroid img-circle">
+<img class="lazy img-circle" data-original="https://cdn1.truelancer.com/user-picture/2109435-6004832f4177a.jpg" onerror="$(this).attr('src','user_pictures/default.jpg')" width="150" height="150" class="img-rounded" alt="Freelancer Ramadhan Hakeem" title="Ramadhan Hakeem">
+</a>
+</div>
+</div>
+
+<div class="col-xs-12 col-md-6 pull-left top-space bot-space">
+<div class="no-mar">
+
+<div class="clearfix">
+<h3 class="no-mar text-16 capitalize text-center tl_gap_bottom_5">
+<a href="freelancer/ramadhanhakeem.html" title="Ramadhan Hakeem">Ramadhan Hakeem</a>
+<span style="margin:0;" class="user_online" data-toggle="tooltip" data-placement="right" title="Online"></span>
+</h3>
+<div class="col-xs-12 text-center">
+<span class="country">
+<img class="flag" src="../static.truelancer.com/flags/ke.png" title="Nairobi" alt="">
+<span class="c">Kenya</span>
+</span>
+</div>
+</div>
+<p class="col-xs-12 text-info tl_word_wrap tl_gap_top_5 tl-text-center">
+<i class="fa fa-quote-left "></i>Freelance Writer<i class="fa fa-quote-right "></i>
+</p>
+<div class="hidden-xs visible-md-block label-skills">Member since 17 Jan, 2021</div>
+<div class="hidden-xs clearfix htruncate">
+<span class="label-skills">Expertise & Skills: </span>
+<ul class="unstyled skills-list uppercase">
+<li class="badge badge badge-default"><a href="grant-writing-freelancers.html" title="Grant Writers">Grant Writing</a></li>
+<li class="badge badge badge-default"><a href="speech-writing-freelancers.html" title="Speech Writers">Speech Writing</a></li>
+<li class="badge badge badge-default"><a href="copywriting-freelancers.html" title="Copywriters">Copywriting</a></li>
+<li class="badge badge badge-default"><a href="academic-writing-freelancers.html" title="Academic Writers">Academic Writing</a></li>
+<li class="badge badge badge-default"><a href="technical-writing-freelancers.html" title="Technical Writers">Technical Writing</a></li>
+<li class="badge badge badge-default"><a href="translation-freelancers.html" title="Translators">Translation</a></li>
+<li class="badge badge badge-default"><a href="content-writing-freelancers.html" title="Content Writers">Content Writing</a></li>
+<li class="badge badge badge-default"><a href="blog-writing-freelancers.html" title="Bloggers">Blog Writing</a></li>
+<li class="badge badge badge-default"><a href="data-entry-freelancers.html" title="Data Entry Operators">Data Entry</a></li>
+<li class="badge badge badge-default"><a href="ghostwriting-freelancers.html" title="Ghostwriters">Ghostwriting</a></li>
+<li class="badge badge badge-default"><a href="article-rewriting-freelancers.html" title="Article Rewriters">Article Rewriting</a></li>
+<li class="badge badge badge-default"><a href="research-freelancers.html" title="Research Analysts">Research</a></li>
+<li class="badge badge badge-default"><a href="copy-typing-freelancers.html" title="Copy Typers">copy typing</a></li>
+<li class="badge badge badge-default"><a href="biography-writing-freelancers.html" title="Biography Writing">Biography Writing</a></li>
+<li class="badge badge badge-default"><a href="biology-freelancers.html" title="Biology">Biology</a></li>
+<li class="badge badge badge-default"><a href="business-proposal-writing-freelancers.html" title="Business Proposal Writing">Business Proposal Writing</a></li>
+<li class="badge badge badge-default"><a href="business-writing-freelancers.html" title="Business Writing">Business Writing</a></li>
+<li class="badge badge badge-default"><a href="copy-editing-freelancers.html" title="Copy editing">Copy editing</a></li>
+<li class="badge badge badge-default"><a href="cover-letter-writing-freelancers.html" title="Cover Letter Writing">Cover Letter Writing</a></li>
+<li class="badge badge badge-default"><a href="creative-writing-freelancers.html" title="Creative writing">Creative writing</a></li>
+<li class="badge badge badge-default"><a href="ebook-writing-freelancers.html" title="ebook Writing">ebook Writing</a></li>
+<li class="badge badge badge-default"><a href="ebooks-freelancers.html" title="eBooks">eBooks</a></li>
+<li class="badge badge badge-default"><a href="editorial-writing-freelancers.html" title="Editorial Writing">Editorial Writing</a></li>
+<li class="badge badge badge-default"><a href="english-proofreading-freelancers.html" title="English Proofreading">English Proofreading</a></li>
+<li class="badge badge badge-default"><a href="essay-writing-freelancers.html" title="Essay Writing">Essay Writing</a></li>
+<li class="badge badge badge-default"><a href="financial-writing-freelancers.html" title="Financial Writing">Financial Writing</a></li>
+<li class="badge badge badge-default"><a href="medical-writing-freelancers.html" title="Medical Writing">Medical Writing</a></li>
+<li class="badge badge badge-default"><a href="online-writing-freelancers.html" title="Online Writing">Online Writing</a></li>
+<li class="badge badge badge-default"><a href="presentation-design-freelancers.html" title="Presentation Design">Presentation Design</a></li>
+<li class="badge badge badge-default"><a href="project-management-freelancers.html" title="Project management">Project management</a></li>
+<li class="badge badge badge-default"><a href="recipe-writing-freelancers.html" title="Recipe Writing">Recipe Writing</a></li>
+<li class="badge badge badge-default"><a href="report-writing-freelancers.html" title="report writing">report writing</a></li>
+<li class="badge badge badge-default"><a href="search-engine-optimization-seo-freelancers.html" title="SEO Consultants">Search Engine Optimization SEO</a></li>
+<li class="badge badge badge-default"><a href="seo-writing-freelancers.html" title="SEO Writers">SEO Writing</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="col-xs-12 col-md-3 text-center top-space bot-space">
+<div class="clearfix tb-space border-left">
+<div class="rate_perhour">
+<div class="fa fa-usd"></div> 2 / Hr
+</div>
+<div class="top-smspace"><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span></div>
+<div class="top-smspace read-reviews">
+<a href="freelancer/ramadhanhakeem.html#feedbacks" title="Feedbacks">44 Feedbacks</a>
+</div>
+<div class="top-smspace clearfix tl_gap_top_10 tl_gap_bottom_5">
+<a href="freelancer/ramadhanhakeem.html">
+<button type="button" class="pull-left btn btn-orange btn-lg btn-block ">Contact</button>
+</a>
+</div>
+</div>
+</div>
+</li>
+<li class="hidden-xs display_box clearfix space" id="244639">
+<div class="picblock pull-left tcenter">
+<a href="freelancer/roxanaacostasosa.html" title="Roxana Acosta Sosa" class="display-ib no-pad img-polaroid">
+<img class="lazy" data-original="https://cdn1.truelancer.com/user-picture/244639-5a264072a6544.jpg" onerror="$(this).attr('src','user_pictures/default.jpg')" width="150" height="150" class="img-rounded" alt="Freelancer Roxana Acosta Sosa" title="Roxana Acosta Sosa">
+</a>
+</div>
+<div class="col-xs-12 col-md-6 pull-left top-space bot-space">
+<div class="no-mar">
+<div class="clearfix">
+<h3 class="no-mar text-16 capitalize">
+<a href="freelancer/roxanaacostasosa.html" title="Roxana Acosta Sosa">Roxana Acosta Sosa</a>
+<script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+	$(window).load(function(){ userOnline(244639) })
+</script>
+<span style="margin:0;display: none;" class="user_online onlinestatus-244639" data-toggle="tooltip" data-placement="right" title="Online"></span>
+<span class="label" style="font-size: 12px; background-color: #F0AD4E;" data-toggle="tooltip" data-placement="right" title="PRO Freelancer">PRO</span>
+<span class="label" style="font-size: 12px; background-color: #55bae0;" data-toggle="tooltip" data-placement="right" title="Rising Talent based on consistent best performance, timely delivery and 5 star feedback during last 2 months">Rising Talent</span>
+<style>
+.user_verified {
+	font-size : 18px !important;
+	line-height : 17px !important;
+	color : #55BADF;
+}
+</style>
+<span data-toggle="tooltip" data-placement="right" title="Verified User">
+<i class="fa fa-check-circle user_verified text-info"></i>
+</span> </h3>
+</div>
+<div class="ver-smspace country">
+<img class="flag" src="../static.truelancer.com/flags/ar.png" title="freelancers Buenos Aires, Argentina" alt="Argentina">
+<span class="c">
+<a href="freelancers-in-argentina.html" title="Freelancers in Argentina">
+Buenos Aires,
+Argentina
+</a>
+</span>
+<span data-toggle="tooltip" data-placement="right" title="Individual">
+<i class="fa fa-user"></i>
+</span>
+<span data-toggle="tooltip" data-placement="top" class="time_ago_small" title="Last Active: 24 Mar 2021">
+<i class="fa fa-clock-o" aria-hidden="true"></i>15 hours ago
+</span>
+</div>
+<p class="no-mar tagline utagline">
+English-Spanish Translator/ Content Developer/ Proofreader
+</p>
+<div class="ubio">
+Hi, I am a copywriter and digital editor, i.e., I write the texts that go on the companies and entrepreneurs websites that sell products or services.
+I like to think that I work as a decision architect and an ideas translator: I put in simple words the value proposition of the professionals to connects with the right people who can benefit from it.
+If you have your own business or personal blog, you will probably not have time to sit down and think: What to publish on your blog? How to describe your products? How to explain your services so people understand you? How to make visits stay on your website, and buy or even how to translate your content or texts and cross-language borders?
+My services include:
+&gt; Blog posts
+&gt; Articles with SEO
+&gt; Product Descriptions/Review
+&gt; Proofreading, Editing, Rewriting
+&gt; Spanish-English, and vice Translations
+&gt; Home Pages content
+Regular communication is important to me. It ensures the work is completed according to your requirements.
+Contact me!...
+</div>
+<div class="clearfix htruncate"><span class="label-skills">Expertise & Skills: </span>
+<ul class="unstyled skills-list uppercase">
+<li class="skillsmall badge badge-default"><a href="copywriting-freelancers.html" title="Copywriters">Copywriting</a></li>
+<li class="skillsmall badge badge-default"><a href="technical-writing-freelancers.html" title="Technical Writers">Technical Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="content-writing-freelancers.html" title="Content Writers">Content Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="blog-writing-freelancers.html" title="Bloggers">Blog Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="ghostwriting-freelancers.html" title="Ghostwriters">Ghostwriting</a></li>
+<li class="skillsmall badge badge-default"><a href="article-rewriting-freelancers.html" title="Article Rewriters">Article Rewriting</a></li>
+<li class="skillsmall badge badge-default"><a href="proofreading-freelancers.html" title="Proofreaders">Proofreading</a></li>
+<li class="skillsmall badge badge-default"><a href="english-language-freelancers.html" title="English Language Experts">English Language</a></li>
+<li class="skillsmall badge badge-default"><a href="article-writing-freelancers.html" title="Article Writing">Article Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="business-writing-freelancers.html" title="Business Writing">Business Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="creative-writing-freelancers.html" title="Creative writing">Creative writing</a></li>
+<li class="skillsmall badge badge-default"><a href="product-descriptions-freelancers.html" title="Product Descriptions">Product Descriptions</a></li>
+<li class="skillsmall badge badge-default"><a href="recipe-writing-freelancers.html" title="Recipe Writing">Recipe Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="sales-writing-freelancers.html" title="Sales Writing">Sales Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="seo-backlinking-freelancers.html" title="SEO Backlinking">SEO Backlinking</a></li>
+<li class="skillsmall badge badge-default"><a href="seo-keyword-research-freelancers.html" title="SEO Keyword Research">SEO Keyword Research</a></li>
+<li class="skillsmall badge badge-default"><a href="seo-writing-freelancers.html" title="SEO Writers">SEO Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="synopsis-writing-freelancers.html" title="Synopsis Writing">Synopsis Writing</a></li>
+<li class="skillsmall badge badge-default"><a href="translation-english-spanish-freelancers.html" title="Translation English Spanish">Translation English Spanish</a></li>
+<li class="skillsmall badge badge-default"><a href="translation-spanish-english-freelancers.html" title="Translation Spanish English">Translation Spanish English</a></li>
+<li class="skillsmall badge badge-default"><a href="travel-writing-freelancers.html" title="Travel Writing">Travel Writing</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-md-3 pull-right top-space">
+<div class="clearfix tb-space border-left">
+<div class="rate_perhour"><div class="fa fa-usd"></div> 6 / Hr</div>
+<div class="top-smspace"><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span></div>
+<div class="top-smspace read-reviews"><a href="freelancer/roxanaacostasosa.html#feedbacks" title="Feedbacks">322 Feedbacks</a></div>
+<section class="top-smspace clearfix">
+<a href="freelancer/roxanaacostasosa.html"><button type="button" class="pull-left btn btn-success btn-wire btn-block ">Contact</button></a>
+</section>
+<div class="tl_gap_top_10"><div>
+<button class="btn-link text-info" onClick="$('#loginmodel').click();" data-toggle="tooltip" data-placement="top" title="Kindly login to compare">
+<i class="glyphicon glyphicon-plus-sign"></i>Add to compare
+</button>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="visible-xs-block hidden-sm hidden-md hidden-lg display_box clearfix space" id="244639">
+
+<div class="pull-right tl_gap_top_5 ">
+</div>
+
+<div class="col-xs-12">
+<div class="tcenter tl_gap_top_5">
+<a href="freelancer/roxanaacostasosa.html" title="Roxana Acosta Sosa" class="display-ib no-pad img-polaroid img-circle">
+<img class="lazy img-circle" data-original="https://cdn1.truelancer.com/user-picture/244639-5a264072a6544.jpg" onerror="$(this).attr('src','user_pictures/default.jpg')" width="150" height="150" class="img-rounded" alt="Freelancer Roxana Acosta Sosa" title="Roxana Acosta Sosa">
+</a>
+</div>
+</div>
+
+<div class="col-xs-12 col-md-6 pull-left top-space bot-space">
+<div class="no-mar">
+
+<div class="clearfix">
+<h3 class="no-mar text-16 capitalize text-center tl_gap_bottom_5">
+<a href="freelancer/roxanaacostasosa.html" title="Roxana Acosta Sosa">Roxana Acosta Sosa</a>
+<span style="margin:0;" class="user_online" data-toggle="tooltip" data-placement="right" title="Online"></span>
+<span class=" icon_verified s_16" data-toggle="tooltip" data-placement="right" title="Verified User"></span>
+</h3>
+<div class="col-xs-12 text-center">
+<span class="country">
+<img class="flag" src="../static.truelancer.com/flags/ar.png" title="Buenos Aires" alt="">
+<span class="c">Argentina</span>
+</span>
+</div>
+</div>
+<p class="col-xs-12 text-info tl_word_wrap tl_gap_top_5 tl-text-center">
+<i class="fa fa-quote-left "></i>English-Spanish Translator/ Content Developer/ Proofreader<i class="fa fa-quote-right "></i>
+</p>
+<div class="hidden-xs visible-md-block label-skills">Member since 26 Jun, 2016</div>
+<div class="hidden-xs clearfix htruncate">
+<span class="label-skills">Expertise & Skills: </span>
+<ul class="unstyled skills-list uppercase">
+<li class="badge badge badge-default"><a href="copywriting-freelancers.html" title="Copywriters">Copywriting</a></li>
+<li class="badge badge badge-default"><a href="technical-writing-freelancers.html" title="Technical Writers">Technical Writing</a></li>
+<li class="badge badge badge-default"><a href="content-writing-freelancers.html" title="Content Writers">Content Writing</a></li>
+<li class="badge badge badge-default"><a href="blog-writing-freelancers.html" title="Bloggers">Blog Writing</a></li>
+<li class="badge badge badge-default"><a href="ghostwriting-freelancers.html" title="Ghostwriters">Ghostwriting</a></li>
+<li class="badge badge badge-default"><a href="article-rewriting-freelancers.html" title="Article Rewriters">Article Rewriting</a></li>
+<li class="badge badge badge-default"><a href="proofreading-freelancers.html" title="Proofreaders">Proofreading</a></li>
+<li class="badge badge badge-default"><a href="english-language-freelancers.html" title="English Language Experts">English Language</a></li>
+<li class="badge badge badge-default"><a href="article-writing-freelancers.html" title="Article Writing">Article Writing</a></li>
+<li class="badge badge badge-default"><a href="business-writing-freelancers.html" title="Business Writing">Business Writing</a></li>
+<li class="badge badge badge-default"><a href="creative-writing-freelancers.html" title="Creative writing">Creative writing</a></li>
+<li class="badge badge badge-default"><a href="product-descriptions-freelancers.html" title="Product Descriptions">Product Descriptions</a></li>
+<li class="badge badge badge-default"><a href="recipe-writing-freelancers.html" title="Recipe Writing">Recipe Writing</a></li>
+<li class="badge badge badge-default"><a href="sales-writing-freelancers.html" title="Sales Writing">Sales Writing</a></li>
+<li class="badge badge badge-default"><a href="seo-backlinking-freelancers.html" title="SEO Backlinking">SEO Backlinking</a></li>
+<li class="badge badge badge-default"><a href="seo-keyword-research-freelancers.html" title="SEO Keyword Research">SEO Keyword Research</a></li>
+<li class="badge badge badge-default"><a href="seo-writing-freelancers.html" title="SEO Writers">SEO Writing</a></li>
+<li class="badge badge badge-default"><a href="synopsis-writing-freelancers.html" title="Synopsis Writing">Synopsis Writing</a></li>
+<li class="badge badge badge-default"><a href="translation-english-spanish-freelancers.html" title="Translation English Spanish">Translation English Spanish</a></li>
+<li class="badge badge badge-default"><a href="translation-spanish-english-freelancers.html" title="Translation Spanish English">Translation Spanish English</a></li>
+<li class="badge badge badge-default"><a href="travel-writing-freelancers.html" title="Travel Writing">Travel Writing</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="col-xs-12 col-md-3 text-center top-space bot-space">
+<div class="clearfix tb-space border-left">
+<div class="rate_perhour">
+<div class="fa fa-usd"></div> 6 / Hr
+</div>
+<div class="top-smspace"><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span></div>
+<div class="top-smspace read-reviews">
+<a href="freelancer/roxanaacostasosa.html#feedbacks" title="Feedbacks">322 Feedbacks</a>
+</div>
+<div class="top-smspace clearfix tl_gap_top_10 tl_gap_bottom_5">
+<a href="freelancer/roxanaacostasosa.html">
+<button type="button" class="pull-left btn btn-orange btn-lg btn-block ">Contact</button>
+</a>
+</div>
+</div>
+</div>
+</li>
+<li class="hidden-xs display_box clearfix space" id="572432">
+<div class="picblock pull-left tcenter">
+<a href="freelancer/owncampaign.html" title="Own Campaign" class="display-ib no-pad img-polaroid">
+<img class="lazy" data-original="https://cdn1.truelancer.com/user-picture/572432-5b9a989a06572.jpg" onerror="$(this).attr('src','user_pictures/default.jpg')" width="150" height="150" class="img-rounded" alt="Freelancer Own Campaign" title="Own Campaign">
+</a>
+</div>
+<div class="col-xs-12 col-md-6 pull-left top-space bot-space">
+<div class="no-mar">
+<div class="clearfix">
+<h3 class="no-mar text-16 capitalize">
+<a href="freelancer/owncampaign.html" title="Own Campaign">Own Campaign</a>
+<script type="text/javascript">
+	$(window).load(function(){ userOnline(572432) })
+</script>
+<span style="margin:0;display: none;" class="user_online onlinestatus-572432" data-toggle="tooltip" data-placement="right" title="Online"></span>
+</h3>
+</div>
+<div class="ver-smspace country">
+<img class="flag" src="../static.truelancer.com/flags/pk.png" title="freelancers Lahore, Pakistan" alt="Pakistan">
+<span class="c">
+<a href="freelancers-in-pakistan.html" title="Freelancers in Pakistan">
+Lahore,
+Pakistan
+</a>
+</span>
+<span data-toggle="tooltip" data-placement="right" title="Individual">
+<i class="fa fa-user"></i>
+</span>
+<span data-toggle="tooltip" data-placement="top" class="time_ago_small" title="Last Active: 25 Mar 2021">
+<i class="fa fa-clock-o" aria-hidden="true"></i>3 hours ago
+</span>
+</div>
+<p class="no-mar tagline utagline">
+SEO Expert OFF-page ON-Page and PBN Private Blog Network
+</p>
+<div class="ubio">
+We are OwnCompaign SEO Services. We provide professional SEO Services and have team for manual link building who works on different sort of proprietary backlinking packages that are specifically designed to improve your SERP. We have extensive experience in all fields of linkbuilding and easily rank any keyword on the FIRST PAGE of google local. We will provide exceptional service and results. Sincerely...
+</div>
+<div class="clearfix htruncate"><span class="label-skills">Expertise & Skills: </span>
+<ul class="unstyled skills-list uppercase">
+<li class="skillsmall badge badge-default"><a href="link-building-freelancers.html" title="Link Builders">Link Building</a></li>
+<li class="skillsmall badge badge-default"><a href="social-networking-freelancers.html" title="Social Networking Marketers">Social Networking</a></li>
+<li class="skillsmall badge badge-default"><a href="seo-freelancers.html" title="SEO Consultants">SEO</a></li>
+<li class="skillsmall badge badge-default"><a href="psd-to-html-freelancers.html" title="PSD to HTML Developers">PSD to HTML</a></li>
+<li class="skillsmall badge badge-default"><a href="social-marketing-freelancers.html" title="Social Marketing Experts">Social Marketing</a></li>
+<li class="skillsmall badge badge-default"><a href="blog-commenting-freelancers.html" title="Blog Commenting">Blog Commenting</a></li>
+<li class="skillsmall badge badge-default"><a href="link-wheel-freelancers.html" title="Link Wheel">Link Wheel</a></li>
+<li class="skillsmall badge badge-default"><a href="search-engine-optimization-seo-freelancers.html" title="SEO Consultants">Search Engine Optimization SEO</a></li>
+<li class="skillsmall badge badge-default"><a href="seo-backlinking-freelancers.html" title="SEO Backlinking">SEO Backlinking</a></li>
+<li class="skillsmall badge badge-default"><a href="social-bookmarking-freelancers.html" title="Social bookmarking">Social bookmarking</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-md-3 pull-right top-space">
+<div class="clearfix tb-space border-left">
+<div class="rate_perhour"><div class="fa fa-usd"></div> 2 / Hr</div>
+<div class="top-smspace"><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span></div>
+<div class="top-smspace read-reviews"><a href="freelancer/owncampaign.html#feedbacks" title="Feedbacks">161 Feedbacks</a></div>
+<section class="top-smspace clearfix">
+<a href="freelancer/owncampaign.html"><button type="button" class="pull-left btn btn-success btn-wire btn-block ">Contact</button></a>
+</section>
+<div class="tl_gap_top_10"><div>
+<button class="btn-link text-info" onClick="$('#loginmodel').click();" data-toggle="tooltip" data-placement="top" title="Kindly login to compare">
+<i class="glyphicon glyphicon-plus-sign"></i>Add to compare
+</button>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="visible-xs-block hidden-sm hidden-md hidden-lg display_box clearfix space" id="572432">
+
+<div class="pull-right tl_gap_top_5 ">
+</div>
+
+<div class="col-xs-12">
+<div class="tcenter tl_gap_top_5">
+<a href="freelancer/owncampaign.html" title="Own Campaign" class="display-ib no-pad img-polaroid img-circle">
+<img class="lazy img-circle" data-original="https://cdn1.truelancer.com/user-picture/572432-5b9a989a06572.jpg" onerror="$(this).attr('src','user_pictures/default.jpg')" width="150" height="150" class="img-rounded" alt="Freelancer Own Campaign" title="Own Campaign">
+</a>
+</div>
+</div>
+
+<div class="col-xs-12 col-md-6 pull-left top-space bot-space">
+<div class="no-mar">
+
+<div class="clearfix">
+<h3 class="no-mar text-16 capitalize text-center tl_gap_bottom_5">
+<a href="freelancer/owncampaign.html" title="Own Campaign">Own Campaign</a>
+<span style="margin:0;" class="user_online" data-toggle="tooltip" data-placement="right" title="Online"></span>
+</h3>
+<div class="col-xs-12 text-center">
+<span class="country">
+<img class="flag" src="../static.truelancer.com/flags/pk.png" title="Lahore" alt="">
+<span class="c">Pakistan</span>
+</span>
+</div>
+</div>
+<p class="col-xs-12 text-info tl_word_wrap tl_gap_top_5 tl-text-center">
+<i class="fa fa-quote-left "></i>SEO Expert OFF-page ON-Page and PBN Private Blog Network<i class="fa fa-quote-right "></i>
+</p>
+<div class="hidden-xs visible-md-block label-skills">Member since 13 Sep, 2018</div>
+<div class="hidden-xs clearfix htruncate">
+<span class="label-skills">Expertise & Skills: </span>
+<ul class="unstyled skills-list uppercase">
+<li class="badge badge badge-default"><a href="link-building-freelancers.html" title="Link Builders">Link Building</a></li>
+<li class="badge badge badge-default"><a href="social-networking-freelancers.html" title="Social Networking Marketers">Social Networking</a></li>
+<li class="badge badge badge-default"><a href="seo-freelancers.html" title="SEO Consultants">SEO</a></li>
+<li class="badge badge badge-default"><a href="psd-to-html-freelancers.html" title="PSD to HTML Developers">PSD to HTML</a></li>
+<li class="badge badge badge-default"><a href="social-marketing-freelancers.html" title="Social Marketing Experts">Social Marketing</a></li>
+<li class="badge badge badge-default"><a href="blog-commenting-freelancers.html" title="Blog Commenting">Blog Commenting</a></li>
+<li class="badge badge badge-default"><a href="link-wheel-freelancers.html" title="Link Wheel">Link Wheel</a></li>
+<li class="badge badge badge-default"><a href="search-engine-optimization-seo-freelancers.html" title="SEO Consultants">Search Engine Optimization SEO</a></li>
+<li class="badge badge badge-default"><a href="seo-backlinking-freelancers.html" title="SEO Backlinking">SEO Backlinking</a></li>
+<li class="badge badge badge-default"><a href="social-bookmarking-freelancers.html" title="Social bookmarking">Social bookmarking</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="col-xs-12 col-md-3 text-center top-space bot-space">
+<div class="clearfix tb-space border-left">
+<div class="rate_perhour">
+<div class="fa fa-usd"></div> 2 / Hr
+</div>
+<div class="top-smspace"><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span><span class="glyphicon glyphicon-star star-active"></span></div>
+<div class="top-smspace read-reviews">
+<a href="freelancer/owncampaign.html#feedbacks" title="Feedbacks">161 Feedbacks</a>
+</div>
+<div class="top-smspace clearfix tl_gap_top_10 tl_gap_bottom_5">
+<a href="freelancer/owncampaign.html">
+<button type="button" class="pull-left btn btn-orange btn-lg btn-block ">Contact</button>
+</a>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<div class="clearfix text-center">
+<ul class="pagination">
+<li class="disabled"><span>&laquo;</span></li><li class="active"><span>1</span></li><li><a href="freelancers4658.html?page=2">2</a></li><li><a href="freelancers4658.html?page=2" rel="next">&raquo;</a></li> </ul>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-xs-12 padding0">
+
+<div id="tlfilterpanel" class="bg_grey tlpanel tlpanel-left">
+<section>
+<div class=" heading-filters padding0"><span>Filters</span>
+<i class="fa fa-sliders pull-right hidden-xs"></i>
+<i class="glyphicon glyphicon-chevron-left pull-right hidden-sm hidden-md hidden-lg visible-xs-block" onClick="closePanel();"></i>
+</div>
+<div class="joblist_right bg_grey">
+<form role="search" method="GET" class="visible-xs-block hidden-sm hidden-md hidden-lg tl_gap_top_10">
+<div class="filter-section">
+<div class="visible-xs-block hidden-sm hidden-md hidden-lg input-group col-xs-12">
+<input type="text" class="form-control" placeholder="Search by Name and Title" id="search" name="q" value="" style="padding:6px 6px;">
+<div class="input-group-btn">
+<button class="btn btn-orange" id="searchbutton" onClick="panel(this);"><i class="tl-icon-search"></i></button>
+</div>
+</div>
+</div>
+<div class="filter-section filter_budget">
+<p>Sort by</p>
+<div>
+<select id="e1" class="filter-sort" name="sort" style="width: 130px;">
+<option value="br">Best Rated</option>
+<option value="new">New</option>
+
+</select>
+</div>
+</div>
+</form>
+<div class="filter-section filter_budget">
+<h2>Hourly Rate</h2>
+<ul>
+<li>
+<p>
+<label for="amount">Price range:</label>
+<span id="amount" class="fw-bold"></span>
+</p>
+<div id="price-slider-range" style="margin: 0 20px 0 5px;"></div>
+</li>
+</ul>
+</div>
+<div class="filter-section fil_sec_country">
+<h2 data-toggle="collapse" data-target=".filtercountrycollapse" aria-expanded="false" aria-controls="filtercountrycollapse">
+<span>Countries</span>
+<span class="pull-right" style="display:inline-block">
+<span class="collapse in countrycollapsedown"><i class="glyphicon glyphicon-chevron-down"></i></span>
+<span class="collapse countrycollapseup"><i class="glyphicon glyphicon-chevron-up"></i></span>
+</span>
+</h2>
+<div class="collapse filtercountrycollapse">
+<ul>
+<li class="" country_code=""><span class="display-ib">
+<div class="squaredFour">
+<input type="checkbox" id="squaredFour" class="filter_country all" checked name="countrycode" value="All">
+<label for="squaredFour"></label>
+</div>
+</span><a href="freelancerse1a3.html?clist=">All</a></li>
+<li class="" country_code=""><span class="display-ib">
+<div class="squaredFour">
+<input type="checkbox" id="squaredFour-IN" class="filter_country" name="countrycode" value="IN">
+<label for="squaredFour-IN"></label>
+</div>
+</span><a href="freelancers-in-india.html" title="Freelancers in India">India ( 1440978 )</a></li>
+<li class="" country_code=""><span class="display-ib">
+<div class="squaredFour">
+<input type="checkbox" id="squaredFour-PK" class="filter_country" name="countrycode" value="PK">
+<label for="squaredFour-PK"></label>
+</div>
+</span><a href="freelancers-in-pakistan.html" title="Freelancers in Pakistan">Pakistan ( 127079 )</a></li>
+<li class="" country_code=""><span class="display-ib">
+<div class="squaredFour">
+<input type="checkbox" id="squaredFour-BD" class="filter_country" name="countrycode" value="BD">
+<label for="squaredFour-BD"></label>
+</div>
+</span><a href="freelancers-in-bangladesh.html" title="Freelancers in Bangladesh">Bangladesh ( 89811 )</a></li>
+<li class="" country_code=""><span class="display-ib">
+<div class="squaredFour">
+<input type="checkbox" id="squaredFour-US" class="filter_country" name="countrycode" value="US">
+<label for="squaredFour-US"></label>
+</div>
+</span><a href="freelancers-in-usa.html" title="Freelancers in USA">USA ( 67014 )</a></li>
+<li class="" country_code=""><span class="display-ib">
+<div class="squaredFour">
+<input type="checkbox" id="squaredFour-PH" class="filter_country" name="countrycode" value="PH">
+<label for="squaredFour-PH"></label>
+</div>
+</span><a href="freelancers-in-philippines.html" title="Freelancers in Philippines">Philippines ( 55848 )</a></li>
+<li class="" country_code=""><span class="display-ib">
+<div class="squaredFour">
+<input type="checkbox" id="squaredFour-KE" class="filter_country" name="countrycode" value="KE">
+<label for="squaredFour-KE"></label>
+</div>
+</span><a href="freelancers-in-kenya.html" title="Freelancers in Kenya">Kenya ( 29779 )</a></li>
+<li class="" country_code=""><span class="display-ib">
+<div class="squaredFour">
+<input type="checkbox" id="squaredFour-ID" class="filter_country" name="countrycode" value="ID">
+<label for="squaredFour-ID"></label>
+</div>
+</span><a href="freelancers-in-indonesia.html" title="Freelancers in Indonesia">Indonesia ( 28683 )</a></li>
+<li class="" country_code=""><span class="display-ib">
+<div class="squaredFour">
+<input type="checkbox" id="squaredFour-LK" class="filter_country" name="countrycode" value="LK">
+<label for="squaredFour-LK"></label>
+</div>
+</span><a href="freelancers-in-sri-lanka.html" title="Freelancers in Sri Lanka">Sri Lanka ( 22698 )</a></li>
+<li class="" country_code=""><span class="display-ib">
+<div class="squaredFour">
+<input type="checkbox" id="squaredFour-MY" class="filter_country" name="countrycode" value="MY">
+<label for="squaredFour-MY"></label>
+</div>
+</span><a href="freelancers-in-malaysia.html" title="Freelancers in Malaysia">Malaysia ( 22470 )</a></li>
+<li class="" country_code=""><span class="display-ib">
+<div class="squaredFour">
+<input type="checkbox" id="squaredFour-EG" class="filter_country" name="countrycode" value="EG">
+<label for="squaredFour-EG"></label>
+</div>
+</span><a href="freelancers-in-egypt.html" title="Freelancers in Egypt">Egypt ( 17330 )</a></li>
+</ul>
+<span><input type="text" class="form-control" id="customcountry" name="" placeholder="Type a country"></span>
+</div>
+</div>
+
+<div class="filter-section fil_sec_skill">
+<h2 data-toggle="collapse" data-target=".filterskillcollapse" aria-expanded="false" aria-controls="filterskillcollapse">
+<span>Skills</span>
+<span class="pull-right" style="display:inline-block">
+<span class="collapse skillcollapsedown"><i class="glyphicon glyphicon-chevron-down"></i></span>
+<span class="collapse in skillcollapseup"><i class="glyphicon glyphicon-chevron-up"></i></span>
+</span>
+</h2>
+<div class="collapse in filterskillcollapse">
+<ul>
+<li class="" skill_id=""><span class="display-ib">
+<div class="squaredFour">
+<input type="checkbox" id="squaredFour-skill-All" class="filter_skill all" checked name="skill" value="All">
+<label for="squaredFour-skill-All"></label>
+</div>
+</span><a href="freelancers7b96.html?slist=">All</a>
+</li>
+<li class="" skill_id=""><span class="display-ib">
+<div class="squaredFour">
+<input type="checkbox" id="squaredFour-skill-104" class="filter_skill" name="skill" value="104">
+<label for="squaredFour-skill-104"></label>
+</div>
+</span><a href="data-entry-freelancers.html" title="Hire Data Entry Operators">Data Entry Operators</a>
+</li>
+<li class="" skill_id=""><span class="display-ib">
+<div class="squaredFour">
+<input type="checkbox" id="squaredFour-skill-132" class="filter_skill" name="skill" value="132">
+<label for="squaredFour-skill-132"></label>
+</div>
+</span><a href="copy-typing-freelancers.html" title="Hire Copy Typers">Copy Typers</a>
+</li>
+<li class="" skill_id=""><span class="display-ib">
+<div class="squaredFour">
+<input type="checkbox" id="squaredFour-skill-27" class="filter_skill" name="skill" value="27">
+<label for="squaredFour-skill-27"></label>
+</div>
+</span><a href="copywriting-freelancers.html" title="Hire Copywriters">Copywriters</a>
+</li>
+<li class="" skill_id=""><span class="display-ib">
+<div class="squaredFour">
+<input type="checkbox" id="squaredFour-skill-32" class="filter_skill" name="skill" value="32">
+<label for="squaredFour-skill-32"></label>
+</div>
+</span><a href="logo-design-freelancers.html" title="Hire Logo Designers">Logo Designers</a>
+</li>
+<li class="" skill_id=""><span class="display-ib">
+<div class="squaredFour">
+<input type="checkbox" id="squaredFour-skill-100" class="filter_skill" name="skill" value="100">
+<label for="squaredFour-skill-100"></label>
+</div>
+</span><a href="content-writing-freelancers.html" title="Hire Content Writers">Content Writers</a>
+</li>
+<li class="" skill_id=""><span class="display-ib">
+<div class="squaredFour">
+<input type="checkbox" id="squaredFour-skill-21" class="filter_skill" name="skill" value="21">
+<label for="squaredFour-skill-21"></label>
+</div>
+</span><a href="photoshop-freelancers.html" title="Hire Photoshop Designers">Photoshop Designers</a>
+</li>
+<li class="" skill_id=""><span class="display-ib">
+<div class="squaredFour">
+<input type="checkbox" id="squaredFour-skill-117" class="filter_skill" name="skill" value="117">
+<label for="squaredFour-skill-117"></label>
+</div>
+</span><a href="excel-freelancers.html" title="Hire Excel Experts">Excel Experts</a>
+</li>
+<li class="" skill_id=""><span class="display-ib">
+<div class="squaredFour">
+<input type="checkbox" id="squaredFour-skill-35" class="filter_skill" name="skill" value="35">
+<label for="squaredFour-skill-35"></label>
+</div>
+</span><a href="graphic-design-freelancers.html" title="Hire Graphic Designers">Graphic Designers</a>
+</li>
+<li class="" skill_id=""><span class="display-ib">
+<div class="squaredFour">
+<input type="checkbox" id="squaredFour-skill-3" class="filter_skill" name="skill" value="3">
+<label for="squaredFour-skill-3"></label>
+</div>
+</span><a href="youtube-freelancers.html" title="Hire YouTube Experts">YouTube Experts</a>
+</li>
+<li class="" skill_id=""><span class="display-ib">
+<div class="squaredFour">
+<input type="checkbox" id="squaredFour-skill-1595" class="filter_skill" name="skill" value="1595">
+<label for="squaredFour-skill-1595"></label>
+</div>
+</span><a href="microsoft-excel-freelancers.html" title="Hire Microsoft Excel">Microsoft Excel</a>
+</li>
+</ul>
+<span><input type="text" class="form-control" id="customskill" name="" placeholder="Type a skill"></span>
+</div>
+</div>
+</div>
+
+</section>
+</div>
+
+
+<div class="row-fluid">
+<section class="">
+<div class="tip_box block space top-mmspace">
+<h4 class="big_help"><i class="fa fa-graduation-cap"></i> Why do people have more than one skill listed?</h4>
+<p>The more skills you list, the more chance you have of finding a work opportunity.</p>
+</div>
+<div class="tip_box block top-mmspace space">
+<h4 class="big_help"><i class="fa fa-search"></i>How can I find work?</h4>
+<p>Search through for projects that match your skills. Make sure you post your skills to your profile so people searching for your skills can find you. </p>
+</div>
+<div class="tip_box block top-mmspace space bot-lgspace">
+<h4 class="big_help"><i class="fa fa-user"></i>How can I hire people immediately?</h4>
+<p>Sign up, post a project for free or browse for the skilled people you want to hire, and Invite them. </p>
+</div>
+</section>
+</div>
+<div class="row-fluid">
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8193547526807882" data-ad-slot="2557059661" data-ad-format="auto"></ins>
+<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+</div>
+</div>
+</section>
+<section class="baselinks">
+<div>Search Best Freelancers in your City</div>
+<ul>
+<li><a href="freelancers-in-delhi.html" title="Freelancers in Delhi">Freelancers in Delhi</a></li>
+<li><a href="freelancers-in-bangalore.html" title="Freelancers in Bangalore">Freelancers in Bangalore</a></li>
+<li><a href="freelancers-in-mumbai.html" title="Freelancers in Mumbai">Freelancers in Mumbai</a></li>
+<li><a href="freelancers-in-chennai.html" title="Freelancers in Chennai">Freelancers in Chennai</a></li>
+<li><a href="freelancers-in-kolkata.html" title="Freelancers in Kolkata">Freelancers in Kolkata</a></li>
+<li><a href="freelancers-in-pune.html" title="Freelancers in Pune">Freelancers in Pune</a></li>
+<li><a href="freelancers-in-hyderabad.html" title="Freelancers in Hyderabad">Freelancers in Hyderabad</a></li>
+<li><a href="freelancers-in-dubai.html" title="Freelancers in Dubai">Freelancers in Dubai</a></li>
+<li><a href="freelancers-in-gurgaon.html" title="Freelancers in Gurgaon">Freelancers in Gurgaon</a></li>
+<li><a href="freelancers-in-chandigarh.html" title="Freelancers in Chandigarh">Freelancers in Chandigarh</a></li>
+</ul>
+</section>
+<section class="baselinks">
+<div>Top Freelancers by Skills</div>
+<ul>
+<li><a href="data-entry-freelancers.html" title="Data Entry Operators Freelancers">Data Entry Freelancers</a></li>
+<li><a href="copy-typing-freelancers.html" title="Copy Typers Freelancers">copy typing Freelancers</a></li>
+<li><a href="copywriting-freelancers.html" title="Copywriters Freelancers">Copywriting Freelancers</a></li>
+<li><a href="logo-design-freelancers.html" title="Logo Designers Freelancers">Logo Design Freelancers</a></li>
+<li><a href="content-writing-freelancers.html" title="Content Writers Freelancers">Content Writing Freelancers</a></li>
+<li><a href="photoshop-freelancers.html" title="Photoshop Designers Freelancers">Photoshop Freelancers</a></li>
+<li><a href="excel-freelancers.html" title="Excel Experts Freelancers">Excel Freelancers</a></li>
+<li><a href="graphic-design-freelancers.html" title="Graphic Designers Freelancers">Graphic Design Freelancers</a></li>
+<li><a href="youtube-freelancers.html" title="YouTube Experts Freelancers">YouTube Freelancers</a></li>
+<li><a href="microsoft-excel-freelancers.html" title="Microsoft Excel Freelancers">Microsoft Excel Freelancers</a></li>
+</ul>
+</section>
+<style type="text/css">
+.tl_getstarted_model .signup_container{
+	display: block;
+}
+.tl_getstarted_model .signin_container{
+	display: none;
+}
+.tl_getstarted_model .login_box{
+	margin: 0px auto;
+}
+.tl_getstarted_model .modal-body {
+   padding: 0px;
+}
+.tl_getstarted_model .modal-content{
+	    display: inline;
+}
+.login_box,.noaccount{
+	max-width: 600px;
+	overflow: hidden;
+}
+.heading {
+    background: #f85f64;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1.5em;
+  }
+.tl_inline{
+	display: inline-block;
+    float: left;
+}
+.tl_inline input{
+	width:95%;
+	padding: 6px 10px;
+}
+#signupForm{
+	margin-top: 5px;
+}
+#signupForm .form-group {
+    margin-bottom: 5px;
+}
+.tl_loginsignup_title{
+	color: #fff;
+    font-family: Arial;
+    padding-top: 30px;
+}
+.tl_getstarted_model .modal-content{
+	border: 0px solid #999;
+}
+@media  screen and (max-height: 575px){
+#rc-imageselect, .g-recaptcha {transform:scale(0.83);-webkit-transform:scale(0.83);transform-origin:0 0;-webkit-transform-origin:0 0;}
+}
+</style>
+<script src='../www.google.com/recaptcha/api.js'></script>
+<button id="loginmodel" class="btn btn-primary hidden" data-toggle="modal" data-target="#myModal">
+login
+</button>
+
+<div class="tl_getstarted_model modal fade" id="myModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-body">
+
+<h1 class="tl_loginsignup_title">Create a Free Account</h1>
+<div class="signin_container">
+<section class="login_box tlpanel-success">
+<div class="col-md-6">
+<form id="loginForm" method="post" action="https://www.truelancer.com/ajax/login">
+<div class="loginrow">
+<div class="form-group">
+<label for="exampleInputEmail1">Email</label>
+<input type="email" class="form-control" name="email" placeholder="Enter email" data-validation="required" data-validation-error-msg="Please enter email">
+</div>
+<div class="form-group">
+<label for="exampleInputEmail1">Password</label>
+<input type="password" class="form-control" name="password" placeholder="Enter password" data-validation="required" data-validation-error-msg="Please enter password">
+</div>
+<div class="form-group forgotpassword" style="margin-bottom: 15px;">
+<a href="forgot_password.html" title="Forgot Password | Truelancer">Forgot Password?</a>
+</div>
+<div class="form-group tcenter">
+<button id="login" type="submit" class="btn btn-orange ladda-button" data-style="expand-left">&nbsp;&nbsp;&nbsp;Log In&nbsp;&nbsp;&nbsp;</button>
+</div>
+</div>
+</form>
+</div>
+<div class="col-md-6">
+<div class="login_facebook loginrow">
+<a href="https://www.facebook.com/dialog/oauth?type=web_server&amp;client_id=264752523692298&amp;redirect_uri=https%3A%2F%2Fwww.truelancer.com%2Fsc%2Ffacebook%3Fpopup%3D1&amp;response_type=code&amp;scope=email&amp;state=8ba72ed88cf4396479663257380a6d5d" target="_blank">
+<span><img src="../static.truelancer.com/icon_facebook.png" /></span>
+<span class="login_text">Login with Facebook</span>
+</a>
+</div>
+<div class="login_google loginrow">
+<a href="https://accounts.google.com/o/oauth2/auth?access_type=online&amp;type=web_server&amp;client_id=264658448910-5bh4ucpv2mp5guvtp4dq9i76gnf699op.apps.googleusercontent.com&amp;redirect_uri=https%3A%2F%2Fwww.truelancer.com%2Fsc%2Fgoogle%3Fpopup%3D1&amp;response_type=code&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&amp;state=12b15be0b8a8191c7983b6d4b3285ca1" target="_blank">
+<span><img src="../static.truelancer.com/icon_google.png" /></span>
+<span class="login_text">Login with Google</span>
+</a>
+</div>
+<div class="login_linkedin loginrow">
+<a href="https://www.linkedin.com/oauth/v2/authorization?state=DCEEFWF45453sdffef424&amp;type=web_server&amp;client_id=75bk67sc4ja2ea&amp;redirect_uri=https%3A%2F%2Fwww.truelancer.com%2Fsc%2Flinkedin%3Fpopup%3D1&amp;response_type=code&amp;scope=r_emailaddress+r_liteprofile" target="_blank">
+<span><img src="../static.truelancer.com/icon_linkedin.png" /></span>
+<span class="login_text">Login with LinkedIn</span>
+</a>
+</div>
+<div class="loginrow staticwarning">
+By clicking Log In, Facebook,Google or LinkedIn you agree to our T&C's
+</div>
+</div>
+</section>
+<section class="noaccount">
+Don’t have an account? <a href="signup.html" id="showsignup" class="orange-color" title="Register on Truelancer | Truelancer"><b>Sign Up</b></a>
+</section>
+</div>
+
+
+<div class="signup_container">
+<section class="login_box tlpanel-success">
+<div class="col-md-6">
+<div class="loginrow">
+<form id="signupForm" method="post" action="https://www.truelancer.com/ajax/signup">
+<input type="hidden" name="_token" value="IMOVSoIhfCGqmf0xZryIal2TVJYCDR4BmMfcCI1r">
+<div class="form-group">
+<label for="exampleInputEmail1">First Name</label>
+<input type="text" class="form-control" name="fname" placeholder="enter first name" data-validation="required" data-validation-error-msg="Please enter your first name">
+</div>
+<div class="form-group">
+<label for="exampleInputEmail1">Last Name</label>
+<input type="text" class="form-control" name="lname" placeholder="enter last name" data-validation="required" data-validation-error-msg="Please enter your last name">
+</div>
+<div class="form-group">
+<label for="exampleInputEmail1">Email</label>
+<input type="email" class="form-control" name="email" placeholder="enter email" data-validation="email" data-validation-error-msg="Please enter email">
+</div>
+<div class="form-group">
+<label for="exampleInputpassword">Password</label>
+<input type="password" class="form-control" placeholder="type password" name="password" value="" data-validation="length" data-validation-length="6-20" data-validation-error-msg="Please enter password between 6-20 characters.">
+</div>
+<div class="form-group">
+Please check below to verify
+<div class="g-recaptcha" data-theme="light" data-sitekey="6LcXtgUTAAAAAI_5pm2C2c8IueyVd7UbsjEg3xzW" style="transform:scale(0.83);-webkit-transform:scale(0.83);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
+</div>
+<div class="form-group tcenter">
+<button id="singup" type="submit" class="btn btn-orange ladda-button" data-style="expand-left">&nbsp;&nbsp;&nbsp;Sign Up&nbsp;&nbsp;&nbsp;</button>
+</div>
+</form>
+</div>
+</div>
+<div class="col-md-6">
+<div class="login_facebook loginrow">
+<a href="https://www.facebook.com/dialog/oauth?type=web_server&amp;client_id=264752523692298&amp;redirect_uri=https%3A%2F%2Fwww.truelancer.com%2Fsc%2Ffacebook%3Fpopup%3D1&amp;response_type=code&amp;scope=email&amp;state=a4a5c70537843cdda0529a77a504a714" target="_blank">
+<span><img src="../static.truelancer.com/icon_facebook.png" /></span>
+<span class="login_text">Sign up with Facebook</span>
+</a>
+</div>
+<div class="login_google loginrow">
+<a href="https://accounts.google.com/o/oauth2/auth?access_type=online&amp;type=web_server&amp;client_id=264658448910-5bh4ucpv2mp5guvtp4dq9i76gnf699op.apps.googleusercontent.com&amp;redirect_uri=https%3A%2F%2Fwww.truelancer.com%2Fsc%2Fgoogle%3Fpopup%3D1&amp;response_type=code&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&amp;state=2e645b483df383ad44d08e419713821a" target="_blank">
+<span><img src="../static.truelancer.com/icon_google.png" /></span>
+<span class="login_text">Sign up with Google</span>
+</a>
+</div>
+<div class="login_linkedin loginrow">
+<a href="https://www.linkedin.com/oauth/v2/authorization?state=DCEEFWF45453sdffef424&amp;type=web_server&amp;client_id=75bk67sc4ja2ea&amp;redirect_uri=https%3A%2F%2Fwww.truelancer.com%2Fsc%2Flinkedin%3Fpopup%3D1&amp;response_type=code&amp;scope=r_emailaddress+r_liteprofile" target="_blank">
+<span><img src="../static.truelancer.com/icon_linkedin.png" /></span>
+<span class="login_text">Sign up with LinkedIn</span>
+</a>
+</div>
+<div class="loginrow staticwarning">
+By clicking Sign up, Facebook,Google or LinkedIn you agree to our T&C's
+</div>
+</div>
+</section>
+<section class="noaccount">
+Already have an account? <a href="login.html" class="orange-color" id="showsignin" title="Login on Truelancer | Truelancer"><b>Log In</b></a>
+</section>
+</div>
+
+<script>
+	function showSignup(){
+		$('.signin_container').hide();
+		$('.signup_container').show();
+		$('.tl_loginsignup_title').text('Create a Free Account');
+	}
+	function showSignin(){
+		$('.signup_container').hide();
+		$('.signin_container').show();
+		$('.tl_loginsignup_title').text('Welcome back, Sign-in to your Account');
+		
+	}
+	$(document).ready(function(){
+		$('#showsignup').on('click',function(event){
+			event.preventDefault();
+			showSignup();
+		});
+		$('#showsignin').on('click',function(event){
+			event.preventDefault();
+			showSignin();
+		});
+		$.validate({
+		  	form : '#signupForm',
+		    onSuccess : function() {
+		    	var l = Ladda.create( document.querySelector( '#singup' ) );
+		    	l.start();
+		    	var options = { 
+		    	complete : function(){
+		    			l.stop();
+		    		},
+		    	success:    function(response) { 
+		    		l.stop();
+				    	if(response.status == 1){
+				    		window.location.href = response.url;
+				    	}else{
+				    		alert(response.message);
+				    	}
+				         
+				    } 
+				};
+		      $('#signupForm').ajaxSubmit(options);
+		      return false; // Will stop the submission of the form
+		    }
+		});
+		$.validate({
+		  	form : '#loginForm',
+		    onSuccess : function() {
+		    	var l = Ladda.create( document.querySelector( '#login' ) );
+		    	l.start();
+		    	var options = { 
+		    	complete : function(){
+		    			l.stop();
+		    		},
+		    	success:    function(response) { 
+		    			l.stop();
+				    	if(response.status == 1){
+				    		window.location.reload();
+				    	}else{
+				    		alert(response.message);
+				    	}
+				         
+				    } 
+				};
+		      $('#loginForm').ajaxSubmit(options);
+		      return false; // Will stop the submission of the form
+		    }
+		});
+	});
+	</script>
+
+</div>
+</div>
+</div>
+</div><span id="currency" data-currency="USD"><div class="fa fa-usd"></div></span>
+<input type="hidden" id="minimum" value="0">
+<input type="hidden" id="maximum" value="">
+</div>
+<script>
+$(document).ready(function(){
+	$('.loader').hide();
+	$('select[name="sort"]').on('change',function(){
+ 		$('#searchbutton').click();
+ 	});
+
+ 	$('#currency').hide();
+ 	var sessioncurrency=$('#currency').attr('data-currency');
+ 	$('.filter-sort').select2({
+   		 minimumResultsForSearch: -1
+	});
+ 	$( "#customcountry" ).autocomplete({
+      source: window.base_url+"/ajax/get_countrylist",
+      minLength: 2,
+      select: function( event, ui ) {
+      	if(ui.item){
+      		$('#customcountry').val('');
+      		var countrylist=[];
+			countrys = $('input[name="countrycode"]');
+			countrys.each(function(){
+				if($(this).val() != 'All'){
+					countrylist.push($(this).val());
+				}
+			});
+			//console.log('list- '+countrylist);
+			//console.log('item- '+ui.item.id);
+			if(countrylist.indexOf(ui.item.id) >= 0){
+				countrys.each(function(){
+				if($(this).val() != 'All' && $(this).val() == ui.item.id){
+					$(this).prop('checked',true);
+				}
+				});
+			}else{
+				html = '<li><span class="display-ib"><div class="squaredFour"><input type="checkbox" checked id="squaredFour-'+ui.item.id+'" class="filter_country" name="countrycode" value="'+ui.item.id+'"><label for="squaredFour-'+ui.item.id+'"></label></div></span><a href="'+window.base_url+'/freelancers?clist='+ui.item.id+'">'+ui.item.value+'</a></li>';
+				$('.fil_sec_country ul').append(html);
+			}
+			$('.filter_country.all').prop('checked',false);
+			update_list();
+
+      	}
+      	$(this).val(''); return false;
+
+      }
+    });
+
+ 	$("#customskill").autocomplete({
+ 		source: window.base_url+"/ajax/get_skilllist",
+ 		minLength: 2,
+ 		select:function(event, ui){
+	      	if(ui.item){
+	      		$('#customskill').val('');
+	      		var skilllist = [];
+	      		skills = $('input[name="skill"]');
+	      		skills.each(function(){
+	      			if($(this).val() != 'All'){
+	      				skilllist.push($(this).val());
+	      			}
+	      		});
+	      		//console.log('list- '+skilllist);
+	      		//console.log('item- '+ui.item.id);
+	      		if(skilllist.indexOf(''+ui.item.id+'') >= 0){
+	      			skills.each(function(){
+	      				if($(this).val() != 'All' && $(this).val() == ui.item.id){
+	      					$(this).prop('checked',true);
+	      				}
+	      			});
+	      		}else{
+	      			html = '<li><span class="display-ib"><div class="squaredFour"><input type="checkbox" checked id="squaredFour-'+ui.item.id+'" class="filter_skill" name="skill" value="'+ui.item.id+'"><label for="squaredFour-'+ui.item.id+'"></label></div></span><a href="'+ui.item.link+'">'+ui.item.value+'</a></li>';
+	      			$('.fil_sec_skill ul').append(html);
+	      		}
+	      		$('.filter_skill.all').prop('checked',false);
+	      		update_list();
+	      	}
+	    	$(this).val('');
+	    	return false;
+      	}
+    });
+ 	$(function() {
+ 	var currency=$('#currency').html();
+ 	if(sessioncurrency=='USD'){
+ 		var maxrange='200';
+ 	}else if(sessioncurrency=='INR'){
+ 		var maxrange='5000';
+ 	}
+	var minrange = 0;
+		 	$('#maximum').val(maxrange);
+ 	$( "#price-slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: maxrange,
+      values: [minrange,maxrange],
+      slide: function( event, ui ) {
+        $( "#amount" ).html( currency + ui.values[ 0 ] + " - "+currency + ui.values[ 1 ] );
+        $('#minimum').val(ui.values[ 0 ]);
+        $('#maximum').val(ui.values[ 1 ]);
+      },
+      change: function( event, ui ) {
+        update_list();
+      }
+    });
+
+    $( "#amount" ).html( currency + $( "#price-slider-range" ).slider( "values", 0 ) +
+      " - "+currency + $( "#price-slider-range" ).slider( "values", 1 ) );
+
+  });
+
+ 	function update_list(){
+
+ 		var countrylist=[];
+ 		var skilllist = [];
+ 		var min=$('#minimum').val();
+        var max=$('#maximum').val();
+        var q = $('#search').val();
+        selectedcountry = $('input[name="countrycode"]:checked');
+        selectedskill = $('input[name="skill"]:checked');
+		var clist = "";
+		var slist = "";
+		selectedcountry.each(function(){
+			if($(this).val() != 'All'){
+				countrylist.push($(this).val());
+				clist += $(this).val()+ ",";
+			}
+		})
+		if(clist != ''){
+			clist = clist.slice(0, - 1);
+		}
+
+		if(countrylist.length == 0){
+			$('.filter_country').removeAttr('checked');
+			$('.filter_country.all').prop('checked',true);
+		}
+
+		selectedskill.each(function(){
+			if($(this).val() != 'All'){
+				skilllist.push($(this).val());
+				slist += $(this).val()+ ",";
+			}
+		})
+		if(slist != ''){
+			slist = slist.slice(0, - 1);
+		}
+
+		if(skilllist.length == 0){
+			$('.filter_skill').removeAttr('checked');
+			$('.filter_skill.all').prop('checked',true);
+		}
+
+		// send ajax request for filter
+		//console.log(clist);
+		var action_url= window.base_url+"/freelancers";
+		action_url = action_url +'?ajax=true&q='+q+'&clist='+clist+'&slist='+slist+'&currency='+sessioncurrency+'&pmin='+min+'&pmax='+max;
+
+					ga('send', 'pageview', action_url);
+		
+			$('.freelancer-list').hide();
+			$('.loader').show();
+			$.ajax({
+				type: 'GET',
+				url:action_url,
+				datatype: "html",
+				success: function(response){
+					$('.loader').hide();
+					$('.freelancer-list').html(response);
+					$('.freelancer-list').show();
+					$("img.lazy").lazyload();
+				}
+		    });
+ 	}
+	$(document).on('change','input[name="countrycode"]',function(){
+		if($(this).val() != 'All'){
+			$('.filter_country.all').removeAttr('checked');
+		}else{
+			$('.filter_country').removeAttr('checked');
+			$('.filter_country.all').prop('checked',true);
+		}
+		update_list();
+		return false;
+	});
+	$(document).on('change','input[name="skill"]',function(){
+		if($(this).val() != 'All'){
+			//console.log('not all');
+			$('.filter_skill.all').removeAttr('checked');
+		}else{
+			//console.log('all');
+			$('.filter_skill').removeAttr('checked');
+			$('.filter_skill.all').prop('checked',true);
+		}
+		update_list();
+		return false;
+	});
+
+	$('.filtercountrycollapse').on('hidden.bs.collapse', function () {
+		$('.countrycollapsedown').show();
+		$('.countrycollapseup').hide();
+	});
+
+	$('.filtercountrycollapse').on('shown.bs.collapse', function () {
+		$('.countrycollapsedown').hide();
+		$('.countrycollapseup').show();
+	});
+
+	$('.filterskillcollapse').on('hidden.bs.collapse', function () {
+		$('.skillcollapsedown').show();
+		$('.skillcollapseup').hide();
+	});
+
+	$('.filterskillcollapse').on('shown.bs.collapse', function () {
+		$('.skillcollapsedown').hide();
+		$('.skillcollapseup').show();
+	});
+
+ });
+</script>
+</section>
+
+
+<script src="assets/tl-min/0da502cefa595bdb196cd6b808a519246974.js?103" type="text/javascript"></script>
+<section>
+</section>
+<section>
+
+<footer class="section-padding">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-1 col-sm-6"></div>
+<div class="col-md-2 col-sm-6">
+<div class="ft-block">
+<h4> Useful links </h4>
+<div class="hr-line"></div>
+<div class="ft-links">
+<div>
+<select id="currency-updater" class="form-control currency" style="width:80px; display:inline-block">
+<option value="USD" selected>USD</option>
+<option value="INR">INR</option>
+</select>
+</div>
+<div><br></div>
+<script>
+
+$(document).ready(function(){
+
+	$('#currency-updater').change(function()
+	{
+		var currency = $('#currency-updater').val();
+
+		updateSessionCurrency(currency, function(){
+			window.location.reload();
+		}, function(response){
+			alert(response.message);
+		});
+	});
+
+});
+
+function updateSessionCurrency(currency, successCallback, errorCallback)
+{
+	var action_url= window.base_url+"/ajax/currency";
+
+	$.ajax({
+		type: 'GET',
+		url:action_url,
+		data:{currency:currency},
+		datatype: "json",
+		success: function(response){
+			if (response.status == 1) {
+				successCallback(response);
+			}else {
+				errorCallback(response);
+			}
+		},
+		error : function(response) {
+			errorCallback(response);
+		}
+	});
+
+	return false;
+}
+</script>
+<a href="mobile-appf7b7.html?source=website_footer">Mobile App</a>
+<a href="rewardsf7b7.html?source=website_footer">Startups</a>
+<a href="primef7b7.html?source=website_footer">Truelancer Prime</a>
+<a href="affiliatef7b7.html?source=website_footer">Affiliate</a>
+</div>
+</div>
+</div>
+<div class="col-md-2 col-sm-6">
+<div class="ft-block">
+<h4>Company </h4>
+<div class="hr-line"></div>
+<div class="ft-links">
+<a href="careersf7b7.html?source=website_footer">Careers</a>
+<a href="contactf7b7.html?source=website_footer">Contact Us</a>
+<a href="aboutf7b7.html?source=website_footer">About Us</a>
+<a href="pressf7b7.html?source=website_footer">Press</a>
+<a href="blog/indexf7b7.html?source=website_footer">Blog</a>
+</div>
+</div>
+</div>
+<div class="col-md-2 col-sm-6">
+<div class="ft-block">
+<h4> Information </h4>
+<div class="hr-line"></div>
+<div class="ft-links">
+<a href="fee-chargesf7b7.html?source=website_footer">Fee and Charges</a>
+<a href="cancellations-refundsf7b7.html?source=website_footer">Cancellations & Refunds</a>
+<a href="terms-servicef7b7.html?source=website_footer">Terms & Conditions</a>
+<a href="privacy-policyf7b7.html?source=website_footer">Privacy Policy</a>
+<a href="faqf7b7.html?source=website_footer">FAQ & Useful Links</a>
+<a href="legal/membership-policyf7b7.html?source=website_footer">Membership Policy</a>
+</div>
+</div>
+</div>
+<div class="col-md-2 col-sm-6">
+<div class="ft-block">
+<h4> Content Writers</h4>
+<div class="hr-line"></div>
+<div class="ft-links">
+<a href="content-writing-freelancersf7b7.html?source=website_footer">Content Writers</a>
+<a href="academic-writing-freelancersf7b7.html?source=website_footer">Academic Writers</a>
+<a href="blog-writing-freelancersf7b7.html?source=website_footer">Blog Writers</a>
+<a href="technical-writing-freelancersf7b7.html?source=website_footer">Technical Writers</a>
+<a href="copywriting-freelancersf7b7.html?source=website_footer">Copywriters</a>
+<a href="seo-writing-freelancersf7b7.html?source=website_footer">SEO Writers</a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6">
+ <div class="ft-block">
+<h4>Freelancers</h4>
+<div class="hr-line"></div>
+<div class="ft-links">
+<a href="freelancers-in-india.html">Freelancers in India</a>
+<a href="freelancers-in-usa.html">Freelancers in USA</a>
+<a href="freelancers-in-united-kingdom.html">Freelancers in UK</a>
+<a href="freelancers-in-philippines.html">Freelancers in Philippines</a>
+<a href="freelancers-in-pakistan.html">Freelancers in Pakistan</a>
+<a href="freelancers-in-bangladesh.html">Freelancers in Bangladesh</a>
+</div>
+</div>
+</div>
+</div>
+<div class="row top-lmspace">
+<div class="col-md-1 col-sm-6"></div>
+<div class="col-md-2 col-sm-6">
+<div class="ft-block">
+<h4> Freelance Jobs</h4>
+<div class="hr-line"></div>
+<div class="ft-links">
+<a href="freelance-content-writing-jobs.html">Freelance Writing Jobs</a>
+<a href="freelance-graphic-design-jobs.html">Graphic Design Jobs</a>
+<a href="freelance-data-entry-jobs.html">Data Entry Jobs</a>
+<a href="freelance-virtual-assistant-jobs.html">Virtual Assistant Jobs</a>
+<a href="freelance-customer-service-jobs.html">Customer Service Jobs</a>
+</div>
+</div>
+</div>
+<div class="col-md-2 col-sm-6">
+<div class="ft-block">
+<h4> Online Jobs</h4>
+<div class="hr-line"></div>
+<div class="ft-links">
+<a href="freelance-jobs.html">Work from Home Jobs</a>
+<a href="freelance-jobs.html">Part Time Jobs</a>
+<a href="freelance-interior-design-jobs.html">Interior Design Jobs</a>
+<a href="freelance-voiceover-jobs.html">Voice Over Jobs</a>
+<a href="freelance-translation-jobs.html">Translator Jobs</a>
+<a href="freelance-accounting-jobs.html">Accounting Jobs</a>
+</div>
+</div>
+</div>
+<div class="col-md-2 col-sm-6">
+<div class="ft-block">
+<h4> Freelancers</h4>
+<div class="hr-line"></div>
+<div class="ft-links">
+<a href="logo-design-freelancers.html">Logo Designers</a>
+<a href="website-design-freelancers.html">Web Designer</a>
+<a href="website-development-freelancers.html">Web Developer</a>
+<a href="seo-freelancers.html">SEO Consultant</a>
+<a href="android-app-development-freelancers.html">Android Developer</a>
+<a href="ios-development-freelancers.html">IOS Developer</a>
+</div>
+</div>
+</div>
+<div class="col-md-2 col-sm-6">
+<div class="ft-block">
+<h4>Developers</h4>
+<div class="hr-line"></div>
+<div class="ft-links">
+<a href="frontend-development-freelancers.html">Front End Developer</a>
+<a href="freelancers409b.html?q=backend+developer">Backend Developer</a>
+<a href="php-freelancers.html">PHP Developer</a>
+<a href="wordpress-freelancers.html">Wordpress Developer</a>
+<a href="java-freelancers.html">Java Developer</a>
+<a href="api-development-freelancers.html">API Developer</a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6">
+<div class="ft-block">
+<h4>Translation</h4>
+<div class="hr-line"></div>
+<div class="ft-links">
+<a href="translation-english-spanish-freelancers.html">English to Spanish Translation</a>
+<a href="translation-german-english-freelancers.html">German to English Translation</a>
+<a href="translation-english-hindi-freelancers.html">English to Hindi Translation</a>
+<a href="translation-english-tamil-freelancers.html">English to Tamil Translation</a>
+<a href="translation-english-french-freelancers.html">English to French Translation</a>
+<a href="translation-spanish-english-freelancers.html">Spanish to English Translation</a>
+<a href="translation-german-english-freelancers.html">German to English Translation</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<div class="footer-bottom">
+<div class="container">
+<div class="col-lg-4">
+<div class="ft-logo">
+<img src="../static.truelancer.com/truelancer-logo-dark-background_small.png" class="img-fluid" />
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="ft-app-store">
+<a href="https://play.google.com/store/apps/details?id=com.truelancer.app&amp;referrer=utm_source%3Dlaunch%26utm_medium%3Dsite_footer">
+<img src="assets/home_v/images/google-play-store.png" id="google" class="img-fluid" />
+</a>
+<a href="https://itunes.apple.com/us/app/search-jobs-hire-freelancer/id1142111951">
+<img src="assets/home_v/images/apple-app-store.png" id="apple" class="img-fluid" />
+</a>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<ul class="ft-social">
+<li>
+<a href="https://www.facebook.com/truelancerofficial" class="facebook">
+<i class="fa fa-facebook"></i>
+</a>
+</li>
+<li>
+<a href="https://www.twitter.com/truelancer_" class="twitter">
+<i class="fa fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href="https://www.linkedin.com/company/truelancer" class="linkedin">
+<i class="fa fa-linkedin"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="ft-copyright">
+<div class="container text-xs-center">
+<p> Copyright &copy; 2021 | Truelancer.com </p>
+</div>
+</div>
+
+<div class="realtime_notify_template" style="display:none;">
+<div class="realtime_notify">
+<div class="panel">
+<i class="fa fa-times pull-right"></i>
+<div class="panel-body message">
+</div>
+</div>
+</div>
+</div>
+</section>
+<script type="text/javascript">
+function socketClose(){
+    if(window.sess_uid != "" || window.sess_uid != undefined){
+        socket.close();
+    }
+}
+
+function socketOpen(){
+    if(window.sess_uid != "" || window.sess_uid != undefined){
+        socket.open();
+        //console.log("window focus socket for userId " + window.sess_uid);
+        if(window.page == "pg_workstream"){
+            var lastinteractionid = $( ".interaction_box" ).last().attr('data-wsinid');
+            var action_url= window.base_url+"/ajax/getlatestinteraction";
+            $.ajax({
+                type: 'POST',
+                url:action_url,
+                data:{wsinid:lastinteractionid},
+                datatype: "html",
+                success: function(response){
+                    $('#replybox').before(response.html);
+                }
+            });
+        }
+        for(var i = 0;i < popups.length;i++){
+            var chatboxdetails = popups[i];
+            var details = chatboxdetails.split('_');
+            var workstreamid = details[1];
+            var senderid = $('#'+chatboxdetails).attr('data-selfid');
+            var receiverid = $('#'+chatboxdetails).attr('data-otherid');
+            $('#messages_chatbox_'+details[1]).html('');
+            getworkstream_interations(workstreamid,senderid,receiverid);
+            console.log('workstreamid',workstreamid,senderid,"selfid");
+        }
+        
+        if(window.page == "job_page" && window.sess_uid == window.job_uid){
+            $('#get_allproposals').click();
+        }
+    }
+}
+
+
+var visibility = (function(){
+    var stateKey, 
+    eventKey, 
+    keys = {
+        hidden: "visibilitychange",
+        webkitHidden: "webkitvisibilitychange",
+        mozHidden: "mozvisibilitychange",
+        msHidden: "msvisibilitychange"
+    };
+    for(stateKey in keys){
+        if(stateKey in document){
+            eventKey = keys[stateKey];
+            break;
+        }
+    }
+    return function(c){
+        if (c) document.addEventListener(eventKey, c);
+        return !document[stateKey];
+    }
+})();
+
+
+visibility(function(){    
+    if(visibility()){
+        socketOpen();                                       
+    }else{
+       socketClose();
+    }
+});
+
+var notIE = (document.documentMode === undefined),
+isChromium = window.chrome;    
+if(notIE && !isChromium){
+    // checks for Firefox and other  NON IE Chrome versions
+    // $(window).on("focusin", function(){ 
+    //   socketOpen();
+    // }).on("focusout", function(){
+    //     socketClose();
+    // });
+}else{
+    // checks for IE and Chromium versions
+    if(window.addEventListener){
+        // bind focus event
+        window.addEventListener("focus", function(event){
+           socketOpen();
+        }, false);
+        // bind blur event
+        window.addEventListener("blur", function(event){
+            socketClose();
+        }, false);
+    }else{
+        // bind focus event
+        window.attachEvent("focus", function(event){
+           socketOpen();
+        });
+        // bind focus event
+        window.attachEvent("blur", function(event){
+           socketClose();
+        });
+    }
+}
+</script>
+<script type="text/javascript">
+$(document).on('click', 'body', function(){
+    $('.jobfeed').hide('slow');
+    $("html, body").css("overflow", "visible");
+});
+</script>
+<script src="assets/scripts/jquery.googleanalytics.min.js"></script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 961713630;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="../www.googleadservices.com/pagead/f.txt">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/961713630/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+</body>
+
+<!-- Mirrored from www.truelancer.com/freelancers by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Mar 2021 04:31:04 GMT -->
+</html>

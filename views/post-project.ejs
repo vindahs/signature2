@@ -1,0 +1,2700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.truelancer.com/post-project by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Mar 2021 04:19:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="icon" href="https://static.truelancer.com/favicon.ico" type="image/ico" />
+<link type="application/opensearchdescription+xml" rel="search" href="opensearch.xml" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Post a Freelance Project to Hire Trusted Freelancers | Truelancer </title>
+<meta name="description" content="Post a Freelance Project to Hire Trusted Freelancers - Truelancer " />
+
+<link rel="publisher" href="https://plus.google.com/101435621975107603972" />
+
+
+<meta property="fb:app_id" content="264752523692298">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Post a Freelance Project to Hire Trusted Freelancers | Truelancer " />
+<meta property="og:description" content=" Post a Freelance Project to Hire Trusted Freelancers - Truelancer " />
+<meta property="og:url" content="post-project.html" />
+<meta property="og:image" content="../static.truelancer.com/main-banner-1.jpg" />
+<meta property="og:site_name" content="Truelancer.com" />
+
+<meta name="p:domain_verify" content="03fbc761b38bddca8951f874e96b77ae" />
+<meta name="google-site-verification" content="1g-uX6XD98hknt04MUUSxh1CPAzz8S870yBtTk2i1iY" />
+<link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<link href="assets/tl-min/1f4224ed6c7725352684e57be64027036974.css?103" type="text/css" rel="stylesheet" />
+<link href="assets/tl-min/b966bd3c9d59ccfd051a2be08336561e6974.css?103" type="text/css" rel="stylesheet" />
+
+
+<script type="text/javascript" src="../cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="assets/tl-min/6bb6ae3d5253cab9241bcb18e57758006974.js?103" type="text/javascript"></script>
+<script src="assets/tl-min/980542a880430a2942c7054b4acfa3c86974.js?103" type="text/javascript"></script>
+
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1115766564729514",
+    enable_page_level_ads: true
+  });
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-830870545"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-830870545'); </script>
+<script async src="../www.gstatic.com/firebasejs/4.0.0/firebase.js" onload="firebase_setupstart()"></script>
+<script>
+function firebase_setupstart(){
+    // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBDyUUuN7cYQPTQIHC_cOYcymX3W0F5IOQ",
+    authDomain: "aerial-tide-509.firebaseapp.com",
+    projectId: "aerial-tide-509",
+    messagingSenderId: "264658448910",
+    appId: "1:264658448910:web:ca0fdbbb97bdc86423825f"
+  };
+  firebase.initializeApp(config);
+    
+    if(window.page == 'contest_page' || window.page == 'verify_contact' || window.page == 'job_page' || window.page == 'profile'){
+        window.RecaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container',{'size': 'invisible'});
+        RecaptchaVerifier.render();
+    }
+    
+    const messaging = firebase.messaging();
+
+   function requestPermission() {
+    console.log('Requesting permission...');
+    // [START request_permission]
+    messaging.requestPermission()
+    .then(function() {
+      console.log('Notification permission granted.');
+      // TODO(developer): Retrieve an Instance ID token for use with FCM.
+      // [START_EXCLUDE]
+      // In many cases once an app has been granted notification permission, it
+      // should update its UI reflecting this.
+      // [END_EXCLUDE]
+    })
+    .catch(function(err) {
+      console.log('Unable to get permission to notify.', err);
+    });
+    // [END request_permission]
+  }
+
+ function requestToken() {
+  // Get Instance ID token. Initially this makes a network call, once retrieved
+  // subsequent calls to getToken will return from cache.
+  messaging.getToken()
+  .then(function(currentToken) {
+    if (currentToken) {
+      console.log('currentToken: '+currentToken);
+      sendTokenToServer(currentToken);
+      
+    } else {
+      // Show permission request.
+      console.log('No Instance ID token available. Request permission to generate one.');
+
+      setTokenSentToServer(false);
+    }
+  })
+  .catch(function(err) {
+    console.log('An error occurred while retrieving token. ', err);
+    //showToken('Error retrieving Instance ID token. ', err);
+     setTokenSentToServer(false);
+  });
+}
+
+
+  // Callback fired if Instance ID token is updated.
+messaging.onTokenRefresh(function() {
+  messaging.getToken()
+  .then(function(refreshedToken) {
+    setTokenSentToServer(false);
+    // Send Instance ID token to app server.
+    console.log('refreshedToken: '+refreshedToken)
+    sendTokenToServer(refreshedToken);
+   
+  })
+  .catch(function(err) {
+    console.log('Unable to retrieve refreshed token ', err);
+  });
+});
+messaging.onMessage(function(payload) {
+  console.log("Message received. ", payload);
+});
+
+requestPermission();
+requestToken();
+
+
+}
+
+ function isTokenSentToServer() {
+    return window.localStorage.getItem('sentToServer') == 1;
+  }
+function isTokenSentToServerWithUser() {
+    luser = window.localStorage.getItem('luser');
+    suser = window.sess_uid;
+    if(suser > 0 && (luser == 1)) {
+        return true;
+    }
+    else if(!(suser > 0) && (luser == 0)){
+         return true;
+    }
+    else{
+        return false;
+    }
+}
+
+  function setTokenSentToServer(sent) {
+    window.localStorage.setItem('sentToServer', sent ? 1 : 0);
+    luser = window.sess_uid;
+    window.localStorage.setItem('luser', luser ? 1 : 0);
+  }
+  function sendTokenToServer(currentToken) {
+
+    if (!isTokenSentToServer() || !isTokenSentToServerWithUser()) {
+        console.log('Sending token to server...');
+        // TODO(developer): Send the current token to your server.
+        $.ajax({
+            url: window.base_url + '/ajax/firebase_registerToken',
+            type: "POST",
+            data: {token: currentToken},
+            dataType: 'json',
+            success: function(response) {
+                console.log('request sent to server');
+                setTokenSentToServer(true);
+            }
+        });
+        setTokenSentToServer(true);
+    } else {
+      console.log('Token already sent to server so won\'t send it again ' +
+          'unless it changes');
+    }
+  }
+
+
+
+
+</script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NMP3H9F');</script>
+
+<script>
+
+      window.page = "postproject";
+      window.referrer =  "";
+    window.base_url = "index.html";
+            window.sess_uid = "";
+        window.sess_fname = "";
+        window.sess_lname = "";  
+        window.sess_displayname = "";    
+        window.sess_uthumb = "";
+        window.sess_uimage ="";
+        window.sess_uprofile = "";
+        window.userType = "";
+        window.userCountry = "";
+    
+  window.sess_uslug = "";
+  window.sess_fbid = "";
+
+  window.fbAsyncInit = function() {
+      FB.init({
+        appId      : "264752523692298",
+        status     : true,
+        xfbml      : true,
+        frictionlessRequests: true,
+        version: 'v2.0',
+      });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "../connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  if(window.sess_uid.length){
+    user_id = window.sess_uid;
+    ga('create', 'UA-11990376-18', { 'userId': user_id });
+  }else{
+    ga('create', 'UA-11990376-18', 'truelancer.com');
+  }
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+
+(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '../connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+  _fbq.push(['addPixelId', '865422773478546']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=865422773478546&amp;ev=PixelInitialized" /></noscript>
+
+<link rel="stylesheet" href="assets/jquery-ui/css/ui-lightness/jquery-ui-1.10.4.custom.min.css">
+<script src="assets/jquery-ui/js/jquery-ui-1.10.4.custom.min.js"></script>
+<script>
+			/*** Handle jQuery plugin naming conflict between jQuery UI and Bootstrap ***/
+				$.widget.bridge('uibutton', $.ui.button);
+				$.widget.bridge('uitooltip', $.ui.tooltip);
+		</script>
+
+<link href="assets/tl-min/f98c00716a9acdf5ca7b78091bdcbf0c6974.css?103" type="text/css" rel="stylesheet" />
+<script src="assets/tl-min/bf9f81290c83da0f03676660b5cc98616974.js?103" type="text/javascript"></script>
+<script src="../cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="assets/scripts/jquery.mobile.custom.min.js"></script>
+</head>
+<body>
+<header class="header_container container-fluid">
+
+<script type="text/javascript">
+      (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="../cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode banner closeBanner creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setIdentity track validateCode".split(" "), 0);
+      branch.init('key_live_oecQL1Hc7LeJup8p1vC7OnmnvueQbaYz');
+      branch.banner({
+      icon: 'https://static.truelancer.com/truelancer-app-icon-128.png',
+      title: 'Truelancer App',
+      description: 'Hire | Work | Collaborate',
+      showiOS: false,
+      showAndroid: true,
+      showDesktop: false
+      }, {});
+    </script>
+
+<style>
+    .offer-nav{
+         background-image: linear-gradient(to bottom,#85d27a 0,#85d27a 100%) !important;
+    }
+    .offer-nav .offer-detail{
+        text-align: center;
+        padding: 10px;
+        color: #fff;
+        font-size: 16px;
+    }
+@media (max-width: 767px) {
+	#tlmenupanel {
+		top:46px;
+	}
+
+	.tlsubmenu
+	{
+		background-color:#272121;
+	}
+
+	.nav-items {
+		background-color: #3D3D3D;
+		border: 0;
+		margin-bottom: 0;
+	}
+   
+}
+color: #fff;
+    padding: 5px;
+    background-color: #f14141;
+</style>
+
+<div class="navbar navbar-default site-nav top-header" role="navigation">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+Menu
+</button>
+<a title="Truelancer is a On Demand Curated Freelance Marketplace" style="min-width: 175px;" class="navbar-brand" href="index.html">
+<img class="site-logo" src="../static.truelancer.com/truelancer-logo1.png" />
+<span class="logo-header">Truelancer</span>
+</a>
+</div>
+<div class="navbar-collapse collapse nav-items">
+<ul class="nav navbar-nav navbar-right">
+<li class="nav-nohover"><a title="Post a Job to Hire Freelancer" href="post-project.html" class=" active arrow-up "><span class="post-project-btn">Post Project</span></a></li>
+<li class="dropdown hidden-xs">
+<a href="freelance-contests.html" class="dropdown-toggle ">
+<i title="Truelancer Contests" class="fa fa-trophy" style="font-size:18px;"></i>Contest</a>
+<ul class="dropdown-menu list-items">
+<li><a title="Post a Contest" href="contests.html">Post Contest</a></li>
+<li><a title="Browse Contests" href="freelance-contests.html">Browse Contest</a></li>
+</ul>
+</li>
+<li class="dropdown hidden-xs">
+<a href="freelance-services.html" class="dropdown-toggle ">
+<i title="Buy Freelance Services" class="glyphicon glyphicon-shopping-cart fs18"></i>Buy Services</a>
+<ul class="dropdown-menu list-items">
+<li><a title="Post a service" href="freelance-services.html">Buy Services</a></li>
+<li><a title="Post a service" href="post-service.html">Sell Service</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a title="Find Jobs" href="freelance-jobs.html" class=" dropdown-toggle ">
+<i class="glyphicon glyphicon-briefcase fs18"></i>Find Jobs</a>
+</li>
+<li><a title="Find and Hire Freelancers" href="freelancers.html" class=" "><i class="glyphicon glyphicon-user fs18"></i>Find Freelancers</a></li>
+
+
+
+<li><a href="login.html">Login</a></li>
+<li style="margin-right: 5px;"><a title="Create a Free Account" href="signup.html">Signup</a></li>
+</ul>
+</div>
+</div>
+</div>
+<script>
+$(document).ready(function() {
+	$('.nav li.dropdown').hover(function() {
+		$(this).addClass('open');
+	}, function() {
+		$(this).removeClass('open');
+	});
+});
+</script>
+</header>
+<div class="container">
+<div id="feedback_basic" class="feedback_panel"></div>
+</div>
+<section class="content_pan">
+<link rel="stylesheet" href="assets/styles/bootstrap-tagsinput.css">
+<script src="assets/scripts/bootstrap-tagsinput.js"></script>
+<script src="assets/scripts/typeahead.js"></script>
+<style>
+textarea {
+    box-sizing: border-box;
+    resize: none;
+}
+.form-group {
+	margin-bottom:20px;
+	float: none;
+}
+ul.wysihtml5-toolbar {
+	float : right;
+}
+.form-control#jobForm_title {
+	padding : 12px;
+	height : 44px;
+	font-size: 18px;
+}
+.default.btn-group .btn-default {
+	background : #fff;
+	border : 1px solid #ddd;
+}
+.default.btn-group .btn-default:hover {
+	background : #ddd;
+	color : #333;
+	border : 1px solid #ddd;
+}
+.default.btn-group .btn-default.active{
+	background : #959494;
+	color : #fff;
+}
+.project-addon {
+	margin-top: 17px;
+	display: table-cell;
+}
+.project-addon-text {
+	font-weight: bold;
+	color: #000;
+	font-size: 18px;
+}
+.project-addon-price{
+	font-size: 16px;
+	padding: 10px;
+	color: #3B7E34;
+}
+.project_pmote_box{
+	border: 2px solid #EAEAEA;
+	padding: 5px 10px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	min-height: 75px;
+	background-color: #F2F2F2;
+}
+.project_pmote_box:hover{
+	background-color: #ECECEC;
+}
+/* project addon css */
+.project-badges{
+    padding: 4px 10px 4px 10px;
+    color:white;
+    border-radius: 12px;
+}
+.addon-featured{
+	background-color:#8c3cd6;
+}
+.addon-recruiter{
+	background-color:#ffb300;
+}
+.addon-nda{
+	background-color:#05b5e4;
+}
+.addon-urgent{
+	background-color:#43a047;
+}
+.addon-private{
+	background-color:#cc0000;
+}
+.login_text {
+	display:inline-block;
+}
+.autocomplete-suggestions {
+    border: 1px solid #999;
+    background: #fff;
+    cursor: default;
+    overflow: auto;
+    padding: 5px;
+}
+.autocomplete-suggestion {
+    padding: 2px;
+    cursor: pointer;
+}
+.autocomplete-suggestion:hover {
+    background-color: #c6c6c6;
+    color: #fff;
+}
+</style>
+<link href="assets/styles/fineuploader.min.css" rel='stylesheet' type='text/css'>
+<script src="assets/scripts/fineuploader.min.js"></script>
+<script type="text/javascript" src="assets/scripts/jquery.autocomplete.min.js"></script>
+<div class="container breadcrumbs bot-smspace" vocab="https://schema.org/" typeof="BreadcrumbList">
+<span property="itemListElement" typeof="ListItem">
+<a class="bhome" property="item" typeof="WebPage" href="index.html">
+<span property="name">Home </span>
+</a>
+<meta property="position" content="1">
+</span> »
+<span>
+Post Project
+</span>
+</div>
+<div class="container">
+
+<div class="row bg_grey tl_gap_top_20" id="usersection">
+<div class="col-md-12" style="margin-left: 15px;">
+<div class="radio col-md-4">
+<label>
+<input type="radio" name="usertype" id="genderRadios1" class="usertype" value="0" data-validation="required" checked data-validation-error-msg="Please choose your user type">
+I am a New user
+</label>
+</div>
+<div class="radio col-md-4" style="margin-top: 10px;">
+<label>
+<input type="radio" name="usertype" id="genderRadios2" class="usertype" value="1" data-validation="required" data-validation-error-msg="Please choose your user type">
+I am a Returning user
+</label>
+</div>
+<div class="col-md-4"></div>
+</div>
+</div>
+<div class="row bg_grey" id="newuser">
+<form id="userForm" method="post" action="https://www.truelancer.com/ajax/savenewuser">
+<input type="hidden" id="timezone" name="jobpost[timezone]" value="">
+<div class="col-md-12">
+<div class="col-md-4 tl_gap_top_20">
+<label>
+<p class="tl_form_label">Email </p>
+</label>
+<input type="email" class="form-control" name="jobpost[email]" value="" placeholder="Enter your Email ID .." data-validation="required" data-validation-error-msg="Please enter an email.">
+</div>
+<div class="col-md-4 tl_gap_top_20">
+<label>
+<p class="tl_form_label">Password</p>
+</label>
+<input type="password" class="form-control" name="jobpost[password]" value="" placeholder="Enter the Password..." data-validation="required" data-validation-error-msg="Please enter a password">
+</div>
+<div class="col-md-4"></div>
+</div>
+<div class="col-md-12">
+<div class="col-md-4 tl_gap_top_20" style="margin-bottom: 25px;">
+<label>
+<p class="tl_form_label">Full Name </p>
+</label>
+<input type="text" class="form-control" name="jobpost[name]" value="" placeholder="Enter your Full Name..." data-validation="required" data-validation-error-msg="Please enter a name">
+</div>
+<div class="col-md-4 tl_gap_top_20">
+<label>
+<p class="tl_form_label">Mobile</p>
+</label>
+
+<div class="input-group">
+<select name="jobpost[countrycode]" class="selectpicker form-control" style="display: inline-block;width:140px;">
+<option value="US">USA (+1)&nbsp;&nbsp;&nbsp;&nbsp;</option>
+<option value="AU">Australia (+61)&nbsp;&nbsp;</option>
+<option value="IN">India (+91)&nbsp;&nbsp;</option>
+<option value="GB">United Kingdom (+44)&nbsp;&nbsp;</option>
+<option value="CA">Canada (+1)&nbsp;&nbsp;&nbsp;&nbsp;</option>
+<option value="AE">UAE (+971)</option>
+<option value="SG">Singapore (+65)&nbsp;&nbsp;</option>
+ <option value="IL">Israel (+972)</option>
+<option value="DE">Germany (+49)&nbsp;&nbsp;</option>
+<option value="NL">Netherlands (+31)&nbsp;&nbsp;</option>
+<option value="NZ">New Zealand (+64)&nbsp;&nbsp;</option>
+<option disabled=""> -------------------- </option>
+<option value="AF">Afghanistan (+93)&nbsp;&nbsp;</option>
+<option value="AX">Aland Islands (+358)</option>
+<option value="AL">Albania (+355)</option>
+<option value="DZ">Algeria (+213)</option>
+<option value="AS">American Samoa (+1684)</option>
+<option value="AD">Andorra (+376)</option>
+<option value="AO">Angola (+244)</option>
+<option value="AI">Anguilla (+1264)</option>
+<option value="AQ">Antarctica (+672)</option>
+<option value="AG">Antigua and Barbuda (+1268)</option>
+<option value="AR">Argentina (+54)&nbsp;&nbsp;</option>
+<option value="AM">Armenia (+374)</option>
+<option value="AW">Aruba (+297)</option>
+<option value="AU">Australia (+61)&nbsp;&nbsp;</option>
+<option value="AT">Austria (+43)&nbsp;&nbsp;</option>
+<option value="AZ">Azerbaijan (+994)</option>
+<option value="BS">Bahamas the (+1242)</option>
+<option value="BH">Bahrain (+973)</option>
+<option value="BD">Bangladesh (+880)</option>
+<option value="BB">Barbados (+1246)</option>
+<option value="BY">Belarus (+375)</option>
+<option value="BE">Belgium (+32)&nbsp;&nbsp;</option>
+<option value="BZ">Belize (+501)</option>
+<option value="BJ">Benin (+229)</option>
+<option value="BM">Bermuda (+1441)</option>
+<option value="BT">Bhutan (+975)</option>
+<option value="BO">Bolivia (+591)</option>
+<option value="BA">Bosnia and Herzegovina (+387)</option>
+<option value="BW">Botswana (+267)</option>
+<option value="BV">Bouvet Island (Bouvetoya) (+1)&nbsp;&nbsp;&nbsp;&nbsp;</option>
+<option value="BR">Brazil (+55)&nbsp;&nbsp;</option>
+<option value="IO">British Indian Ocean Territory (Chagos Archipelago (+246)</option>
+<option value="VG">British Virgin Islands (+1284)</option>
+<option value="BN">Brunei Darussalam (+673)</option>
+<option value="BG">Bulgaria (+359)</option>
+<option value="BF">Burkina Faso (+226)</option>
+<option value="BI">Burundi (+257)</option>
+<option value="KH">Cambodia (+855)</option>
+<option value="CM">Cameroon (+237)</option>
+<option value="CA">Canada (+1)&nbsp;&nbsp;&nbsp;&nbsp;</option>
+<option value="CV">Cape Verde (+238)</option>
+<option value="KY">Cayman Islands (+1345)</option>
+<option value="CF">Central African Republic (+236)</option>
+<option value="TD">Chad (+235)</option>
+<option value="CL">Chile (+56)&nbsp;&nbsp;</option>
+<option value="CN">China (+86)&nbsp;&nbsp;</option>
+<option value="CX">Christmas Island (+6189)</option>
+<option value="CC">Cocos (Keeling) Islands (+672)</option>
+<option value="CO">Colombia (+57)&nbsp;&nbsp;</option>
+<option value="KM">Comoros the (+269)</option>
+<option value="CD">Democratic Republic of Congo (+243)</option>
+<option value="CG">Congo (+242)</option>
+<option value="CK">Cook Islands (+682)</option>
+<option value="CR">Costa Rica (+506)</option>
+<option value="CI">Cote d'Ivoire (+225)</option>
+ <option value="HR">Croatia (+385)</option>
+<option value="CY">Cyprus (+357)</option>
+<option value="CZ">Czech Republic (+420)</option>
+<option value="DK">Denmark (+45)&nbsp;&nbsp;</option>
+<option value="DJ">Djibouti (+253)</option>
+<option value="DM">Dominica (+1767)</option>
+<option value="DO">Dominican Republic (+1809)</option>
+<option value="EC">Ecuador (+593)</option>
+<option value="EG">Egypt (+20)&nbsp;&nbsp;</option>
+<option value="SV">El Salvador (+503)</option>
+<option value="GQ">Equatorial Guinea (+240)</option>
+<option value="ER">Eritrea (+291)</option>
+<option value="EE">Estonia (+372)</option>
+<option value="ET">Ethiopia (+251)</option>
+<option value="FO">Faroe Islands (+298)</option>
+<option value="FK">Falkland Islands (Malvinas) (+500)</option>
+<option value="FJ">Fiji the Fiji Islands (+679)</option>
+<option value="FI">Finland (+358)</option>
+<option value="FR">France (+33)&nbsp;&nbsp;</option>
+<option value="GF">French Guiana (+594)</option>
+<option value="PF">French Polynesia (+689)</option>
+<option value="TF">French Southern Territories (+262)</option>
+<option value="GA">Gabon (+241)</option>
+<option value="GM">Gambia the (+220)</option>
+<option value="GE">Georgia (+995)</option>
+<option value="DE">Germany (+49)&nbsp;&nbsp;</option>
+<option value="GH">Ghana (+233)</option>
+<option value="GI">Gibraltar (+350)</option>
+<option value="GL">Greenland (+299)</option>
+<option value="GR">Greece (+30)&nbsp;&nbsp;</option>
+<option value="GD">Grenada (+1473)</option>
+<option value="GP">Guadeluope (+590)</option>
+<option value="GU">Guam (+1671)</option>
+<option value="GT">Guatemala (+502)</option>
+<option value="GG">Guernsey (+44)&nbsp;&nbsp;</option>
+<option value="GN">Guinea (+224)</option>
+<option value="GW">Guinea-Bissau (+245)</option>
+<option value="GY">Guyana (+592)</option>
+<option value="HT">Haiti (+509)</option>
+<option value="HM">Heard Island and McDonald Islands (+1)&nbsp;&nbsp;&nbsp;&nbsp;</option>
+<option value="VA">Holy See (Vatican City State) (+39)&nbsp;&nbsp;</option>
+<option value="HN">Honduras (+504)</option>
+<option value="HK">Hong Kong (+852)</option>
+<option value="HU">Hungary (+36)&nbsp;&nbsp;</option>
+<option value="IS">Iceland (+354)</option>
+<option value="IN">India (+91)&nbsp;&nbsp;</option>
+<option value="ID">Indonesia (+62)&nbsp;&nbsp;</option>
+<option value="IQ">Iraq (+964)</option>
+<option value="IE">Ireland (+353)</option>
+<option value="IM">Isle of Man (+44)&nbsp;&nbsp;</option>
+<option value="IL">Israel (+972)</option>
+<option value="IT">Italy (+39)&nbsp;&nbsp;</option>
+<option value="JM">Jamaica (+1876)</option>
+<option value="JP">Japan (+81)&nbsp;&nbsp;</option>
+<option value="JE">Jersey (+44)&nbsp;&nbsp;</option>
+<option value="JO">Jordan (+962)</option>
+<option value="KZ">Kazakhstan (+7)&nbsp;&nbsp;&nbsp;&nbsp;</option>
+<option value="KE">Kenya (+254)</option>
+<option value="KI">Kiribati (+686)</option>
+<option value="KR">South Korea (+82)&nbsp;&nbsp;</option>
+<option value="KW">Kuwait (+965)</option>
+<option value="KG">Kyrgyz Republic (+996)</option>
+<option value="LA">Lao (+856)</option>
+<option value="LV">Lativa (+371)</option>
+<option value="LB">Lebanon (+961)</option>
+<option value="LS">Lesoboto (+266)</option>
+<option value="LR">Liberia (+231)</option>
+<option value="LY">Libya (+218)</option>
+<option value="LI">Liechtenstein (+423)</option>
+<option value="LT">Lithuania (+370)</option>
+<option value="LU">Luxembourg (+352)</option>
+<option value="MO">Macao (+853)</option>
+<option value="MK">Macedonia (+389)</option>
+<option value="MG">Madagascar (+261)</option>
+<option value="MW">Malawi (+265)</option>
+<option value="MY">Malaysia (+60)&nbsp;&nbsp;</option>
+<option value="MV">Maldives (+960)</option>
+<option value="ML">Mali (+223)</option>
+<option value="MT">Malta (+356)</option>
+<option value="MH">Marshall Islands (+692)</option>
+<option value="MQ">Martinique (+596)</option>
+<option value="MR">Mauritania (+222)</option>
+<option value="MU">Mauritius (+230)</option>
+<option value="YT">Mayotte (+262)</option>
+<option value="MX">Mexico (+52)&nbsp;&nbsp;</option>
+<option value="FM">Micronesia (+691)</option>
+<option value="MD">Moldova (+373)</option>
+<option value="MC">Monaco (+377)</option>
+<option value="MN">Mongolia (+976)</option>
+<option value="ME">Motenegro (+382)</option>
+<option value="MS">Montserrat (+166)</option>
+<option value="MA">Morocco (+212)</option>
+<option value="MZ">Mozambique (+258)</option>
+<option value="MM">Myanmar (+95)&nbsp;&nbsp;</option>
+<option value="NA">Namibia (+264)</option>
+<option value="NR">Nauru (+674)</option>
+<option value="NP">Nepal (+977)</option>
+<option value="AN">Netherlands Antilles (+599)</option>
+<option value="NL">Netherlands (+31)&nbsp;&nbsp;</option>
+<option value="NC">New Caledonia (+687)</option>
+<option value="NZ">New Zealand (+64)&nbsp;&nbsp;</option>
+<option value="NI">Nicaragua (+505)</option>
+<option value="NE">Niger (+227)</option>
+<option value="NG">Nigeria (+234)</option>
+<option value="NU">Niue (+683)</option>
+<option value="NF">Norfolk Island (+672)</option>
+<option value="MP">Northern Mariana Islands (+1670)</option>
+<option value="NO">Norway (+47)&nbsp;&nbsp;</option>
+<option value="OM">Oman (+968)</option>
+<option value="PK">Pakistan (+92)&nbsp;&nbsp;</option>
+<option value="PW">Palau (+680)</option>
+<option value="PS">Palestinian Territory (+970)</option>
+<option value="PA">Panama (+507)</option>
+<option value="PG">Papua New Guinea (+675)</option>
+<option value="PY">Paraguay (+595)</option>
+<option value="PE">Peru (+51)&nbsp;&nbsp;</option>
+<option value="PH">Philippines (+63)&nbsp;&nbsp;</option>
+<option value="PN">Pitcairn Islands (+870)</option>
+<option value="PL">Poland (+48)&nbsp;&nbsp;</option>
+<option value="PT">Portugal (+351)</option>
+<option value="PR">Puerto Rico (+1787)</option>
+<option value="QA">Qatar (+974)</option>
+<option value="RE">Reunion (+262)</option>
+<option value="RO">Romanian (+40)&nbsp;&nbsp;</option>
+<option value="RU">Russian Federation (+7)&nbsp;&nbsp;&nbsp;&nbsp;</option>
+<option value="RW">Rwanda (+250)</option>
+<option value="BL">Saint Barthelemy (+590)</option>
+<option value="SH">Saint Helena (+290)</option>
+<option value="KN">Saint Kitts and Nevis (+1869)</option>
+<option value="LC">Saint Lucia (+1758)</option>
+<option value="MF">Saint Martin (+1599)</option>
+<option value="PM">Saint Pierre and Miquelon (+508)</option>
+<option value="VC">Saint Vincent and the Grenadines (+1784)</option>
+<option value="WS">Samao (+685)</option>
+<option value="SM">San Marino (+378)</option>
+<option value="ST">Sao Tome Principe (+239)</option>
+<option value="SA">Saudi Arabia (+966)</option>
+<option value="SN">Senegal (+221)</option>
+<option value="RS">Serbia (+381)</option>
+<option value="SC">Seychelles (+248)</option>
+<option value="SL">Sierra Leone (+232)</option>
+<option value="SG">Singapore (+65)&nbsp;&nbsp;</option>
+<option value="SK">Slovakia (Slovak Republic) (+421)</option>
+<option value="SI">Slovenia (+386)</option>
+<option value="SB">Solomon Islands (+677)</option>
+<option value="SO">Somalia, Somali Republic (+252)</option>
+<option value="ZA">South Africa (+27)&nbsp;&nbsp;</option>
+<option value="GS">South Georgia and the South Sandwich Islands (+500)</option>
+<option value="ES">Spain (+34)&nbsp;&nbsp;</option>
+<option value="LK">Sri Lanka (+94)&nbsp;&nbsp;</option>
+<option value="SR">Suriname (+597)</option>
+<option value="SJ">Svalbard & Jan Mayen Islands (+47)&nbsp;&nbsp;</option>
+<option value="SZ">Swaziland (+268)</option>
+<option value="SE">Sweden (+46)&nbsp;&nbsp;</option>
+<option value="CH">Switzerland, Swiss Confederation (+41)&nbsp;&nbsp;</option>
+<option value="TW">Taiwan (+886)</option>
+<option value="TJ">Tajikistan (+992)</option>
+<option value="TZ">Tanzania (+255)</option>
+<option value="TH">Thailand (+66)&nbsp;&nbsp;</option>
+<option value="TL">Timor-Leste (+670)</option>
+<option value="TG">Togo (+228)</option>
+<option value="TK">Tokelau (+690)</option>
+<option value="TO">Tonga (+676)</option>
+<option value="TT">Trinidad and Tobago (+1868)</option>
+<option value="TN">Tunisia (+216)</option>
+<option value="TR">Turkey (+90)&nbsp;&nbsp;</option>
+<option value="TM">Turkmenistan (+993)</option>
+<option value="TC">Turks and Caicos Islands (+1649)</option>
+<option value="TV">Tuvalu (+688)</option>
+<option value="UG">Uganda (+256)</option>
+<option value="UA">Ukraine (+380)</option>
+<option value="AE">UAE (+971)</option>
+<option value="GB">United Kingdom (+44)&nbsp;&nbsp;</option>
+<option value="US">USA (+1)&nbsp;&nbsp;&nbsp;&nbsp;</option>
+<option value="UM">Unites States Minor Outlying Islands (+1)&nbsp;&nbsp;&nbsp;&nbsp;</option>
+<option value="VI">United States Virgin Islands (+1340)</option>
+<option value="UY">Uruguay, Eastern Republic of Uruguay (+598)</option>
+<option value="UZ">Uzbekistan (+998)</option>
+<option value="VU">Vanuatu (+678)</option>
+<option value="VE">Venezuela (+58)&nbsp;&nbsp;</option>
+<option value="VN">Vietnam (+84)&nbsp;&nbsp;</option>
+<option value="WF">Wallis and Futuna (+681)</option>
+<option value="EH">Western Sahara (+212)</option>
+<option value="YE">Yemen (+967)</option>
+<option value="ZM">Zambia (+260)</option>
+<option value="ZW">Zimbabwe (+263)</option>
+</select>
+<input type="number" id="mobile" class="form-control" style="width:210px;" name="jobpost[mobile]" data-validation="number length" data-validation-length="min6" value="" placeholder="Mobile Number" data-validation="required" data-validation-error-msg="Please enter a valid mobile number.">
+</div>
+</div>
+<div class="col-md-4" style="margin-top:62px;">
+<label></label>
+<button id="singup" type="submit" class="btn btn-orange ladda-button" data-style="expand-left">&nbsp;&nbsp;&nbsp;Sign Up&nbsp;&nbsp;&nbsp;</button>
+</div>
+</div>
+</form>
+</div>
+<div class="row bg_grey" id="existinguser" style="margin-bottom: 25px;">
+<form id="loginForm" method="post" action="https://www.truelancer.com/ajax/loginuser">
+<div class="col-md-12">
+<div class="col-md-4 tl_gap_top_20">
+<label>
+<p class="tl_form_label">Email </p>
+</label>
+<input type="email" class="form-control" name="email" value="" placeholder="enter your email id..." data-validation="required" data-validation-error-msg="Please enter an email">
+</div>
+<div class="col-md-4 tl_gap_top_20">
+<label>
+<p class="tl_form_label">Password</p>
+</label>
+<input type="password" class="form-control" name="password" value="" placeholder="enter your password..." data-validation="required" data-validation-error-msg="Please enter an password.">
+</div>
+<div class="col-md-4">
+<div class="login_facebook loginrow">
+<a href="https://www.facebook.com/dialog/oauth?type=web_server&amp;client_id=264752523692298&amp;redirect_uri=https%3A%2F%2Fwww.truelancer.com%2Fsc%2Ffacebook%3Fpopup%3D1&amp;response_type=code&amp;scope=email&amp;state=486d69ccaf536d1ec94d291e1c4c0644" target="_blank">
+<span><img src="../static.truelancer.com/icon_facebook.png" /></span>
+<span class="login_text">Login with Facebook</span>
+</a>
+</div>
+<div class="login_google loginrow">
+<a href="https://accounts.google.com/o/oauth2/auth?access_type=online&amp;type=web_server&amp;client_id=264658448910-5bh4ucpv2mp5guvtp4dq9i76gnf699op.apps.googleusercontent.com&amp;redirect_uri=https%3A%2F%2Fwww.truelancer.com%2Fsc%2Fgoogle%3Fpopup%3D1&amp;response_type=code&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&amp;state=a0d9cb313b92135bb29411028673ad36" target="_blank">
+<span><img src="../static.truelancer.com/icon_google.png" /></span>
+<span class="login_text">Login with Google</span>
+</a>
+</div>
+<div class="login_linkedin loginrow">
+<a href="https://www.linkedin.com/oauth/v2/authorization?state=DCEEFWF45453sdffef424&amp;type=web_server&amp;client_id=75bk67sc4ja2ea&amp;redirect_uri=https%3A%2F%2Fwww.truelancer.com%2Fsc%2Flinkedin%3Fpopup%3D1&amp;response_type=code&amp;scope=r_emailaddress+r_liteprofile" target="_blank">
+<span><img src="../static.truelancer.com/icon_linkedin.png" /></span>
+<span class="login_text">Login with LinkedIn</span>
+</a>
+</div>
+</div>
+</div>
+<div class="col-md-12">
+<div class="col-md-4">
+<label></label>
+</div>
+<div class="col-md-4" style="margin-bottom: 10px; margin-left: 120px;">
+<button id="login" type="submit" class="btn btn-orange ladda-button" data-style="expand-left">Login</button>
+</div>
+<div class="col-md-4">
+<label></label>
+</div>
+</div>
+</form>
+</div>
+
+<style type="text/css">
+   		
+   	.category-block{
+    background-color: #efefef;
+    border: 1px solid #efefef;
+    display: inline-block;
+    padding: 10px 9px;
+    width: 155px;
+    text-align: center;
+    cursor: pointer;
+   }
+   .category-block:hover{
+   	background-color: #efefef;
+   	border: 1px dashed #bbbaba;
+
+   }
+
+   	.padding{
+   		padding: 12px 10px;
+   	}
+   	</style>
+
+
+<div class="row bg_white tl_gap_top_20">
+<div class="col-md-12 tlpanel-success">
+<div>
+<h4 style="font-size: 25px;font-weight: 300;">Get your project done Quickly!</h4>
+<p class="tl_gap_top_10">Post a Project for free and start receiving proposals within minutes</p>
+</div>
+</div>
+</div>
+<div class="row bg_grey_light">
+<div class="col-md-9 bg_grey">
+<section class="formcontainer">
+<form id="jobForm" method="post" action="https://www.truelancer.com/ajax/savejob">
+<input type="hidden" id="jobuser" value="" />
+<input type="hidden" id="jobdetail" value="" />
+<input type="hidden" name="jobpost[id]" value="" />
+<input type="hidden" name="jobpost[userid]" value="" />
+<input type="hidden" name="jobpost[formtype]" value="" />
+<input type="hidden" id="activerole" value="" />
+<div class="form-group col-xs-12 dblock">
+<div class="row">
+<div class="col-md-6">
+<label class="dblock">
+<p class="tl_form_label">Type of work you need to get done</p>
+</label>
+<select class="form-control dblock forminline" id="jobCategory" data-validation="required" data-validation-error-msg="Please select job category" autocomplete="off">
+<option></option>
+<option value="1">IT & Programming</option>
+<option value="9">Mobile Application</option>
+<option value="2">Graphic Design & Multimedia</option>
+<option value="3">Writing, Content & Translation</option>
+<option value="8">Social Media, SEO & SEM</option>
+<option value="6">Sales & Marketing</option>
+<option value="4">Data Entry & Admin</option>
+<option value="5">Finance & Accounting</option>
+<option value="7">Customer Support & Service</option>
+<option value="145">Music & Audio</option>
+<option value="10">Others</option>
+</select>
+</div>
+<div id="sub_cat_options" style="display:none">
+<option data-catid="1" value="11">Application Interface Design</option>
+<option data-catid="1" value="12">Desktop Applications</option>
+<option data-catid="1" value="13">Ecommerce</option>
+<option data-catid="1" value="14">Game Development</option>
+<option data-catid="1" value="15">Web Development</option>
+<option data-catid="1" value="16">Scripts & Utilities</option>
+<option data-catid="1" value="17">Software Project Management</option>
+<option data-catid="1" value="18">Website Project Management</option>
+<option data-catid="1" value="19">Website Testing</option>
+<option data-catid="1" value="20">QA & Testing</option>
+<option data-catid="1" value="21">Other</option>
+<option data-catid="2" value="22">Website Design</option>
+<option data-catid="2" value="23">UI & UX Design</option>
+<option data-catid="2" value="24">Logo Design</option>
+<option data-catid="2" value="25">Graphic Design</option>
+<option data-catid="2" value="26">Product Design</option>
+<option data-catid="2" value="27">Icons Design</option>
+<option data-catid="2" value="28">Advertisement Design</option>
+<option data-catid="2" value="29">Annual Reports</option>
+<option data-catid="2" value="30">Brochures</option>
+<option data-catid="2" value="31">Catalogs</option>
+<option data-catid="2" value="32">Cover & Page Design</option>
+<option data-catid="2" value="33">Direct Mail Pieces</option>
+<option data-catid="2" value="34">Displays & Posters</option>
+<option data-catid="2" value="35">Flash Presentations</option>
+<option data-catid="2" value="36">Industrial Design</option>
+<option data-catid="2" value="37">Layout & Desktop Publishing</option>
+<option data-catid="2" value="38">Brand Identity Packages</option>
+<option data-catid="2" value="39">Multimedia Animation</option>
+<option data-catid="2" value="40">Packaging Design</option>
+<option data-catid="2" value="41">Photo & Image Editing</option>
+<option data-catid="2" value="42">PowerPoint Presentations</option>
+<option data-catid="2" value="43">Promotional Videos</option>
+<option data-catid="3" value="45">Articles & Blogs</option>
+<option data-catid="3" value="47">Press Releases</option>
+<option data-catid="3" value="49">Copywriting</option>
+<option data-catid="3" value="50">Translation</option>
+<option data-catid="3" value="52">Editing & Proofreading</option>
+<option data-catid="3" value="53">Grants & Proposals</option>
+<option data-catid="3" value="54">Newsletters</option>
+<option data-catid="3" value="55">Reports</option>
+<option data-catid="3" value="56">Reviews & Feedbacks</option>
+<option data-catid="3" value="57">Resumes & Cover Letters</option>
+<option data-catid="3" value="58">Sales Writing</option>
+<option data-catid="3" value="59">Screen & Script Writing</option>
+<option data-catid="3" value="60">Songs & Poems</option>
+<option data-catid="3" value="61">Speeches</option>
+<option data-catid="3" value="62">Technical Writing</option>
+<option data-catid="3" value="63">User Guides & Manuals</option>
+<option data-catid="4" value="64">Article Submission</option>
+<option data-catid="4" value="65">Bulk Mailing</option>
+<option data-catid="4" value="66">Data Entry</option>
+<option data-catid="4" value="67">Data Processing</option>
+<option data-catid="4" value="68">Desktop Support</option>
+<option data-catid="4" value="69">Email Response Handling</option>
+<option data-catid="4" value="70">Event Planning</option>
+<option data-catid="4" value="71">Excel</option>
+<option data-catid="4" value="72">Fact Checking</option>
+<option data-catid="4" value="73">HR & Payroll</option>
+<option data-catid="4" value="74">Office Management</option>
+<option data-catid="4" value="75">Personal Assistant</option>
+<option data-catid="3" value="76">Transcription</option>
+<option data-catid="4" value="77">Travel Planning</option>
+<option data-catid="4" value="78">Video Upload</option>
+<option data-catid="4" value="79">Virtual Assistant</option>
+<option data-catid="4" value="80">Web Research</option>
+<option data-catid="5" value="81">Chartered Accountant</option>
+<option data-catid="5" value="82">Business Incorporation</option>
+<option data-catid="5" value="83">Financial Planning</option>
+<option data-catid="5" value="84">Financial Reporting</option>
+<option data-catid="5" value="85">Legal Assistance</option>
+<option data-catid="5" value="86">Mergers & Acquisitions</option>
+<option data-catid="5" value="87">Raising Equity Capital</option>
+<option data-catid="5" value="88">Raising Loan Capital</option>
+<option data-catid="5" value="89">Income Tax Services</option>
+<option data-catid="5" value="90">Venture Funding</option>
+<option data-catid="5" value="91">Annual compliances </option>
+<option data-catid="5" value="92">Company Audit</option>
+<option data-catid="5" value="93">Other</option>
+<option data-catid="6" value="94">Ad Planning & Buying</option>
+<option data-catid="6" value="95">Advertising</option>
+<option data-catid="6" value="96">Affiliate Marketing</option>
+<option data-catid="6" value="97">Branding</option>
+<option data-catid="6" value="98">Bulk Marketing</option>
+<option data-catid="6" value="99">Business Plans</option>
+<option data-catid="6" value="100">Classifieds Posting</option>
+<option data-catid="6" value="101">Email Marketing</option>
+<option data-catid="6" value="102">Internet Marketing</option>
+<option data-catid="6" value="103">Google Adsense</option>
+<option data-catid="6" value="104">Leads</option>
+<option data-catid="6" value="105">Marketing</option>
+<option data-catid="6" value="106">Market Research</option>
+<option data-catid="8" value="107">Guest Post & PR</option>
+<option data-catid="6" value="108">Sales</option>
+<option data-catid="6" value="109">Telemarketing</option>
+<option data-catid="6" value="110">Viral Marketing</option>
+<option data-catid="6" value="111">SMM - Social Media Marketing</option>
+<option data-catid="6" value="112">Other</option>
+<option data-catid="7" value="113">Customer Service & Support</option>
+<option data-catid="7" value="114">Business Support</option>
+<option data-catid="7" value="115">Order Processing</option>
+<option data-catid="7" value="116">Technical Support</option>
+<option data-catid="7" value="117">Phone Support</option>
+<option data-catid="7" value="118">Other</option>
+<option data-catid="8" value="119">Facebook</option>
+<option data-catid="8" value="120">Google</option>
+<option data-catid="8" value="121">Linkedin</option>
+<option data-catid="8" value="122">Twitter</option>
+<option data-catid="8" value="123">Pinterest</option>
+<option data-catid="8" value="124">Facebook Ads</option>
+<option data-catid="8" value="125">Google Adword</option>
+<option data-catid="8" value="126">Twitter Ads</option>
+<option data-catid="8" value="127">Pinterest Ads</option>
+<option data-catid="8" value="128">Google Adword</option>
+<option data-catid="8" value="129">Bing Ads</option>
+<option data-catid="8" value="130">Yahoo Ads</option>
+<option data-catid="8" value="131">SEO - Search Engine Optimization</option>
+<option data-catid="8" value="132">SEM - Search & Display Marketing</option>
+<option data-catid="8" value="133">Other</option>
+<option data-catid="9" value="134">Android</option>
+<option data-catid="9" value="135">IOS</option>
+<option data-catid="9" value="136">IPAD</option>
+<option data-catid="9" value="137">IPHONE</option>
+<option data-catid="9" value="138">Windows Phone</option>
+<option data-catid="9" value="139">Other</option>
+<option data-catid="10" value="140">Photography</option>
+<option data-catid="10" value="141">Trainers</option>
+<option data-catid="10" value="142">Other</option>
+<option data-catid="3" value="143">Research & Survey</option>
+<option data-catid="145" value="146">Narration & Voice-Over</option>
+<option data-catid="145" value="147">Audio Editing & Mastering</option>
+<option data-catid="145" value="148">Custom Songs</option>
+<option data-catid="145" value="149">Songwriting</option>
+<option data-catid="145" value="150">Sound Effects & Loops</option>
+<option data-catid="145" value="151">Music Lessons</option>
+<option data-catid="145" value="152">Jingles</option>
+<option data-catid="145" value="153">Voicemail Greetings</option>
+<option data-catid="145" value="154">Other</option>
+<option data-catid="8" value="155">YouTube</option>
+</div>
+<div class="col-md-6" id="subCategory" style="display:none;">
+<label class="dblock">
+<p class="tl_form_label">Specifically belongs to</p>
+</label>
+<select class="form-control forminline display-ib" id="jobSubCategory" name="jobpost[category_id]" data-validation="required" data-validation-error-msg="Please select job category" autocomplete="off">
+<option></option>
+</select>
+</div>
+</div>
+</div>
+<style>
+.contestSuggestion{
+  padding: 15px 10px;
+  background-color: #fff;
+  border: 1px solid #BBB;
+  font-size: 24px;
+  display:none;
+}
+.contestSuggestion .suggTitle{
+  color: #D07272;
+}
+.contestSuggestion .suggDef{
+  font-size: 12px;padding-top: 10px;
+}
+</style>
+<div class="form-group col-xs-12 dblock">
+<div class="contestSuggestion ">
+<span class="suggTitle">Launch a Logo Design Contest </span>
+<a class="btn btn-success" style="float: right;" href="signup.html">Post a Contest</a>
+<div class="suggDef">Post a Contest &amp; start getting Amazing Creatives Entries from freelancers around the world.</div>
+</div>
+</div>
+<div class="form-group col-xs-12 dblock">
+<label>
+<p class="tl_form_label">What is your project about?</p>
+</label>
+<input type="text" id="jobForm_title" onMouseOver="$(this).next().children('a').popover('show');" onMouseOut="$(this).next().children('a').popover('hide');" class="form-control" name="jobpost[title]" data-validation="length" data-validation-length="min20" value="" placeholder="I need..." data-validation="required" data-validation-error-msg="Please enter a descriptive title for the project.">
+<span class="charsleft"><span id="max-length-element">100</span> chars left
+<a href="#" class="tips" rel="popover" data-placement="bottom" data-content="Describe your project in brief.What you write here is going to appear on the listing page.">
+<i class="color-info fa fa-question-circle"></i></a>
+</span>
+</div>
+<div class="form-group col-xs-12 dblock">
+<label>
+<p>
+<span class="tips-trigger">
+<span class="tl_form_label">Please explain in detail</span>
+<span class="text-12">
+<a href="#" class="tips" rel="popover" data-placement="right" data-content="what the project is for,outline of your requirement.Don't publish your contact details or promote any third party services.">
+<i class="color-info fa fa-question-circle"></i></a>
+</span>
+</span>
+</p>
+</label>
+<textarea class="form-control" id="job-description" rows="7" name="jobpost[description]"></textarea>
+</div>
+<div class="form-group col-xs-12 dblock">
+<label>
+<p>
+<span class="tips-trigger tl_form_label">Skills Required
+<span class="text-12">
+<a href="#" class="tips" rel="popover" data-placement="right" data-content="Mention skills which you want to be used in this project.">
+<i class="color-info fa fa-question-circle"></i></a>
+</span>
+</span>
+</p>
+</label>
+<input id="tagsinput" type="text" data-role="tagsinput" name="skills" value="" />
+<div id="suggestedSkills" class="tl_gap_top_5"></div>
+</div>
+<div class="form-group col-xs-12 dblock">
+<label onClick="if($('#addTags').is(':hidden')) $('#addTags').slideDown('slow'); else $('#addTags').hide(); " class="row">
+<p>
+<span class="tips-trigger"><span class="btn btn-link text-info">Add keywords (optional)</span>
+<span class="text-12">
+<a href="#" class="tips" rel="popover" data-placement="right" data-content="Anything you want to mention that you don't find in skills set.">
+<i class="color-info fa fa-question-circle"></i></a>
+</span>
+</span>
+</p>
+</label>
+<div id="addTags" style="display:none;">
+<input type="text" id="jobForm_tags" name="jobpost[tags]" value="" class="form-control" placeholder="Add keywords">
+</div>
+</div>
+<div class="form-group col-xs-12 dblock">
+<label for="duration" class="dblock"><p>
+<span class="tips-trigger tl_form_label">Project Type
+<span class="text-12">
+<a href="#" class="tips" rel="popover" data-placement="right" data-content="<b>Hourly Project:</b> Invoice for hourly project will be generated depending on the hours worked by your Freelancer.<br/><b>Fixed Project</b>: Project price and the specifications are fixed.">
+<i class="color-info fa fa-question-circle"></i></a>
+</span>
+</span>
+</p>
+</label>
+<div class="default btn-group" data-toggle="buttons">
+<label class="btn btn-default  active ">
+<input type="radio" name="jobpost[jobtype]" id="option1" autocomplete="off" value="2" checked> Fixed
+</label>
+<label class="btn btn-default ">
+<input type="radio" name="jobpost[jobtype]" id="option2" autocomplete="off" value="3"> Hourly
+</label>
+</div>
+</div>
+
+<div class="form-group col-xs-12 dblock">
+<label class="dblock"><p>
+<span class="tips-trigger tl_form_label">What is your Budget ?
+<span class="text-12">
+<a href="#" class="tips" rel="popover" data-placement="right" data-content="Give freelancers a rough but realistic estimation of your budget.">
+<i class="color-info fa fa-question-circle"></i></a>
+</span>
+</span>
+</p>
+</label>
+<select class="select2 form-control forminline" id="currency" name="jobpost[currency]">
+<option value="USD">USD</option>
+</select>
+<input type="text" id="budget" class="form-control forminline" style="width:100px; margin-left:20px;" name="jobpost[budget]" value="" placeholder="" data-validation="number" data-validation-allowing="range[500;500000]" data-validation-error-msg="Please enter the Project Budget (Min INR 500)">
+<span id="hourly-tip"></span>
+</div>
+<div class="form-group col-xs-12 dblock" id="hours">
+<p class="dblock">
+<span class="tips-trigger tl_form_label">Expected Hours of Work
+<span class="text-12">
+<a href="#" class="tips" rel="popover" data-placement="right" data-content="Number of hours for which you want to hire the freelancer.">
+<i class="color-info fa fa-question-circle"></i></a>
+</span>
+</span>
+</p>
+<input type="text" class="form-control" style="width:100px;" id="hourly_hours" name="jobpost[hours]" value="" data-validation="number" data-validation-allowing="range[3;500]" data-validation-error-msg="Please enter the min 3 hour." data-validation-optional="true">
+</div>
+<div class="form-group col-xs-12 dblock tl_gap_top_10">
+<label class="dblock">
+<p>
+<span class="tips-trigger tl_form_label">Listing of project till
+<span class="text-12">
+<a href="#" class="tips" rel="popover" data-placement="right" data-content="Till when do you want the project to be open for proposals.">
+<i class="color-info fa fa-question-circle"></i></a>
+</span>
+</span>
+</p>
+</label>
+<select class="select2 form-control forminline" id="jobEndDate">
+<option value="7">7 Days</option>
+<option value="14">2 Week</option>
+<option value="21" selected>3 Week</option>
+<option value="30">1 Month</option>
+<option value="30">Not Sure</option>
+</select>
+<input type="hidden" name="jobpost[enddate]" value="" />
+</div>
+
+<div class="form-group col-xs-12 dblock tl_gap_top_10">
+<label for="duration" class="dblock"><p>
+<span class="tips-trigger tl_form_label">Project Visibility
+<span class="text-12">
+<a href="#" class="tips" rel="popover" data-placement="right" data-content="Public Project will be listed on the project list after approval by admin.Private project will be shown to you and the freelancer you invited. ">
+<i class="color-info fa fa-question-circle"></i></a>
+</span>
+</span>
+</p>
+</label>
+<div class="tl_gap_top_10">
+<div class="radio">
+<label>
+<input type="radio" name="jobpost[type]" id="optionsRadios1" value="0" checked>
+Public (All Freelancer) - Recommended
+</label>
+</div>
+<div class="radio">
+<label>
+<input type="radio" name="jobpost[type]" id="optionsRadios2" value="1">
+Private (only to freelancers invited by you)
+</label>
+</div>
+</div>
+</div>
+<div class="hidden_files"> </div>
+<div class="form-group col-xs-12 dblock">
+<label onClick="if($('#attachments').is(':hidden')) $('#attachments').slideDown('slow'); else $('#attachments').hide(); " class="row">
+<p><span class="btn btn-link text-info"><i class="fa fa-paperclip"></i>Add relative files (optional)</span></p>
+</label>
+<div id="attachments" style="display:none">
+<div id="fileplaceholder" class="placeholder_uploadimages">
+<i class="glyphicon glyphicon-paperclip"></i>
+File Attachments
+</div>
+<div id="imgplaceholder" class="placeholder_uploadimages imgplaceholder">
+<i class="glyphicon glyphicon-picture"></i>
+Images
+</div>
+<div id="image-uploader"></div>
+<div id="file-uploader"></div>
+</div>
+</div>
+<div class="project_pmote_box col-md-12">
+<div class="col-md-2 project-addon">
+<span class="display-ib" style="padding: 0px 6px;margin-left: -18px;">
+<div class="squaredFour">
+<input type="checkbox" id="squaredFour-1" class="update-addon" name="jobpost[featured]" value="1">
+<label for="squaredFour-1"></label>
+</div>
+</span>
+<span class="project-badges addon-featured">Featured</span>
+</div>
+<div class="col-md-8">Featured projects attract more, better-quality bids & are displayed eminently in the 'Featured Jobs' section.</div>
+<div class="col-md-2 project-addon-price" id="isfeatured"></div>
+</div>
+<div class="project_pmote_box col-md-12">
+<div class="col-md-2 project-addon">
+<span class="display-ib" style="padding: 0px 5px;margin-left: -18px;">
+<div class="squaredFour">
+<input type="checkbox" id="squaredFour-2" class="update-addon" name="jobpost[addon_recruiter]" value="1">
+<label for="squaredFour-2"></label>
+</div>
+</span>
+<span class="project-badges addon-recruiter">Recruiter</span>
+</div>
+<div class="col-md-8">Our hands-on PRIME Recruitment service ensures you get the best freelancer for your project. Our recruiters personally review all the proposals saving you time screening freelancers' proposals.</div>
+<div class="col-md-2 project-addon-price" id="isrecruiter"></div>
+</div>
+<div class="project_pmote_box col-md-12">
+<div class="col-md-2 project-addon">
+<span class="display-ib" style="padding: 0px 6px;margin-left: -18px;">
+<div class="squaredFour">
+<input type="checkbox" id="squaredFour-3" class="update-addon" name="jobpost[addon_nda]" value="1">
+<label for="squaredFour-3"></label>
+</div>
+</span>
+<span class="project-badges addon-nda">NDA</span>
+</div>
+<div class="col-md-8">Freelancers must sign a Non-disclosure Agreement to work on your project. Freelancers agree to keep details discussed through private messages and files/documents/code confidential.</div>
+<div class="col-md-2 project-addon-price" id="isnda"></div>
+</div>
+<div class="project_pmote_box col-md-12">
+<div class="col-md-2 project-addon">
+<span class="display-ib" style="padding: 0px 6px;margin-left: -18px;">
+<div class="squaredFour">
+<input type="checkbox" id="squaredFour-4" class="update-addon" name="jobpost[addon_urgent]" value="1">
+<label for="squaredFour-4"></label>
+</div>
+</span>
+<span class="project-badges addon-urgent">Urgent</span>
+</div>
+<div class="col-md-8">Receive faster responses from freelancers & get your Project started within a day!</div>
+<div class="col-md-2 project-addon-price" id="isurgent"></div>
+</div>
+<div class="project_pmote_box col-md-12">
+<div class="col-md-2 project-addon">
+<span class="display-ib" style="padding: 0px 6px;margin-left: -18px;">
+<div class="squaredFour">
+<input type="checkbox" id="squaredFour-5" class="update-addon" name="jobpost[addon_private]" value="1">
+<label for="squaredFour-5"></label>
+</div>
+</span>
+<span class="project-badges addon-private">Private</span>
+</div>
+<div class="col-md-8">Hide project details from search engines and users that are not logged in. This feature is recommended for projects where confidentiality is a priority.</div>
+<div class="col-md-2 project-addon-price" id="isprivate"></div>
+</div>
+<div class=" total pull-right clearfix">
+<span class="total-amount">
+Total:
+<input type="hidden" id="total-amount" name="jobpost[total-amount]" value="">
+<span id="total">0.00</span>
+<span id="total-currency">INR</span>
+</span>
+</div>
+<div class="form-group col-xs-12 dblock">
+<div class="checkbox">
+<label>
+<input type="checkbox" name="jobpost[confirm]" data-validation="required" data-validation-error-msg="Please confirm to continue." checked>
+<p>I confirm i have read Truelancer's Terms & Conditions. See <a target="_blank" href="terms-service.html">T&Cs</a></p>
+</label>
+</div>
+</div>
+<div class="form-group col-xs-12 dblock">
+<div class="feedback_jobForm"></div>
+</div>
+<div class="form-group col-xs-12 dblock tl-text-center">
+<button id="submitJob" type="submit" class="btn btn-success btn-lg ladda-button" data-style="expand-left"> Submit Project </button>
+</div>
+</form>
+</section>
+</div>
+<div class="col-md-3">
+
+<section class="tl_gap_top_20">
+
+
+<div class="tip_box block top-mmspace space bot-lgspace">
+<h4 class="big_help"><i class="fa fa-briefcase"></i>Post Project for FREE</h4>
+<p class="justify">Post your project by giving a brief information about it. Select relevant Skills and set a realistic budget so that we can notify relevant Freelancers to send you proposals. Posting a Project is absolutely FREE.</p>
+</div>
+<div class="tip_box block top-mmspace space bot-lgspace">
+<h4 class="big_help"><i class="fa fa-check-square-o"></i>Discuss & Shortlist</h4>
+<p class="justify">Chat & discuss the Project with Freelancers, shortlist the Proposals you like. You can check Freelancers' previous works and feedback on their profiles to select the most suitable Freelancer within your budget.</p>
+</div>
+<div class="tip_box block top-mmspace space bot-lgspace">
+<h4 class="big_help"><i class="fa fa-money"></i>Award & Pay</h4>
+<p class="justify">Once you've finalized the Freelancer, award the Project to him on Truelancer using Truelancer's Security Deposit. This ensures that you get a full refund if the work is not done to your expectations.</p>
+</div>
+<div class="tip_box block top-mmspace space bot-lgspace">
+<h4 class="big_help"><i class="fa fa-money"></i>Release Payments</h4>
+<p class="justify">Release the payment to the Freelancer based on milestones or once the work is complete and you are 100% satisfied. We release the payment to the Freelancer only once you approve. </p>
+</div>
+
+
+
+
+</section>
+</div>
+</div>
+</div>
+<style type="text/css">
+.tl_getstarted_model .signup_container{
+	display: block;
+}
+.tl_getstarted_model .signin_container{
+	display: none;
+}
+.tl_getstarted_model .login_box{
+	margin: 0px auto;
+}
+.tl_getstarted_model .modal-body {
+   padding: 0px;
+}
+.tl_getstarted_model .modal-content{
+	    display: inline;
+}
+.login_box,.noaccount{
+	max-width: 600px;
+	overflow: hidden;
+}
+.heading {
+    background: #f85f64;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1.5em;
+  }
+.tl_inline{
+	display: inline-block;
+    float: left;
+}
+.tl_inline input{
+	width:95%;
+	padding: 6px 10px;
+}
+#signupForm{
+	margin-top: 5px;
+}
+#signupForm .form-group {
+    margin-bottom: 5px;
+}
+.tl_loginsignup_title{
+	color: #fff;
+    font-family: Arial;
+    padding-top: 30px;
+}
+.tl_getstarted_model .modal-content{
+	border: 0px solid #999;
+}
+@media  screen and (max-height: 575px){
+#rc-imageselect, .g-recaptcha {transform:scale(0.83);-webkit-transform:scale(0.83);transform-origin:0 0;-webkit-transform-origin:0 0;}
+}
+</style>
+<script src='../www.google.com/recaptcha/api.js'></script>
+<button id="loginmodel" class="btn btn-primary hidden" data-toggle="modal" data-target="#myModal">
+login
+</button>
+
+<div class="tl_getstarted_model modal fade" id="myModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-body">
+
+<h1 class="tl_loginsignup_title">Create a Free Account</h1>
+<div class="signin_container">
+<section class="login_box tlpanel-success">
+<div class="col-md-6">
+<form id="loginForm" method="post" action="https://www.truelancer.com/ajax/login">
+<div class="loginrow">
+<div class="form-group">
+<label for="exampleInputEmail1">Email</label>
+<input type="email" class="form-control" name="email" placeholder="Enter email" data-validation="required" data-validation-error-msg="Please enter email">
+</div>
+<div class="form-group">
+<label for="exampleInputEmail1">Password</label>
+<input type="password" class="form-control" name="password" placeholder="Enter password" data-validation="required" data-validation-error-msg="Please enter password">
+</div>
+<div class="form-group forgotpassword" style="margin-bottom: 15px;">
+<a href="forgot_password.html" title="Forgot Password | Truelancer">Forgot Password?</a>
+</div>
+<div class="form-group tcenter">
+<button id="login" type="submit" class="btn btn-orange ladda-button" data-style="expand-left">&nbsp;&nbsp;&nbsp;Log In&nbsp;&nbsp;&nbsp;</button>
+</div>
+</div>
+</form>
+</div>
+<div class="col-md-6">
+<div class="login_facebook loginrow">
+<a href="https://www.facebook.com/dialog/oauth?type=web_server&amp;client_id=264752523692298&amp;redirect_uri=https%3A%2F%2Fwww.truelancer.com%2Fsc%2Ffacebook%3Fpopup%3D1&amp;response_type=code&amp;scope=email&amp;state=69abde2e8762a5bf4eac486fe7df822f" target="_blank">
+<span><img src="../static.truelancer.com/icon_facebook.png" /></span>
+<span class="login_text">Login with Facebook</span>
+</a>
+</div>
+<div class="login_google loginrow">
+<a href="https://accounts.google.com/o/oauth2/auth?access_type=online&amp;type=web_server&amp;client_id=264658448910-5bh4ucpv2mp5guvtp4dq9i76gnf699op.apps.googleusercontent.com&amp;redirect_uri=https%3A%2F%2Fwww.truelancer.com%2Fsc%2Fgoogle%3Fpopup%3D1&amp;response_type=code&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&amp;state=702c45f45a8a0c7595c6bc62fa89edd2" target="_blank">
+<span><img src="../static.truelancer.com/icon_google.png" /></span>
+<span class="login_text">Login with Google</span>
+</a>
+</div>
+<div class="login_linkedin loginrow">
+<a href="https://www.linkedin.com/oauth/v2/authorization?state=DCEEFWF45453sdffef424&amp;type=web_server&amp;client_id=75bk67sc4ja2ea&amp;redirect_uri=https%3A%2F%2Fwww.truelancer.com%2Fsc%2Flinkedin%3Fpopup%3D1&amp;response_type=code&amp;scope=r_emailaddress+r_liteprofile" target="_blank">
+<span><img src="../static.truelancer.com/icon_linkedin.png" /></span>
+<span class="login_text">Login with LinkedIn</span>
+</a>
+</div>
+<div class="loginrow staticwarning">
+By clicking Log In, Facebook,Google or LinkedIn you agree to our T&C's
+</div>
+</div>
+</section>
+<section class="noaccount">
+Don’t have an account? <a href="signup.html" id="showsignup" class="orange-color" title="Register on Truelancer | Truelancer"><b>Sign Up</b></a>
+</section>
+</div>
+
+
+<div class="signup_container">
+<section class="login_box tlpanel-success">
+<div class="col-md-6">
+<div class="loginrow">
+<form id="signupForm" method="post" action="https://www.truelancer.com/ajax/signup">
+<input type="hidden" name="_token" value="IMOVSoIhfCGqmf0xZryIal2TVJYCDR4BmMfcCI1r">
+<div class="form-group">
+<label for="exampleInputEmail1">First Name</label>
+<input type="text" class="form-control" name="fname" placeholder="enter first name" data-validation="required" data-validation-error-msg="Please enter your first name">
+</div>
+<div class="form-group">
+<label for="exampleInputEmail1">Last Name</label>
+<input type="text" class="form-control" name="lname" placeholder="enter last name" data-validation="required" data-validation-error-msg="Please enter your last name">
+</div>
+<div class="form-group">
+<label for="exampleInputEmail1">Email</label>
+<input type="email" class="form-control" name="email" placeholder="enter email" data-validation="email" data-validation-error-msg="Please enter email">
+</div>
+<div class="form-group">
+<label for="exampleInputpassword">Password</label>
+<input type="password" class="form-control" placeholder="type password" name="password" value="" data-validation="length" data-validation-length="6-20" data-validation-error-msg="Please enter password between 6-20 characters.">
+</div>
+<div class="form-group">
+Please check below to verify
+<div class="g-recaptcha" data-theme="light" data-sitekey="6LcXtgUTAAAAAI_5pm2C2c8IueyVd7UbsjEg3xzW" style="transform:scale(0.83);-webkit-transform:scale(0.83);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
+</div>
+<div class="form-group tcenter">
+<button id="singup" type="submit" class="btn btn-orange ladda-button" data-style="expand-left">&nbsp;&nbsp;&nbsp;Sign Up&nbsp;&nbsp;&nbsp;</button>
+</div>
+</form>
+</div>
+</div>
+<div class="col-md-6">
+<div class="login_facebook loginrow">
+<a href="https://www.facebook.com/dialog/oauth?type=web_server&amp;client_id=264752523692298&amp;redirect_uri=https%3A%2F%2Fwww.truelancer.com%2Fsc%2Ffacebook%3Fpopup%3D1&amp;response_type=code&amp;scope=email&amp;state=15b1c3dec2154b8817ccf0d67a8140a7" target="_blank">
+<span><img src="../static.truelancer.com/icon_facebook.png" /></span>
+<span class="login_text">Sign up with Facebook</span>
+</a>
+</div>
+<div class="login_google loginrow">
+<a href="https://accounts.google.com/o/oauth2/auth?access_type=online&amp;type=web_server&amp;client_id=264658448910-5bh4ucpv2mp5guvtp4dq9i76gnf699op.apps.googleusercontent.com&amp;redirect_uri=https%3A%2F%2Fwww.truelancer.com%2Fsc%2Fgoogle%3Fpopup%3D1&amp;response_type=code&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&amp;state=2bbba90ceb997bbda7352f72533f0424" target="_blank">
+<span><img src="../static.truelancer.com/icon_google.png" /></span>
+<span class="login_text">Sign up with Google</span>
+</a>
+</div>
+<div class="login_linkedin loginrow">
+<a href="https://www.linkedin.com/oauth/v2/authorization?state=DCEEFWF45453sdffef424&amp;type=web_server&amp;client_id=75bk67sc4ja2ea&amp;redirect_uri=https%3A%2F%2Fwww.truelancer.com%2Fsc%2Flinkedin%3Fpopup%3D1&amp;response_type=code&amp;scope=r_emailaddress+r_liteprofile" target="_blank">
+<span><img src="../static.truelancer.com/icon_linkedin.png" /></span>
+<span class="login_text">Sign up with LinkedIn</span>
+</a>
+</div>
+<div class="loginrow staticwarning">
+By clicking Sign up, Facebook,Google or LinkedIn you agree to our T&C's
+</div>
+</div>
+</section>
+<section class="noaccount">
+Already have an account? <a href="login.html" class="orange-color" id="showsignin" title="Login on Truelancer | Truelancer"><b>Log In</b></a>
+</section>
+</div>
+
+<script>
+	function showSignup(){
+		$('.signin_container').hide();
+		$('.signup_container').show();
+		$('.tl_loginsignup_title').text('Create a Free Account');
+	}
+	function showSignin(){
+		$('.signup_container').hide();
+		$('.signin_container').show();
+		$('.tl_loginsignup_title').text('Welcome back, Sign-in to your Account');
+		
+	}
+	$(document).ready(function(){
+		$('#showsignup').on('click',function(event){
+			event.preventDefault();
+			showSignup();
+		});
+		$('#showsignin').on('click',function(event){
+			event.preventDefault();
+			showSignin();
+		});
+		$.validate({
+		  	form : '#signupForm',
+		    onSuccess : function() {
+		    	var l = Ladda.create( document.querySelector( '#singup' ) );
+		    	l.start();
+		    	var options = { 
+		    	complete : function(){
+		    			l.stop();
+		    		},
+		    	success:    function(response) { 
+		    		l.stop();
+				    	if(response.status == 1){
+				    		window.location.href = response.url;
+				    	}else{
+				    		alert(response.message);
+				    	}
+				         
+				    } 
+				};
+		      $('#signupForm').ajaxSubmit(options);
+		      return false; // Will stop the submission of the form
+		    }
+		});
+		$.validate({
+		  	form : '#loginForm',
+		    onSuccess : function() {
+		    	var l = Ladda.create( document.querySelector( '#login' ) );
+		    	l.start();
+		    	var options = { 
+		    	complete : function(){
+		    			l.stop();
+		    		},
+		    	success:    function(response) { 
+		    			l.stop();
+				    	if(response.status == 1){
+				    		window.location.reload();
+				    	}else{
+				    		alert(response.message);
+				    	}
+				         
+				    } 
+				};
+		      $('#loginForm').ajaxSubmit(options);
+		      return false; // Will stop the submission of the form
+		    }
+		});
+	});
+	</script>
+
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+var $_Tawk_API={},$_Tawk_LoadStart=new Date();
+Tawk_API =  {};
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/563499b5b761e937440040f0/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+
+
+if(window.sess_uid.length > 0){
+  window.sfullname = window.sess_fname+' '+window.sess_lname ;
+  Tawk_API.onLoad = function(){
+    Tawk_API.visitor = {
+  	   name  : window.sfullname
+    };
+  	Tawk_API.setAttributes({
+  		'Name'    : window.sfullname,
+  		'Profile' : window.sess_uprofile,
+      'Id'    : window.sess_uid
+  	}, function(error){});
+  };
+}
+</script>
+
+<script>
+		
+	var skillApiUrl = window.base_url + "/job-skills?query=%QUERY";
+	var skillslist = new Bloodhound({
+		datumTokenizer: Bloodhound.tokenizers.obj.whitespace('text'),
+		queryTokenizer: Bloodhound.tokenizers.whitespace,
+		remote : {
+			url: skillApiUrl,
+			wildcard: '%QUERY'
+		},
+		limit: 10
+	});
+
+skillslist.initialize();
+
+
+var tag = $('#tagsinput');
+tag.tagsinput({
+	itemValue : 'value',
+	itemText  : 'text',
+	maxTags   : 5,
+	typeaheadjs: {
+		limit: 10,
+		minLength: 0,
+  		highlight: true,
+		//displayKey: 'text',
+		display: function(item) {        // display: 'name' will also work
+	        return item.text;
+	    },
+		name  : 'skills',  
+		source : skillslist.ttAdapter()
+	}
+});
+
+
+$.each(jQuery('textarea[data-autoresize]'), function() {
+    var offset = this.offsetHeight - this.clientHeight;
+ 
+    var resizeTextarea = function(el) {
+        $(el).css('height', 'auto').css('height', el.scrollHeight + offset);
+    };
+    $(this).on('keyup input', function() { resizeTextarea(this); }).removeAttr('data-autoresize');
+});
+
+function timezone() {
+    var offset = new Date().getTimezoneOffset(), o = Math.abs(offset);
+    return (offset < 0 ? "+" : "-") + ("00" + Math.floor(o / 60)).slice(-2) + ":" + ("00" + (o % 60)).slice(-2);
+}
+
+$("#timezone").val(timezone());
+
+var freeaddon = '';
+
+window.forcepublish = false;
+
+	$('.usertype').on('change',function(){
+		usertyepeform();
+	}); 
+
+	if($('#existinguser').length){
+		usertyepeform();
+	}
+	
+
+	function usertyepeform(){
+		usertype = document.querySelector('input[name="usertype"]:checked').value;
+		if(usertype == '1'){ // existing user options
+			$('#existinguser').show();
+			$('#newuser').hide();
+		}else{ // new user options
+			$('#existinguser').hide();
+			$('#newuser').show();
+		}
+	}
+
+	$.validate({
+		form : '#userForm',
+	    onSuccess : function() {
+	    	var l = Ladda.create( document.querySelector( '#singup' ) );
+	    	l.start();
+	    	var options = {
+	    		complete : function(){
+	    			l.stop();
+	    		},
+			    success:  function(response){
+			    	l.stop();
+			    	if(response.status == 1){
+			    		$('#jobuser').val('1');
+			    		$('#usersection').hide();
+			    		$('#newuser').hide();
+			    		jobdetail = $('#jobdetail').val();
+			    		if(jobdetail == '1'){
+			    			$('#jobForm').submit();
+			    		}else{
+			    			showAlert(response.message,'Information');
+			    		}
+			    		
+			         }else{
+						showAlert(response.message,'Information');
+					}
+			    }
+			};
+	    	$('#userForm').ajaxSubmit(options);
+	    	return false; // Will stop the submission of the form
+	    }
+	});
+
+	$.validate({
+		form : '#loginForm',
+	    onSuccess : function() {
+	    	var l = Ladda.create( document.querySelector( '#login' ) );
+	    	l.start();
+	    	var options = {
+	    		complete : function(){
+	    			l.stop();
+	    		},
+			    success:  function(response){
+			    	l.stop();
+			    	if(response.status == 1){
+			    		$('#jobuser').val('1');
+			    		$('#jobdetail').val('1');
+			    		$('#usersection').hide();
+			    		$('#newuser').hide();		 
+			         }else{
+						showAlert(response.message,'Information');
+					}
+			    }
+			};
+	    	$('#loginForm').ajaxSubmit(options);
+	    	return false; // Will stop the submission of the form
+	    }
+	});
+	
+
+ 	$(document).ready(function(){
+ 		$('.tips').popover({'html':true,'trigger':'hover'});
+ 		settotalprize();
+ 		$('#hours').hide();
+ 		jobtype = $('input[name="jobpost[jobtype]"]:checked').val();
+ 		checkjobtype(jobtype);
+
+ 		$('#image-uploader').fineUploader({
+ 		  button:$("#imgplaceholder"),
+	      template: "qq-simple-thumbnails-template",
+	      thumbnails: {
+	          placeholders: {
+	            waitingPath: "assets/waiting-generic.png",
+	            notAvailablePath: "assets/not_available-generic.png"
+	          }
+	      },
+	      request: {
+	        endpoint: '/upload/image'
+	      },
+	      deleteFile: {
+		        enabled: true, // defaults to false
+		        endpoint: '/upload/delete'
+		  },
+	     validation: {
+			  allowedExtensions: ["jpg","png","gif","jpeg","svg"],
+	          sizeLimit: 5120000 // 5000 kB = 5000 * 1024 bytes
+	      }
+	    })
+	    .on('complete', function (event,id, name, response) {
+        	 // callback code here...
+	         if(response.success == true){
+	         	filehtml = '<input type="hidden" id="file-'+id+'" name="files[]" value="'+response.uuid+'/'+response.uploadName+'" >';
+	         	$('.hidden_files').append(filehtml);
+	         }else{
+	         	//alert('no')
+	         }
+
+	    })
+	    .on('deleteComplete', function (event,id, name, response) {
+        	 // callback code here...
+        	 $('#file-'+id).remove();
+	    });
+
+
+		$('#job-description').wysihtml5({
+			"font-styles": false,
+ 			"link": false,
+			"image": false
+ 		});
+ 		$('.glyphicon-indent-left').parents('.btn').hide();
+ 		$('.glyphicon-indent-right').parents('.btn').hide();
+
+ 	    var editor = $('#job-description').data("wysihtml5").editor;
+
+ 	   
+
+		var resizeIframe = function() {
+			nh = Number(editor.composer.element.scrollHeight);
+			if(Number(nh) > 150){
+				nh = nh + 8;
+				editor.composer.iframe.style.height = nh + "px";
+			}
+		}
+		editor.on("load", function() {
+		  editor.composer.element.addEventListener("keyup", resizeIframe, false)
+		  editor.composer.element.addEventListener("blur", resizeIframe, false)
+		  editor.composer.element.addEventListener("focus", resizeIframe, false)
+		})
+
+	    $('#file-uploader').fineUploader({
+ 		  button:$("#fileplaceholder"),
+	      template: "qq-simple-thumbnails-template",
+	      thumbnails: {
+	          placeholders: {
+	            waitingPath: "assets/waiting-generic.png",
+	            notAvailablePath: "assets/not_available-generic.png"
+	          }
+	      },
+	      request: {
+	        endpoint: '/upload/file'
+	      },
+	      deleteFile: {
+		        enabled: true, // defaults to false
+		        endpoint: '/upload/delete'
+		  },
+	     validation: {
+	          allowedExtensions: ["jpg","png","gif","jpeg","psd","svg","ai","pdf","doc","docx","xls","xlsx","txt","log","msg","odt","rtf","wps","csv","dat","pps","ppt","pptx","vcf","xml","dwg","dxf","zip","7z","rar","mp3","mid","\twav","wma","3gp","asf","asx","avi","flv","m4v","mov","mp4","mpg","rm","srt","swf","vob","wmv"],
+	          sizeLimit: 10240000 // 10000 kB = 1000 * 1024 bytes
+	      }
+	    })
+	    .on('complete', function (event,id, name, response) {
+        	 // callback code here...
+	         if(response.success == true){
+	         	filehtml = '<input type="hidden" id="file-'+id+'" name="files[]" value="'+response.uuid+'/'+response.uploadName+'" >';
+	         	$('.hidden_files').append(filehtml);
+	         }else{
+	         	//alert('no')
+	         }
+
+	    })
+	    .on('deleteComplete', function (event,id, name, response) {
+        	 // callback code here...
+        	 $('#file-'+id).remove();
+	    });
+
+ 		$( "#datepicker" ).datepicker({minDate: 0});
+ 		$( "#datepicker" ).datepicker( "option", "dateFormat","yy-mm-dd");
+ 		 	
+
+		$("#jobCategory").select2({placeholder:'Select Category'});
+		$("#jobSubCategory").select2({placeholder:'Select Sub Category'});
+
+		$(document).on('change','#jobCategory',function(){
+        	catid = $('#jobCategory').val();
+        	getSubCategories(catid);
+        	return false;
+        });
+
+		$(document).on('change','#jobSubCategory',function(){
+			subcatid = $('#jobSubCategory').val();
+			updateCategorySkills(subcatid);
+			checkContestSuggestion(subcatid);
+			return false;
+        });
+
+		var subcatid = $('#jobSubCategory').val();
+		updateCategorySkills(subcatid);
+
+ 		$("#jobForm_tags").select2({
+              tags:[],
+              tokenSeparators: [",", " "],
+              maximumInputLength: 15
+          });
+        
+
+        $(".select2").select2({minimumResultsForSearch: Infinity});
+
+        var currency = $('#currency').val();
+		validatebudget(currency);
+		$(document).on('change','#currency',function(){
+			currency = $('#currency').val();
+			validatebudget(currency);
+			settotalprize();
+		});
+		function validatebudget(currency){
+			jobtype = $('input[name="jobpost[jobtype]"]:checked').val();
+			if(jobtype== 2){
+				if(currency == 'USD'){
+					$('#budget').attr("data-validation-allowing","range[10;100000]");
+					$('#budget').attr("data-validation-error-msg","Please enter the Project Budget (Min $ 10)");
+				}else{
+					$('#budget').attr("data-validation-allowing","range[500;500000]");
+					$('#budget').attr("data-validation-error-msg","Please enter the Project Budget (Min INR 500)");
+				}
+				$('#hourly_hours').attr("data-validation-optional","true");
+			}else{
+				$('#hourly_hours').attr("data-validation-optional","false");
+				if(currency == 'USD'){
+					$('#budget').attr("data-validation-allowing","range[2;500]");
+					$('#budget').attr("data-validation-error-msg","Please enter the Minimum Hourly Rate (Min $ 2)");
+				}else{
+					$('#budget').attr("data-validation-allowing","range[100;1500]");
+					$('#budget').attr("data-validation-error-msg","Please enter the Minimum Hourly Rate (Min INR 100)");
+				}
+			}
+		}
+		$(document).on('change','input[name="jobpost[jobtype]"]:checked',function(){
+			jobtype = $('input[name="jobpost[jobtype]"]:checked').val();
+			currency = $('#currency').val();
+			validatebudget(currency);
+			checkjobtype(jobtype);
+		});
+		function checkjobtype(jobtype){
+			if(jobtype == '3'){
+				$('#hourly-tip').html('/Hr');
+				$('#hours').show();
+			}else{
+				$('#hourly-tip').html('');
+				$('#hours').hide();
+			}
+		}
+
+		function checktitle(str){
+			for(var i = 0, len = str.length, count = 0, ch; i < len; ++i){
+				ch = str.charAt(i);
+				if(ch >= 'A' && ch <= 'Z') ++count;
+				text = str.length;
+			}
+			percentage = (count/text) * 100;
+			percentage = Math.round(percentage);
+			return percentage;
+		}
+
+
+		$.validate({
+ 		   form : '#jobForm',
+		   ignore: ":hidden:not(textarea)",
+		    onSuccess : function() {
+		    	jobuser = $('#jobuser').val();
+		    	if(jobuser == ''){
+		    		$('#jobdetail').val('1');
+		    		usertype = document.querySelector('input[name="usertype"]:checked').value;
+					if(usertype == '1'){ // existing user options
+						showAlert("Kindly login to your account before posting the project.",'Alert');
+		    			return false;
+						
+					}else{ // new user options
+						$('#userForm').submit();
+					}
+		    		
+		    		return false;
+		    	}
+		    	desc = $('#job-description').val();
+		    	title = $('#jobForm_title').val();
+		    	percentage  = checktitle(title);
+		    	if(percentage > 60){
+		    		showAlert("Execessive capitalization in the Project title is not allowed.",'Warning');
+			    	return false;
+		    	}
+		    	if(desc.length < 20){
+		    		showAlert("Kindly describe your project with proper details.",'Warning');
+			    	return false;
+		    	}
+		    	title = title.split('.').join('');
+		    	if(title.length < 20){
+		    		showAlert("Please enter a valid Project Title.",'Warning');
+		    		return false;
+		    	}
+		    	title = title.split('-').join('');
+		    	if(title.length < 20){
+		    		showAlert("Please enter a valid Project Title.",'Warning');
+		    		return false;
+		    	}
+		    	title = title .split(" ");
+		    	if(title.length < 3){
+		    		showAlert("Please enter a valid Project Title.",'Warning');
+		    		return false;
+		    	}
+		    	activerole = $("#activerole").val();
+		    	var allskills = $('#tagsinput').val();
+		    	if(!allskills.length){
+		    		showAlert("Please enter the job skills.",'Warning');
+		    		return false;
+		    	}
+		    	if(activerole == '1' && !window.forcepublish){
+			    		$.confirm({
+			            'title'      : 'Confirmation',
+			            'message'    : 'Are you sure, you want to post a Project to Hire Freelancers ?',
+			            'buttons'    : {
+			                'Yes'    : {
+			                    'class'    : 'blue',
+			                    'action': function(){
+			                    	window.forcepublish = true;
+			                    	$('#jobForm').submit();
+			                    }
+			                },
+			                'Find Jobs'   : {
+			                    'class'    : 'gray',
+			                    'action': function(){
+			                    	window.location.href = "freelance-jobs.html";
+			                    }
+			                }
+			            }
+	    			});
+		    		return false;
+		    	}
+		    	var l = Ladda.create( document.querySelector( '#submitJob' ) );
+		    	l.start();
+		    	var options = {
+		    		complete : function(){
+		    			setTimeout(function(){
+		    				l.stop(); }, 5000);
+		    		},
+				    success:    function(response) {
+				    	if(response.status == 1){
+					  	 	window.location.href = response.targeturl;
+					  	 }else{
+					  	 	if(response.message=='login'){
+					  	 		$('#loginmodel').click();
+					  	 	}else{
+					  	 		showAlert(response.message,'Information');
+					  	 	}
+					  	 	l.stop();
+					  	 }
+				    }
+				};
+
+		      $('#jobForm').ajaxSubmit(options);
+		      return false; // Will stop the submission of the form
+		    }
+		});
+		$('#jobForm_title').restrictLength( $('#max-length-element') );
+
+		$('.qq-upload-delete').on('click',function(){
+			deleteattachment = $(this).parents('.qq-upload-success');
+			var uploadid=deleteattachment.attr('upload-id');
+			var action_url= window.base_url+"/ajax/delete_file";
+			$.ajax({
+			    type: 'POST',
+			    url:action_url,
+			    data: {id:uploadid},
+			    datatype: "json",
+		        success: function(response){
+					if(response.status == 1){
+						$('#upload-'+uploadid).remove();
+					}else{
+						showAlert(response.message,'Information');
+					}
+		        }
+			});
+	        return false;
+		});
+		function checkContestSuggestion(subcatid){
+			if(subcatid == '24'){
+				$('.contestSuggestion').show();
+			}else{
+				$('.contestSuggestion').hide();
+			}
+		}
+		function updateCategorySkills(subcatid)
+		{
+			if (subcatid == 0 || subcatid == undefined)
+			{
+				return false;
+			}
+			$.ajax({
+	            url: window.base_url+'/ajax/get_category_skills',
+	            type:"POST",
+	            data : {id : subcatid},
+	            dataType: 'json',
+	            success: function(response){
+	            	var count = response.length;
+			        if (count != 0) {
+			        	var html = "Suggested skills : ";
+				        if(count > 10){
+				        	count = 10;
+				        }
+		            	for(i =0; i < count ; i++)
+		            	{
+			            	html = html + '<span class="suggestedSkills btn btn-link btn-sm" data-skill-id="'+response[i].skill_id+'" data-skill-name="'+response[i].name+'">'+response[i].tag+'</span>';
+		            	}
+		            	$('#suggestedSkills').html(html);
+		            }else{
+		            	$('#suggestedSkills').html('');
+		            }
+	            }
+        	});
+		}
+
+		function getSubCategories(catid)
+		{
+			if (catid == 0 || catid == undefined)
+			{
+				return false;
+			}
+			var response =  $("#sub_cat_options option[data-catid='"+catid+"']").clone();;
+			$('#jobSubCategory').html('');
+			$('#jobSubCategory').html('<option></option>');
+			$('#jobSubCategory').append(response);
+			$("#jobSubCategory").select2({placeholder:'Select Sub Category'});
+			$('#subCategory').show();
+		}
+
+		function skillSuggestion(skill_id,skillname)
+		{
+			if ($('#job_skills').val() != undefined) {
+	        	var skills = $('#job_skills').val();
+        	}
+        	else {
+	        	var skills = [];
+	        }	        
+	       	skills.push(skill_id);
+	       	$('#tagsinput').tagsinput('add', { "value": skill_id , "text": skillname , "key": skill_id });
+		}
+
+		$(document).on('click', '.suggestedSkills', function(){
+			if ($('#tagsinput').val() != undefined) {
+	        	var skills = $('#tagsinput').val();
+        	}else{
+	        	var skills = [];
+	        }
+			var words = $('#tagsinput').val().split(",");
+			if(words.length > 4){
+				showAlert('Maximum 5 skills allowed','Information');
+			}else{
+				var skillId = $(this).attr('data-skill-id');
+        		var skillname = $(this).attr('data-skill-name');
+        		$(this).hide();
+				skillSuggestion(skillId,skillname);
+			}
+		});
+
+		$(document).on('change','.update-addon',function(){
+			settotalprize();
+        });
+
+		function settotalprize(){
+			currency   = $('#currency').val();
+			finalprize = '0';
+			addonfeatured  = $('input[name="jobpost[featured]"]');
+			addonrecruiter = $('input[name="jobpost[addon_recruiter]"]');
+			addonnda       = $('input[name="jobpost[addon_nda]"]');
+			addonurgent    = $('input[name="jobpost[addon_urgent]"]');
+			addonprivate   = $('input[name="jobpost[addon_private]"]');
+			fcost   = 500;
+			rcost   = 2000;
+			ncost   = 1000;
+			ucost   = 300;
+			pcost   = 300;
+			if(currency == 'USD'){
+				fcost   = 10;
+				rcost   = 30;
+				ncost   = 15;
+				ucost   = 5;
+				pcost   = 5;				
+			}	
+			$('#isfeatured').html('<b>'+fcost + ' ' + currency+'</b>');
+			$('#isrecruiter').html('<b>'+rcost + ' ' + currency+'</b>');
+			$('#isnda').html('<b>'+ncost + ' ' + currency+'</b>');
+			$('#isurgent').html('<b>'+ucost + ' ' + currency+'</b>');
+			$('#isprivate').html('<b>'+pcost + ' ' + currency+'</b>');
+
+			switch(freeaddon){
+				case 'recruiter':
+					rcost = 0;
+					$('#isrecruiter').html('<b>FREE OFFER</b>');	
+					$('input[name="jobpost[addon_recruiter]"]').attr('checked',true);	
+				break;
+				case 'nda':
+					ncost = "0";
+					$('#isnda').html('<b>FREE OFFER</b>');
+					$('input[name="jobpost[addon_nda]"]').attr('checked',true);
+				break;
+				case 'urgent':
+					ucost = "Free";
+					$('#isurgent').html('<b>FREE OFFER</b>');
+					$('input[name="jobpost[addon_urgent]"]').attr('checked',true);
+				break;
+				case 'private':
+					pcost = "Free";
+					$('#isprivate').html('<b>FREE OFFER</b>');
+					$('input[name="jobpost[addon_private]"]').attr('checked',true);
+				break;
+				case 'featured':
+					fcost = "Free";
+					$('#isfeatured').html('<b>FREE OFFER</b>');
+					$('input[name="jobpost[featured]"]').attr('checked',true);
+				break;				
+			}			
+
+			if(addonfeatured.is(":checked")){
+			  finalprize =  parseInt(finalprize) + parseInt(fcost);
+			}
+			if(addonrecruiter.is(":checked")){
+			  finalprize = parseInt(finalprize) + parseInt(rcost);
+			}
+			if(addonnda.is(":checked")){
+			  finalprize = parseInt(finalprize) + parseInt(ncost);
+			}
+			if(addonurgent.is(":checked")){
+			  finalprize = parseInt(finalprize) + parseInt(ucost);
+			}
+			if(addonprivate.is(":checked")){
+			  finalprize = parseInt(finalprize) + parseInt(pcost);
+			}
+			if(finalprize){
+				$('#total-currency').html(currency);
+				$('#total').html(finalprize);
+			}
+			$('#total-amount').val(finalprize);
+			$('#tobepaid-currency').html(currency);			
+		}
+
+		$(document).on('change','#jobEndDate',function(){
+			var interval = $('#jobEndDate').val();
+			setEndDate(interval);
+		});
+
+		function setEndDate(interval)
+		{
+			interval = parseInt(interval);
+
+			if(interval == 0) {
+				return false;
+			}
+			var dt =  new Date();
+			dt.setDate(dt.getDate() + interval);
+			var dateString = dt.getFullYear() + '-' + ("0" + (dt.getMonth() +　1)).slice(-2) + '-' + ("0" + (dt.getDate() +　1)).slice(-2);
+			$('input[name="jobpost[enddate]"]').val(dateString);
+		}
+					var interval = $('#jobEndDate').val();
+			setEndDate(interval);
+		
+ 	});
+</script>
+<script type="text/template" id="qq-simple-thumbnails-template">
+  <div class="qq-uploader-selector qq-uploader">
+    <div class="qq-upload-drop-area-selector qq-upload-drop-area" qq-hide-dropzone>
+      <span>Drop files here to upload</span>
+    </div>
+    <div class="qq-upload-button-selector qq-upload-button">
+      <div>Upload a file</div>
+    </div>
+    <span class="qq-drop-processing-selector qq-drop-processing">
+      <span>Processing dropped files...</span>
+      <span class="qq-drop-processing-spinner-selector qq-drop-processing-spinner"></span>
+    </span>
+    <ul class="qq-upload-list-selector qq-upload-list">
+      <li>
+        <div class="qq-progress-bar-container-selector">
+          <div class="qq-progress-bar-selector qq-progress-bar"></div>
+        </div>
+        <span class="qq-upload-spinner-selector qq-upload-spinner"></span>
+        <img class="qq-thumbnail-selector" qq-max-size="100" qq-server-scale>
+        <span class="qq-edit-filename-icon-selector qq-edit-filename-icon"></span>
+        <span class="qq-upload-file-selector qq-upload-file"></span>
+        <input class="qq-edit-filename-selector qq-edit-filename" tabindex="0" type="text">
+        <span class="qq-upload-size-selector qq-upload-size"></span>
+        <a class="qq-upload-cancel-selector qq-upload-cancel" href="javascript:void()">Cancel</a>
+        <a class="qq-upload-retry-selector qq-upload-retry" href="javascript:void()">Retry</a>
+        <a class="qq-upload-delete-selector qq-upload-delete btn btn-sm btn-danger" href="#">Delete</a>
+        <span class="qq-upload-status-text-selector qq-upload-status-text"></span>
+      </li>
+    </ul>
+  </div>
+</script>
+</section>
+
+
+<script src="assets/tl-min/0da502cefa595bdb196cd6b808a519246974.js?103" type="text/javascript"></script>
+<section>
+</section>
+<section>
+
+<footer class="section-padding">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-1 col-sm-6"></div>
+<div class="col-md-2 col-sm-6">
+<div class="ft-block">
+<h4> Useful links </h4>
+<div class="hr-line"></div>
+<div class="ft-links">
+<div>
+<select id="currency-updater" class="form-control currency" style="width:80px; display:inline-block">
+<option value="USD" selected>USD</option>
+<option value="INR">INR</option>
+</select>
+</div>
+<div><br></div>
+<script>
+
+$(document).ready(function(){
+
+	$('#currency-updater').change(function()
+	{
+		var currency = $('#currency-updater').val();
+
+		updateSessionCurrency(currency, function(){
+			window.location.reload();
+		}, function(response){
+			alert(response.message);
+		});
+	});
+
+});
+
+function updateSessionCurrency(currency, successCallback, errorCallback)
+{
+	var action_url= window.base_url+"/ajax/currency";
+
+	$.ajax({
+		type: 'GET',
+		url:action_url,
+		data:{currency:currency},
+		datatype: "json",
+		success: function(response){
+			if (response.status == 1) {
+				successCallback(response);
+			}else {
+				errorCallback(response);
+			}
+		},
+		error : function(response) {
+			errorCallback(response);
+		}
+	});
+
+	return false;
+}
+</script>
+<a href="mobile-appf7b7.html?source=website_footer">Mobile App</a>
+<a href="rewardsf7b7.html?source=website_footer">Startups</a>
+<a href="primef7b7.html?source=website_footer">Truelancer Prime</a>
+<a href="affiliatef7b7.html?source=website_footer">Affiliate</a>
+</div>
+</div>
+</div>
+<div class="col-md-2 col-sm-6">
+<div class="ft-block">
+<h4>Company </h4>
+<div class="hr-line"></div>
+<div class="ft-links">
+<a href="careersf7b7.html?source=website_footer">Careers</a>
+<a href="contactf7b7.html?source=website_footer">Contact Us</a>
+<a href="aboutf7b7.html?source=website_footer">About Us</a>
+<a href="pressf7b7.html?source=website_footer">Press</a>
+<a href="blog/indexf7b7.html?source=website_footer">Blog</a>
+</div>
+</div>
+</div>
+<div class="col-md-2 col-sm-6">
+<div class="ft-block">
+<h4> Information </h4>
+<div class="hr-line"></div>
+<div class="ft-links">
+<a href="fee-chargesf7b7.html?source=website_footer">Fee and Charges</a>
+<a href="cancellations-refundsf7b7.html?source=website_footer">Cancellations & Refunds</a>
+<a href="terms-servicef7b7.html?source=website_footer">Terms & Conditions</a>
+<a href="privacy-policyf7b7.html?source=website_footer">Privacy Policy</a>
+<a href="faqf7b7.html?source=website_footer">FAQ & Useful Links</a>
+<a href="legal/membership-policyf7b7.html?source=website_footer">Membership Policy</a>
+</div>
+</div>
+</div>
+<div class="col-md-2 col-sm-6">
+<div class="ft-block">
+<h4> Content Writers</h4>
+<div class="hr-line"></div>
+<div class="ft-links">
+<a href="content-writing-freelancersf7b7.html?source=website_footer">Content Writers</a>
+<a href="academic-writing-freelancersf7b7.html?source=website_footer">Academic Writers</a>
+<a href="blog-writing-freelancersf7b7.html?source=website_footer">Blog Writers</a>
+<a href="technical-writing-freelancersf7b7.html?source=website_footer">Technical Writers</a>
+<a href="copywriting-freelancersf7b7.html?source=website_footer">Copywriters</a>
+<a href="seo-writing-freelancersf7b7.html?source=website_footer">SEO Writers</a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6">
+<div class="ft-block">
+<h4>Freelancers</h4>
+<div class="hr-line"></div>
+<div class="ft-links">
+<a href="freelancers-in-india.html">Freelancers in India</a>
+<a href="freelancers-in-usa.html">Freelancers in USA</a>
+<a href="freelancers-in-united-kingdom.html">Freelancers in UK</a>
+<a href="freelancers-in-philippines.html">Freelancers in Philippines</a>
+<a href="freelancers-in-pakistan.html">Freelancers in Pakistan</a>
+<a href="freelancers-in-bangladesh.html">Freelancers in Bangladesh</a>
+</div>
+</div>
+</div>
+</div>
+<div class="row top-lmspace">
+<div class="col-md-1 col-sm-6"></div>
+<div class="col-md-2 col-sm-6">
+<div class="ft-block">
+<h4> Freelance Jobs</h4>
+<div class="hr-line"></div>
+<div class="ft-links">
+<a href="freelance-content-writing-jobs.html">Freelance Writing Jobs</a>
+<a href="freelance-graphic-design-jobs.html">Graphic Design Jobs</a>
+<a href="freelance-data-entry-jobs.html">Data Entry Jobs</a>
+<a href="freelance-virtual-assistant-jobs.html">Virtual Assistant Jobs</a>
+<a href="freelance-customer-service-jobs.html">Customer Service Jobs</a>
+</div>
+</div>
+</div>
+<div class="col-md-2 col-sm-6">
+<div class="ft-block">
+<h4> Online Jobs</h4>
+<div class="hr-line"></div>
+<div class="ft-links">
+<a href="freelance-jobs.html">Work from Home Jobs</a>
+<a href="freelance-jobs.html">Part Time Jobs</a>
+<a href="freelance-interior-design-jobs.html">Interior Design Jobs</a>
+<a href="freelance-voiceover-jobs.html">Voice Over Jobs</a>
+<a href="freelance-translation-jobs.html">Translator Jobs</a>
+ <a href="freelance-accounting-jobs.html">Accounting Jobs</a>
+</div>
+</div>
+</div>
+<div class="col-md-2 col-sm-6">
+<div class="ft-block">
+<h4> Freelancers</h4>
+<div class="hr-line"></div>
+<div class="ft-links">
+<a href="logo-design-freelancers.html">Logo Designers</a>
+<a href="website-design-freelancers.html">Web Designer</a>
+<a href="website-development-freelancers.html">Web Developer</a>
+<a href="seo-freelancers.html">SEO Consultant</a>
+<a href="android-app-development-freelancers.html">Android Developer</a>
+<a href="ios-development-freelancers.html">IOS Developer</a>
+</div>
+</div>
+</div>
+<div class="col-md-2 col-sm-6">
+<div class="ft-block">
+<h4>Developers</h4>
+<div class="hr-line"></div>
+<div class="ft-links">
+<a href="frontend-development-freelancers.html">Front End Developer</a>
+<a href="freelancers409b.html?q=backend+developer">Backend Developer</a>
+<a href="php-freelancers.html">PHP Developer</a>
+<a href="wordpress-freelancers.html">Wordpress Developer</a>
+<a href="java-freelancers.html">Java Developer</a>
+<a href="api-development-freelancers.html">API Developer</a>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6">
+<div class="ft-block">
+<h4>Translation</h4>
+<div class="hr-line"></div>
+<div class="ft-links">
+<a href="translation-english-spanish-freelancers.html">English to Spanish Translation</a>
+<a href="translation-german-english-freelancers.html">German to English Translation</a>
+<a href="translation-english-hindi-freelancers.html">English to Hindi Translation</a>
+<a href="translation-english-tamil-freelancers.html">English to Tamil Translation</a>
+<a href="translation-english-french-freelancers.html">English to French Translation</a>
+<a href="translation-spanish-english-freelancers.html">Spanish to English Translation</a>
+<a href="translation-german-english-freelancers.html">German to English Translation</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<div class="footer-bottom">
+<div class="container">
+<div class="col-lg-4">
+<div class="ft-logo">
+<img src="../static.truelancer.com/truelancer-logo-dark-background_small.png" class="img-fluid" />
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="ft-app-store">
+<a href="https://play.google.com/store/apps/details?id=com.truelancer.app&amp;referrer=utm_source%3Dlaunch%26utm_medium%3Dsite_footer">
+<img src="assets/home_v/images/google-play-store.png" id="google" class="img-fluid" />
+</a>
+<a href="https://itunes.apple.com/us/app/search-jobs-hire-freelancer/id1142111951">
+<img src="assets/home_v/images/apple-app-store.png" id="apple" class="img-fluid" />
+</a>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<ul class="ft-social">
+<li>
+<a href="https://www.facebook.com/truelancerofficial" class="facebook">
+<i class="fa fa-facebook"></i>
+</a>
+</li>
+<li>
+<a href="https://www.twitter.com/truelancer_" class="twitter">
+<i class="fa fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href="https://www.linkedin.com/company/truelancer" class="linkedin">
+<i class="fa fa-linkedin"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="ft-copyright">
+<div class="container text-xs-center">
+<p> Copyright &copy; 2021 | Truelancer.com </p>
+</div>
+</div>
+
+<div class="realtime_notify_template" style="display:none;">
+<div class="realtime_notify">
+<div class="panel">
+<i class="fa fa-times pull-right"></i>
+<div class="panel-body message">
+</div>
+</div>
+</div>
+</div>
+</section>
+<script type="text/javascript">
+function socketClose(){
+    if(window.sess_uid != "" || window.sess_uid != undefined){
+        socket.close();
+    }
+}
+
+function socketOpen(){
+    if(window.sess_uid != "" || window.sess_uid != undefined){
+        socket.open();
+        //console.log("window focus socket for userId " + window.sess_uid);
+        if(window.page == "pg_workstream"){
+            var lastinteractionid = $( ".interaction_box" ).last().attr('data-wsinid');
+            var action_url= window.base_url+"/ajax/getlatestinteraction";
+            $.ajax({
+                type: 'POST',
+                url:action_url,
+                data:{wsinid:lastinteractionid},
+                datatype: "html",
+                success: function(response){
+                    $('#replybox').before(response.html);
+                }
+            });
+        }
+        for(var i = 0;i < popups.length;i++){
+            var chatboxdetails = popups[i];
+            var details = chatboxdetails.split('_');
+            var workstreamid = details[1];
+            var senderid = $('#'+chatboxdetails).attr('data-selfid');
+            var receiverid = $('#'+chatboxdetails).attr('data-otherid');
+            $('#messages_chatbox_'+details[1]).html('');
+            getworkstream_interations(workstreamid,senderid,receiverid);
+            console.log('workstreamid',workstreamid,senderid,"selfid");
+        }
+        
+        if(window.page == "job_page" && window.sess_uid == window.job_uid){
+            $('#get_allproposals').click();
+        }
+    }
+}
+
+
+var visibility = (function(){
+    var stateKey, 
+    eventKey, 
+    keys = {
+        hidden: "visibilitychange",
+        webkitHidden: "webkitvisibilitychange",
+        mozHidden: "mozvisibilitychange",
+        msHidden: "msvisibilitychange"
+    };
+    for(stateKey in keys){
+        if(stateKey in document){
+            eventKey = keys[stateKey];
+            break;
+        }
+    }
+    return function(c){
+        if (c) document.addEventListener(eventKey, c);
+        return !document[stateKey];
+    }
+})();
+
+
+visibility(function(){    
+    if(visibility()){
+        socketOpen();                                       
+    }else{
+       socketClose();
+    }
+});
+
+var notIE = (document.documentMode === undefined),
+isChromium = window.chrome;    
+if(notIE && !isChromium){
+    // checks for Firefox and other  NON IE Chrome versions
+    // $(window).on("focusin", function(){ 
+    //   socketOpen();
+    // }).on("focusout", function(){
+    //     socketClose();
+    // });
+}else{
+    // checks for IE and Chromium versions
+    if(window.addEventListener){
+        // bind focus event
+        window.addEventListener("focus", function(event){
+           socketOpen();
+        }, false);
+        // bind blur event
+        window.addEventListener("blur", function(event){
+            socketClose();
+        }, false);
+    }else{
+        // bind focus event
+        window.attachEvent("focus", function(event){
+           socketOpen();
+        });
+        // bind focus event
+        window.attachEvent("blur", function(event){
+           socketClose();
+        });
+    }
+}
+</script>
+<script type="text/javascript">
+$(document).on('click', 'body', function(){
+    $('.jobfeed').hide('slow');
+    $("html, body").css("overflow", "visible");
+});
+</script>
+<script src="assets/scripts/jquery.googleanalytics.min.js"></script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 961713630;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="../www.googleadservices.com/pagead/f.txt">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/961713630/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+</body>
+
+<!-- Mirrored from www.truelancer.com/post-project by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Mar 2021 04:19:55 GMT -->
+</html>
