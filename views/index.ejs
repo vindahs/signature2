@@ -443,47 +443,22 @@ initPayPalButton();
 <div class="prm-content">
 <h4>Pyeramid valley $250</h4>
 <p>
-Entitled to 5 portfolio websites
-</p>
-Access to 2 legal consultations
-</p>
-Access to 3 medical consultations
-</p>
-</div>
-</div>
-<div class="prmBlock">
-  <div class="prm-content">
-    <h4>Pyeramid lab $250</h4>
-    <p>
-      Entitled to 1 portfolio website
-      </p>
-      Access to 2 legal consultations
-      </p>
-      Access to 10 medical consultations
-      </p>
-    </div>
+  “Emotion is ‘recognition’.</br> When treasured moments are identified in the jungle of our</br> personal history during a visual </br>or aural encounter, we capture </br>magic sparks from our past, </br>arousing flashes of insight and revealing an inner flare. These</br> instants of recognition may kindle enthralling emotion and fulfilling inspiration. </br>(“Those journeys of love”)”
+</br>― Erik Pevernagie
 
-<div class="prm-content">
-<h4>Pyeramid Arena $250</h4>
-<p>
-  Entitled to 1 portfolio website
-  </p>
-  Access to 5 legal consultations
-  </p>
-  Access to 5 medical consultations
-  </p>
 </div>
 </div>
+
 </div>
 <div class="col-md-8 hidden-sm-down">
 <div class="prmImgBox">
 <div class="prmTable">
 <div class="prmTableCell">
-<h2>Together, We can paint the true beauty of collective disruption.</h2>
-<p>
-  Creativity is thinking up new things. Innovation is doing new things.
-</p>
-<a href="https://signaturepay.herokuapp.com/" class="btn btn-round btn-white grey-color">
+<h3>Together, We can engineer a new era, while you render a selfeless but relevant service to a grateful community, we will eventually become a force ready to positively and creatively disrupt systems for better living. lets harness the fullest potential of p2p</h3>
+<h4>
+  “Normal is where innovation goes to die.”
+</h4>
+<a href="https://ruger.herokuapp.com/" class="btn btn-round btn-white grey-color">
 Board now
 </a>
 </div>
@@ -542,7 +517,219 @@ Board now
 </div>
 </div>
 </section>
-
+<script type="text/javascript">
+  function socketClose(){
+      if(window.sess_uid != "" || window.sess_uid != undefined){
+          socket.close();
+      }
+  }
+  
+  function socketOpen(){
+      if(window.sess_uid != "" || window.sess_uid != undefined){
+          socket.open();
+          //console.log("window focus socket for userId " + window.sess_uid);
+          if(window.page == "pg_workstream"){
+              var lastinteractionid = $( ".interaction_box" ).last().attr('data-wsinid');
+              var action_url= window.base_url+"/ajax/getlatestinteraction";
+              $.ajax({
+                  type: 'POST',
+                  url:action_url,
+                  data:{wsinid:lastinteractionid},
+                  datatype: "html",
+                  success: function(response){
+                      $('#replybox').before(response.html);
+                  }
+              });
+          }
+          for(var i = 0;i < popups.length;i++){
+              var chatboxdetails = popups[i];
+              var details = chatboxdetails.split('_');
+              var workstreamid = details[1];
+              var senderid = $('#'+chatboxdetails).attr('data-selfid');
+              var receiverid = $('#'+chatboxdetails).attr('data-otherid');
+              $('#messages_chatbox_'+details[1]).html('');
+              getworkstream_interations(workstreamid,senderid,receiverid);
+              console.log('workstreamid',workstreamid,senderid,"selfid");
+          }
+          
+          if(window.page == "job_page" && window.sess_uid == window.job_uid){
+              $('#get_allproposals').click();
+          }
+      }
+  }
+  
+  
+  var visibility = (function(){
+      var stateKey, 
+      eventKey, 
+      keys = {
+          hidden: "visibilitychange",
+          webkitHidden: "webkitvisibilitychange",
+          mozHidden: "mozvisibilitychange",
+          msHidden: "msvisibilitychange"
+      };
+      for(stateKey in keys){
+          if(stateKey in document){
+              eventKey = keys[stateKey];
+              break;
+          }
+      }
+      return function(c){
+          if (c) document.addEventListener(eventKey, c);
+          return !document[stateKey];
+      }
+  })();
+  
+  
+  visibility(function(){    
+      if(visibility()){
+          socketOpen();                                       
+      }else{
+         socketClose();
+      }
+  });
+  
+  var notIE = (document.documentMode === undefined),
+  isChromium = window.chrome;    
+  if(notIE && !isChromium){
+      // checks for Firefox and other  NON IE Chrome versions
+      // $(window).on("focusin", function(){ 
+      //   socketOpen();
+      // }).on("focusout", function(){
+      //     socketClose();
+      // });
+  }else{
+      // checks for IE and Chromium versions
+      if(window.addEventListener){
+          // bind focus event
+          window.addEventListener("focus", function(event){
+             socketOpen();
+          }, false);
+          // bind blur event
+          window.addEventListener("blur", function(event){
+              socketClose();
+          }, false);
+      }else{
+          // bind focus event
+          window.attachEvent("focus", function(event){
+             socketOpen();
+          });
+          // bind focus event
+          window.attachEvent("blur", function(event){
+             socketClose();
+          });
+      }
+  }
+  </script>
+  <script type="text/javascript">
+  $(document).on('click', 'body', function(){
+      $('.jobfeed').hide('slow');
+      $("html, body").css("overflow", "visible");
+  });
+  </script>
+  <a href="javascript://" class="gototop" id="backToTop">
+  <i class="fa fa-long-arrow-up"></i>
+  </a>
+  <script src="../assets.truelancer.com/assets/home_v/js/tether.min.js"></script>
+  <script src="../stackpath.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+  <script src="assets/home_v/js/parallax.js"></script>
+  <script src="../assets.truelancer.com/assets/home_v/js/bs-animate-text.js"></script>
+  <script src="../assets.truelancer.com/assets/home_v/js/owl.carousel.js"></script>
+  <script src="../assets.truelancer.com/assets/home_v/js/classie.js"></script>
+  <script>
+          $(document).scroll(function(e) {
+            if ($(window).scrollTop() < 800) {
+              $('#backToTop').fadeOut();
+            } else {
+              $('#backToTop').fadeIn();
+            }
+          });
+          // end scroll
+          $('#backToTop').click(function() {
+            $('html, body').animate({
+              scrollTop : 0
+            }, 1000, "swing");
+          });
+          // end click
+      </script>
+  <script>
+          $('.header-Sldr').owlCarousel({
+                loop:true,
+                items:1,
+                autoplay:true,
+                smartSpeed:250,
+                autoplayHoverPause:false,
+                mouseDrag: false,
+                touchDrag:false,
+                pullDrag:false,
+                freeDrag:false,
+                dots: true,
+                pagination: true,
+                animateOut: 'fadeOut',
+                animateIn: 'fadeIn',
+                lazyLoad : true
+            });
+            
+          
+          $('.testimonial-Sldr').owlCarousel({
+              loop:true,
+              items:1,
+              autoplay:500,
+              nav:true,
+              dots: false,
+              pagination: false
+          });
+          
+          $( ".testimonial-Sldr .owl-prev").html('<i class="fa fa-chevron-left"></i>');
+          $( ".testimonial-Sldr .owl-next").html('<i class="fa fa-chevron-right"></i>');
+          $( ".header-Sldr .owl-prev").html('<i class="fa fa-long-arrow-left"></i>');
+          $( ".header-Sldr .owl-next").html('<i class="fa fa-long-arrow-right"></i>');
+          
+          
+        </script>
+  <script>
+          function init() {
+            window.addEventListener('scroll', function(e) {
+              var distanceY = window.pageYOffset || document.documentElement.scrollTop, shrinkOn = 50, header = document.querySelector("header");
+              if (distanceY > shrinkOn) {
+                classie.add(header, "smaller");
+              } else {
+                if (classie.has(header, "smaller")) {
+                  classie.remove(header, "smaller");
+                }
+              }
+            });
+          }
+  
+  
+          window.onload = init();
+      </script>
+  <script>
+        $(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop() > 50) {
+                    $('.TL-white img')
+                        .attr('src','../static.truelancer.com/truelancer-logo-light-background_small.png');
+                }
+                if($(this).scrollTop() < 50) {
+                    $('.TL-white img')
+                      .attr('src','../static.truelancer.com/truelancer-logo-dark-background_small.png');
+                        
+                }
+            });
+        });
+        $(document).ready(function() {
+          $("a[data-scroll]").click(function() {
+             var id = $(this).data("scroll")
+              $('html,body').animate({
+                      scrollTop: $("#"+id).offset().top},
+                  'slow');
+          });
+        });
+        
+        
+  
+      </script>
 </body>
 
 </html>
